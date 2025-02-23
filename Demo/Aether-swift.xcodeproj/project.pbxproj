@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */; };
+		9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */; };
+		9FC84FD12D61C9EE000DBBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */; };
+		9FC84FD32D61C9EF000DBBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */; };
+		9FC84FD62D61C9EF000DBBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */; };
+		9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FDF2D61CA54000DBBA3 /* TestLog.m */; };
+		9FC8502A2D646FB9000DBBA3 /* DemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* DemoScene.swift */; };
+		9FC850302D646FF1000DBBA3 /* DemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8502F2D646FF1000DBBA3 /* DemoScene.swift */; };
+		9FC850CA2D6B2091000DBBA3 /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850962D6B2091000DBBA3 /* AEEngine.m */; };
+		9FC850CB2D6B2091000DBBA3 /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850982D6B2091000DBBA3 /* AESkybox.m */; };
+		9FC850CC2D6B2091000DBBA3 /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850992D6B2091000DBBA3 /* AEShader.m */; };
+		9FC850CD2D6B2091000DBBA3 /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509E2D6B2091000DBBA3 /* AEElement.m */; };
+		9FC850CE2D6B2091000DBBA3 /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509F2D6B2091000DBBA3 /* AETexture.m */; };
+		9FC850CF2D6B2091000DBBA3 /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */; };
+		9FC850D02D6B2091000DBBA3 /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */; };
+		9FC850D12D6B2091000DBBA3 /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */; };
+		9FC850D22D6B2091000DBBA3 /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A82D6B2091000DBBA3 /* AERenderer.m */; };
+		9FC850D32D6B2091000DBBA3 /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */; };
+		9FC850D42D6B2091000DBBA3 /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AD2D6B2091000DBBA3 /* AEMath.m */; };
+		9FC850D52D6B2091000DBBA3 /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */; };
+		9FC850D62D6B2091000DBBA3 /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */; };
+		9FC850D72D6B2091000DBBA3 /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */; };
+		9FC850D82D6B2091000DBBA3 /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B62D6B2091000DBBA3 /* AEScene.m */; };
+		9FC850D92D6B2091000DBBA3 /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B82D6B2091000DBBA3 /* AEModel.m */; };
+		9FC850DA2D6B2091000DBBA3 /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B92D6B2091000DBBA3 /* AECamera.m */; };
+		9FC850DB2D6B2091000DBBA3 /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BC2D6B2091000DBBA3 /* AEMesh.m */; };
+		9FC850DC2D6B2091000DBBA3 /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BE2D6B2091000DBBA3 /* AEComponent.m */; };
+		9FC850DD2D6B2091000DBBA3 /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C22D6B2091000DBBA3 /* Basic.metal */; };
+		9FC850DE2D6B2091000DBBA3 /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C62D6B2091000DBBA3 /* AEView.m */; };
+		9FC850DF2D6B2091000DBBA3 /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C92D6B2091000DBBA3 /* AEMaterial.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aether-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FC84FD02D61C9EE000DBBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FC84FD52D61C9EF000DBBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FC84FD72D61C9EF000DBBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC84FDD2D61CA54000DBBA3 /* Aether-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aether-swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		9FC84FDE2D61CA54000DBBA3 /* TestLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLog.h; sourceTree = "<group>"; };
+		9FC84FDF2D61CA54000DBBA3 /* TestLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLog.m; sourceTree = "<group>"; };
+		9FC850292D646FB9000DBBA3 /* DemoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoScene.swift; sourceTree = "<group>"; };
+		9FC8502F2D646FF1000DBBA3 /* DemoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScene.swift; sourceTree = "<group>"; };
+		9FC850962D6B2091000DBBA3 /* AEEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEEngine.m; sourceTree = "<group>"; };
+		9FC850982D6B2091000DBBA3 /* AESkybox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESkybox.m; sourceTree = "<group>"; };
+		9FC850992D6B2091000DBBA3 /* AEShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEShader.m; sourceTree = "<group>"; };
+		9FC8509A2D6B2091000DBBA3 /* AEElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEElement.h; sourceTree = "<group>"; };
+		9FC8509B2D6B2091000DBBA3 /* AETexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETexture.h; sourceTree = "<group>"; };
+		9FC8509C2D6B2091000DBBA3 /* AEShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEShader.h; sourceTree = "<group>"; };
+		9FC8509D2D6B2091000DBBA3 /* AESkybox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESkybox.h; sourceTree = "<group>"; };
+		9FC8509E2D6B2091000DBBA3 /* AEElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEElement.m; sourceTree = "<group>"; };
+		9FC8509F2D6B2091000DBBA3 /* AETexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETexture.m; sourceTree = "<group>"; };
+		9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEPipelineState.m; sourceTree = "<group>"; };
+		9FC850A22D6B2091000DBBA3 /* AEPipelineStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEPipelineStateManager.h; sourceTree = "<group>"; };
+		9FC850A32D6B2091000DBBA3 /* AEResourcePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEResourcePool.h; sourceTree = "<group>"; };
+		9FC850A42D6B2091000DBBA3 /* AERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AERenderer.h; sourceTree = "<group>"; };
+		9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEPipelineStateManager.m; sourceTree = "<group>"; };
+		9FC850A62D6B2091000DBBA3 /* AEPipelineState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEPipelineState.h; sourceTree = "<group>"; };
+		9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEResourcePool.m; sourceTree = "<group>"; };
+		9FC850A82D6B2091000DBBA3 /* AERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AERenderer.m; sourceTree = "<group>"; };
+		9FC850AA2D6B2091000DBBA3 /* AEWorldContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEWorldContext.h; sourceTree = "<group>"; };
+		9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEWorldContext.m; sourceTree = "<group>"; };
+		9FC850AD2D6B2091000DBBA3 /* AEMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMath.m; sourceTree = "<group>"; };
+		9FC850AE2D6B2091000DBBA3 /* AEMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMath.h; sourceTree = "<group>"; };
+		9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEPerformanceMonitor.m; sourceTree = "<group>"; };
+		9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDebugTools.m; sourceTree = "<group>"; };
+		9FC850B22D6B2091000DBBA3 /* AEPerformanceMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEPerformanceMonitor.h; sourceTree = "<group>"; };
+		9FC850B32D6B2091000DBBA3 /* AEDebugTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDebugTools.h; sourceTree = "<group>"; };
+		9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEBasicGeometry.m; sourceTree = "<group>"; };
+		9FC850B62D6B2091000DBBA3 /* AEScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEScene.m; sourceTree = "<group>"; };
+		9FC850B72D6B2091000DBBA3 /* AEMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMesh.h; sourceTree = "<group>"; };
+		9FC850B82D6B2091000DBBA3 /* AEModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEModel.m; sourceTree = "<group>"; };
+		9FC850B92D6B2091000DBBA3 /* AECamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AECamera.m; sourceTree = "<group>"; };
+		9FC850BA2D6B2091000DBBA3 /* AEComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEComponent.h; sourceTree = "<group>"; };
+		9FC850BB2D6B2091000DBBA3 /* AEBasicGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEBasicGeometry.h; sourceTree = "<group>"; };
+		9FC850BC2D6B2091000DBBA3 /* AEMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMesh.m; sourceTree = "<group>"; };
+		9FC850BD2D6B2091000DBBA3 /* AEScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEScene.h; sourceTree = "<group>"; };
+		9FC850BE2D6B2091000DBBA3 /* AEComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEComponent.m; sourceTree = "<group>"; };
+		9FC850BF2D6B2091000DBBA3 /* AECamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AECamera.h; sourceTree = "<group>"; };
+		9FC850C02D6B2091000DBBA3 /* AEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEModel.h; sourceTree = "<group>"; };
+		9FC850C22D6B2091000DBBA3 /* Basic.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Basic.metal; sourceTree = "<group>"; };
+		9FC850C32D6B2091000DBBA3 /* AEEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEEngine.h; sourceTree = "<group>"; };
+		9FC850C52D6B2091000DBBA3 /* AEView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEView.h; sourceTree = "<group>"; };
+		9FC850C62D6B2091000DBBA3 /* AEView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEView.m; sourceTree = "<group>"; };
+		9FC850C82D6B2091000DBBA3 /* AEMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMaterial.h; sourceTree = "<group>"; };
+		9FC850C92D6B2091000DBBA3 /* AEMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMaterial.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FC84FC32D61C9EE000DBBA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FC84FBD2D61C9EE000DBBA3 = {
+			isa = PBXGroup;
+			children = (
+				9FC84FC82D61C9EE000DBBA3 /* Aether-swift */,
+				9FC84FC72D61C9EE000DBBA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FC84FC72D61C9EE000DBBA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FC84FC82D61C9EE000DBBA3 /* Aether-swift */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850952D6B2091000DBBA3 /* Aether */,
+				9FC8502F2D646FF1000DBBA3 /* DemoScene.swift */,
+				9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */,
+				9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */,
+				9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */,
+				9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */,
+				9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */,
+				9FC84FD72D61C9EF000DBBA3 /* Info.plist */,
+				9FC84FDE2D61CA54000DBBA3 /* TestLog.h */,
+				9FC84FDF2D61CA54000DBBA3 /* TestLog.m */,
+				9FC84FDD2D61CA54000DBBA3 /* Aether-swift-Bridging-Header.h */,
+				9FC850292D646FB9000DBBA3 /* DemoScene.swift */,
+			);
+			path = "Aether-swift";
+			sourceTree = "<group>";
+		};
+		9FC850952D6B2091000DBBA3 /* Aether */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850C32D6B2091000DBBA3 /* AEEngine.h */,
+				9FC850962D6B2091000DBBA3 /* AEEngine.m */,
+				9FC850972D6B2091000DBBA3 /* DataTypes */,
+				9FC850A02D6B2091000DBBA3 /* Render */,
+				9FC850A92D6B2091000DBBA3 /* World */,
+				9FC850AC2D6B2091000DBBA3 /* Math */,
+				9FC850AF2D6B2091000DBBA3 /* Utilities */,
+				9FC850B42D6B2091000DBBA3 /* Components */,
+				9FC850C12D6B2091000DBBA3 /* Shaders */,
+				9FC850C42D6B2091000DBBA3 /* View */,
+				9FC850C72D6B2091000DBBA3 /* Material */,
+			);
+			name = Aether;
+			path = ../../Aether;
+			sourceTree = "<group>";
+		};
+		9FC850972D6B2091000DBBA3 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850982D6B2091000DBBA3 /* AESkybox.m */,
+				9FC850992D6B2091000DBBA3 /* AEShader.m */,
+				9FC8509A2D6B2091000DBBA3 /* AEElement.h */,
+				9FC8509B2D6B2091000DBBA3 /* AETexture.h */,
+				9FC8509C2D6B2091000DBBA3 /* AEShader.h */,
+				9FC8509D2D6B2091000DBBA3 /* AESkybox.h */,
+				9FC8509E2D6B2091000DBBA3 /* AEElement.m */,
+				9FC8509F2D6B2091000DBBA3 /* AETexture.m */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		9FC850A02D6B2091000DBBA3 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */,
+				9FC850A22D6B2091000DBBA3 /* AEPipelineStateManager.h */,
+				9FC850A32D6B2091000DBBA3 /* AEResourcePool.h */,
+				9FC850A42D6B2091000DBBA3 /* AERenderer.h */,
+				9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */,
+				9FC850A62D6B2091000DBBA3 /* AEPipelineState.h */,
+				9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */,
+				9FC850A82D6B2091000DBBA3 /* AERenderer.m */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		9FC850A92D6B2091000DBBA3 /* World */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850AA2D6B2091000DBBA3 /* AEWorldContext.h */,
+				9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		9FC850AC2D6B2091000DBBA3 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850AD2D6B2091000DBBA3 /* AEMath.m */,
+				9FC850AE2D6B2091000DBBA3 /* AEMath.h */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		9FC850AF2D6B2091000DBBA3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */,
+				9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */,
+				9FC850B22D6B2091000DBBA3 /* AEPerformanceMonitor.h */,
+				9FC850B32D6B2091000DBBA3 /* AEDebugTools.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9FC850B42D6B2091000DBBA3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */,
+				9FC850B62D6B2091000DBBA3 /* AEScene.m */,
+				9FC850B72D6B2091000DBBA3 /* AEMesh.h */,
+				9FC850B82D6B2091000DBBA3 /* AEModel.m */,
+				9FC850B92D6B2091000DBBA3 /* AECamera.m */,
+				9FC850BA2D6B2091000DBBA3 /* AEComponent.h */,
+				9FC850BB2D6B2091000DBBA3 /* AEBasicGeometry.h */,
+				9FC850BC2D6B2091000DBBA3 /* AEMesh.m */,
+				9FC850BD2D6B2091000DBBA3 /* AEScene.h */,
+				9FC850BE2D6B2091000DBBA3 /* AEComponent.m */,
+				9FC850BF2D6B2091000DBBA3 /* AECamera.h */,
+				9FC850C02D6B2091000DBBA3 /* AEModel.h */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9FC850C12D6B2091000DBBA3 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850C22D6B2091000DBBA3 /* Basic.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		9FC850C42D6B2091000DBBA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850C52D6B2091000DBBA3 /* AEView.h */,
+				9FC850C62D6B2091000DBBA3 /* AEView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FC850C72D6B2091000DBBA3 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850C82D6B2091000DBBA3 /* AEMaterial.h */,
+				9FC850C92D6B2091000DBBA3 /* AEMaterial.m */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FC84FC52D61C9EE000DBBA3 /* Aether-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC84FDA2D61C9EF000DBBA3 /* Build configuration list for PBXNativeTarget "Aether-swift" */;
+			buildPhases = (
+				9FC84FC22D61C9EE000DBBA3 /* Sources */,
+				9FC84FC32D61C9EE000DBBA3 /* Frameworks */,
+				9FC84FC42D61C9EE000DBBA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aether-swift";
+			productName = "Aether-swift";
+			productReference = 9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FC84FBE2D61C9EE000DBBA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					9FC84FC52D61C9EE000DBBA3 = {
+						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
+					};
+				};
+			};
+			buildConfigurationList = 9FC84FC12D61C9EE000DBBA3 /* Build configuration list for PBXProject "Aether-swift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FC84FBD2D61C9EE000DBBA3;
+			productRefGroup = 9FC84FC72D61C9EE000DBBA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FC84FC52D61C9EE000DBBA3 /* Aether-swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FC84FC42D61C9EE000DBBA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC84FD62D61C9EF000DBBA3 /* LaunchScreen.storyboard in Resources */,
+				9FC84FD32D61C9EF000DBBA3 /* Assets.xcassets in Resources */,
+				9FC84FD12D61C9EE000DBBA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FC84FC22D61C9EE000DBBA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC850CD2D6B2091000DBBA3 /* AEElement.m in Sources */,
+				9FC850D62D6B2091000DBBA3 /* AEDebugTools.m in Sources */,
+				9FC850DE2D6B2091000DBBA3 /* AEView.m in Sources */,
+				9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */,
+				9FC850CB2D6B2091000DBBA3 /* AESkybox.m in Sources */,
+				9FC850D42D6B2091000DBBA3 /* AEMath.m in Sources */,
+				9FC850CC2D6B2091000DBBA3 /* AEShader.m in Sources */,
+				9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */,
+				9FC850DB2D6B2091000DBBA3 /* AEMesh.m in Sources */,
+				9FC850302D646FF1000DBBA3 /* DemoScene.swift in Sources */,
+				9FC850DC2D6B2091000DBBA3 /* AEComponent.m in Sources */,
+				9FC850D22D6B2091000DBBA3 /* AERenderer.m in Sources */,
+				9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */,
+				9FC850D72D6B2091000DBBA3 /* AEBasicGeometry.m in Sources */,
+				9FC8502A2D646FB9000DBBA3 /* DemoScene.swift in Sources */,
+				9FC850D12D6B2091000DBBA3 /* AEResourcePool.m in Sources */,
+				9FC850CA2D6B2091000DBBA3 /* AEEngine.m in Sources */,
+				9FC850CE2D6B2091000DBBA3 /* AETexture.m in Sources */,
+				9FC850DD2D6B2091000DBBA3 /* Basic.metal in Sources */,
+				9FC850DF2D6B2091000DBBA3 /* AEMaterial.m in Sources */,
+				9FC850CF2D6B2091000DBBA3 /* AEPipelineState.m in Sources */,
+				9FC850D82D6B2091000DBBA3 /* AEScene.m in Sources */,
+				9FC850D32D6B2091000DBBA3 /* AEWorldContext.m in Sources */,
+				9FC850D52D6B2091000DBBA3 /* AEPerformanceMonitor.m in Sources */,
+				9FC850D92D6B2091000DBBA3 /* AEModel.m in Sources */,
+				9FC850DA2D6B2091000DBBA3 /* AECamera.m in Sources */,
+				9FC850D02D6B2091000DBBA3 /* AEPipelineStateManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC84FD02D61C9EE000DBBA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC84FD52D61C9EF000DBBA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FC84FD82D61C9EF000DBBA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FC84FD92D61C9EF000DBBA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FC84FDB2D61C9EF000DBBA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Aether-swift/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FC84FDC2D61C9EF000DBBA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Aether-swift/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FC84FC12D61C9EE000DBBA3 /* Build configuration list for PBXProject "Aether-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC84FD82D61C9EF000DBBA3 /* Debug */,
+				9FC84FD92D61C9EF000DBBA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC84FDA2D61C9EF000DBBA3 /* Build configuration list for PBXNativeTarget "Aether-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC84FDB2D61C9EF000DBBA3 /* Debug */,
+				9FC84FDC2D61C9EF000DBBA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FC84FBE2D61C9EE000DBBA3 /* Project object */;
+}
