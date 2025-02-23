@@ -21,7 +21,16 @@ let package = Package(
             resources:[
                 .process("private/Shaders"),
             ],
-            publicHeadersPath: "AAEngine"
+            publicHeadersPath: "AAEngine",
+            cSettings: [
+//                .headerSearchPath("**"),
+                .headerSearchPath("AAEngine"),
+                .headerSearchPath("AAEngine/Basic"),
+                .headerSearchPath("AAEngine/Camera"),
+                .headerSearchPath("AAEngine/Geometry"),
+                .headerSearchPath("AAEngine/Tools"),
+                .headerSearchPath("AAEngine/Components"),
+            ]
         ),
     ]
 )
