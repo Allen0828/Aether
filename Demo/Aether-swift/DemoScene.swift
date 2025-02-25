@@ -12,5 +12,11 @@ class DemoScene: AEScene {
         super.init()
         self.componentName = "demoScene"
         self.setCamera(AECamera());
+        
+        let box = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
+        box?.position = simd_float3(1.0, 1.0, 0);
+        
+        self.addObject(box!)
+        
     }
 }

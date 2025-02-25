@@ -43,7 +43,8 @@ struct Uniforms {
     if ((self = [super init])) {
         _device = device;
         _commandQueue = [device newCommandQueue];
-        //[self setupPipeline];
+        self.pipelineStateManager = [[AEPipelineStateManager alloc] init];
+        [self setupPipeline];
         _model = [[AEModel alloc] initWithURL:nil device:self.device];
         [self setMSAA];
     }
@@ -51,17 +52,38 @@ struct Uniforms {
 }
 
 - (void)setupPipeline {
-    self.pipelineStateManager = [[AEPipelineStateManager alloc] init];
-    // 创建和配置渲染管线状态
+    
     id<MTLLibrary> library = [self.device newDefaultLibrary];
     id<MTLFunction> vertexFunction = [library newFunctionWithName:@"main_vertex"];
     id<MTLFunction> fragmentFunction = [library newFunctionWithName:@"main_fragment"];
-    MTLVertexDescriptor *vertexDescriptor = [self createVertexDescriptor];
-
+    
+    NSError *error;
+    MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:self.device];
+    MDLMesh *cube = [[MDLMesh alloc] initBoxWithExtent:simd_make_float3(0.1,0.1,0.1) segments:simd_make_uint3(20,20,20) inwardNormals:true geometryType:MDLGeometryTypeTriangles allocator:allocator];
+    
+    MTLRenderPipelineDescriptor *pipelineDes = [MTLRenderPipelineDescriptor new];
+    pipelineDes.vertexFunction = vertexFunction;
+    pipelineDes.fragmentFunction = fragmentFunction;
+    pipelineDes.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
+    pipelineDes.vertexDescriptor = MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor);
+    if (@available(iOS 16.0, *)) {
+        pipelineDes.sampleCount = 4;
+    } else {
+        pipelineDes.rasterSampleCount = 4;
+    }
+    //self.pipelineState = [self.device newRenderPipelineStateWithDescriptor:pipelineDes error:&error];
+    
+    
+//    // 创建和配置渲染管线状态
+//    id<MTLLibrary> library = [self.device newDefaultLibrary];
+//    id<MTLFunction> vertexFunction = [library newFunctionWithName:@"main_vertex"];
+//    id<MTLFunction> fragmentFunction = [library newFunctionWithName:@"main_fragment"];
+//    MTLVertexDescriptor *vertexDescriptor = [self createVertexDescriptor];
+//
     AEPipelineState *pipelineState = [[AEPipelineState alloc] initWithDevice:self.device
                                                                vertexFunction:vertexFunction
                                                               fragmentFunction:fragmentFunction
-                                                              vertexDescriptor:vertexDescriptor
+                                                              vertexDescriptor:MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor)
                                                                  pixelFormat:MTLPixelFormatBGRA8Unorm];
     [self.pipelineStateManager addPipelineState:pipelineState withName:@"BasicPipeline"];
 
@@ -120,19 +142,26 @@ struct Uniforms {
         // model
         matrix_float4x4 trans = Translation(0, 0, 0);
         matrix_float4x4 rotation = Rotation_float4x4(simd_make_float3(0,0,0));
-        matrix_float4x4 scale = scaling(1,1,1);
+        matrix_float4x4 scale = scaling(0.1, 0.05, 0.1);
         matrix_float4x4 modelMatrix = matrix_multiply(trans, matrix_multiply(rotation, scale));
         _uniform.modelMatrix = modelMatrix;
         
         [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
         // Set the pipeline state.
         AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"BasicPipeline"];
-        //[renderEncoder setRenderPipelineState:pipelineState.pipelineState];
-
+        [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
+        
+        for (AEComponent *comp in scene.objects) {
+            if ([comp isKindOfClass:[AEGeometry class]]) {
+                AEGeometry* geometry = (AEGeometry*)comp;
+                [geometry render:renderEncoder];
+            }
+        }
+        
         // Here you would set other render command encoder state and draw calls.
 //        [self.view render];
         
-        [_model renderWithRenderEncoder:renderEncoder];
+        //[_model renderWithRenderEncoder:renderEncoder];
         
         // End encoding and present the drawable to the screen.
         [renderEncoder endEncoding];

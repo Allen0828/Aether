@@ -22,6 +22,12 @@
         pipelineDescriptor.vertexDescriptor = vertexDescriptor;
         pipelineDescriptor.colorAttachments[0].pixelFormat = pixelFormat;
 
+        if (@available(iOS 16.0, *)) {
+            pipelineDescriptor.sampleCount = 4;
+        } else {
+            pipelineDescriptor.rasterSampleCount = 4;
+        }
+        
         NSError *error = nil;
         self.pipelineState = [device newRenderPipelineStateWithDescriptor:pipelineDescriptor error:&error];
         if (!self.pipelineState) {

@@ -58,7 +58,18 @@
 
 - (instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments {
     if (self = [super init]) {
+        NSError *error;
+        MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:AEEngine.device];
+        MDLMesh *mdlMesh = [[MDLMesh alloc] initPlaneWithExtent:extent segments:segments geometryType:MDLGeometryTypeTriangles allocator:allocator];
         
+        MTKMesh *mtkMesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AEEngine.device error:&error];
+        if (error != nil) {
+            NSLog(@"create box geometry error %@", error);
+        } else {
+            self.vertexBuffers = mtkMesh.vertexBuffers;
+            self.submeshes = mtkMesh.submeshes;
+            self.vertexCount = mtkMesh.vertexCount;
+        }
     }
     return self;
 }
@@ -75,6 +86,7 @@
         NSError *error;
         MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:AEEngine.device];
         MDLMesh *mdlMesh = [[MDLMesh alloc] initBoxWithExtent:extent segments:segments inwardNormals:inwardNormals geometryType:MDLGeometryTypeTriangles allocator:allocator];
+        
         MTKMesh *mtkMesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AEEngine.device error:&error];
         if (error != nil) {
             NSLog(@"create box geometry error %@", error);
@@ -94,7 +106,18 @@
 
 - (instancetype)initWithStacks:(int)stacks slices:(int)slices radius:(float)radius {
     if (self = [super init]) {
+        NSError *error;
+        MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:AEEngine.device];
+        MDLMesh *mdlMesh = [[MDLMesh alloc] initSphereWithExtent:simd_make_float3(radius, radius, radius) segments:simd_make_uint2(stacks, slices) inwardNormals:false geometryType:MDLGeometryTypeTriangles allocator:allocator];
         
+        MTKMesh *mtkMesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AEEngine.device error:&error];
+        if (error != nil) {
+            NSLog(@"create box geometry error %@", error);
+        } else {
+            self.vertexBuffers = mtkMesh.vertexBuffers;
+            self.submeshes = mtkMesh.submeshes;
+            self.vertexCount = mtkMesh.vertexCount;
+        }
     }
     return self;
 }
@@ -108,7 +131,18 @@
 
 - (instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments normals:(BOOL)inwardNormals topCap:(BOOL)tCap bottomCap:(BOOL)bCap {
     if (self = [super init]) {
+        NSError *error;
+        MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:AEEngine.device];
+        MDLMesh *mdlMesh = [[MDLMesh alloc] initCylinderWithExtent:extent segments:segments inwardNormals:inwardNormals topCap:tCap bottomCap:bCap geometryType:MDLGeometryTypeTriangles allocator:allocator];
         
+        MTKMesh *mtkMesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AEEngine.device error:&error];
+        if (error != nil) {
+            NSLog(@"create box geometry error %@", error);
+        } else {
+            self.vertexBuffers = mtkMesh.vertexBuffers;
+            self.submeshes = mtkMesh.submeshes;
+            self.vertexCount = mtkMesh.vertexCount;
+        }
     }
     return self;
 }
@@ -119,7 +153,18 @@
 
 - (instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments normals:(BOOL)inwardNormals cap:(BOOL)cap {
     if (self = [super init]) {
+        NSError *error;
+        MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:AEEngine.device];
+        MDLMesh *mdlMesh = [[MDLMesh alloc] initConeWithExtent:extent segments:segments inwardNormals:inwardNormals cap:cap geometryType:MDLGeometryTypeTriangles allocator:allocator];
         
+        MTKMesh *mtkMesh = [[MTKMesh alloc] initWithMesh:mdlMesh device:AEEngine.device error:&error];
+        if (error != nil) {
+            NSLog(@"create box geometry error %@", error);
+        } else {
+            self.vertexBuffers = mtkMesh.vertexBuffers;
+            self.submeshes = mtkMesh.submeshes;
+            self.vertexCount = mtkMesh.vertexCount;
+        }
     }
     return self;
 }

@@ -8,6 +8,7 @@
 #import "AEComponent.h"
 #import "AECamera.h"
 #import "AESkybox.h"
+#import "AEBasicGeometry.h"
 
 
 
