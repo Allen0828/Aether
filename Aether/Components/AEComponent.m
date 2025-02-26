@@ -6,10 +6,12 @@
 //
 
 #import "AEComponent.h"
+#import "AEBehaviour.h"
 
 @interface AEComponent ()
 
 @property (nonatomic, strong) NSMutableArray<AEComponent *> *children;
+@property (nonatomic, strong) NSMutableArray<AEBehaviour *> *elements;
 
 @end
 
@@ -19,6 +21,7 @@
     self = [super init];
     if (self) {
         _children = [NSMutableArray array];
+        _elements = [NSMutableArray array];
     }
     return self;
 }
@@ -28,6 +31,9 @@
     // 例如，更新位置、旋转、缩放等
     for (AEComponent *child in self.children) {
         [child update];
+    }
+    for (AEBehaviour *beh in self.elements) {
+        [beh update];
     }
 }
 
@@ -48,5 +54,16 @@
     [self.children removeObject:component];
     component.parent = nil;
 }
+
+- (void)attachBehaviour:(AEBehaviour*)beh {
+    [self.elements addObject:beh];
+}
+- (void)detachBehaviour:(AEBehaviour*)beh {
+    [self.elements removeObject:beh];
+}
+- (void)detachAllBehaviour {
+    [self.elements removeAllObjects];
+}
+
 
 @end

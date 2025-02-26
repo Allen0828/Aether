@@ -47,9 +47,12 @@
 }
 
 - (void)update {
+    
     for (AEComponent *object in self.objects) {
         [object update];
     }
+    // update self beh
+    [super update];
 }
 
 

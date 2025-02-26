@@ -9,21 +9,22 @@
 
 @implementation AEElement
 
-- (AEComponent *)GetComponent {
+- (AEComponent *)getComponent {
     return NULL;
 }
 
-- (void)Init {
+- (void)initObject {
+    
 }
 
-- (BOOL)IsBehaviour {
+- (BOOL)isBehaviour {
     return false;
 }
 
-- (void)Unload {
+- (void)unload {
 }
 
-- (void)Update {
+- (void)update {
 }
 
 @end

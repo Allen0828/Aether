@@ -13,13 +13,13 @@
 @interface AEElement : NSObject
 
 
-- (AEComponent*)GetComponent;
+- (AEComponent*)getComponent;
 
-- (void)Init;
-- (void)Update;
-- (void)Unload;
+- (void)initObject;
+- (void)update;
+- (void)unload;
 
-- (BOOL)IsBehaviour;
+- (BOOL)isBehaviour;
 
 
 @end

@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <simd/simd.h>
 
+@class AEBehaviour;
 
 @interface AEComponent : NSObject
 
@@ -20,5 +21,9 @@
 - (instancetype)init;
 - (void)update;
 - (void)render;
+
+- (void)attachBehaviour:(AEBehaviour*)beh;
+- (void)detachBehaviour:(AEBehaviour*)beh;
+- (void)detachAllBehaviour;
 
 @end

@@ -7,6 +7,31 @@
 
 import UIKit
 
+class testBeh: AEBehaviour {
+    
+    override init() {
+        super.init()
+    }
+    
+    override func update() {
+        print("test scene Beh update")
+    }
+    
+}
+
+class testCompBeh: AEBehaviour {
+    
+    override init() {
+        super.init()
+    }
+    
+    override func update() {
+        //getComponent()
+        print("test comp Beh update")
+    }
+    
+}
+
 class DemoScene: AEScene {
     override init() {
         super.init()
@@ -18,5 +43,7 @@ class DemoScene: AEScene {
         
         self.addObject(box!)
         
+        box?.attach(testCompBeh())
+        self.attach(testBeh())
     }
 }

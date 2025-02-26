@@ -37,6 +37,7 @@
 		9FC850DD2D6B2091000DBBA3 /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C22D6B2091000DBBA3 /* Basic.metal */; };
 		9FC850DE2D6B2091000DBBA3 /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C62D6B2091000DBBA3 /* AEView.m */; };
 		9FC850DF2D6B2091000DBBA3 /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C92D6B2091000DBBA3 /* AEMaterial.m */; };
+		9FC850E32D6EB4C0000DBBA3 /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,8 @@
 		9FC850C62D6B2091000DBBA3 /* AEView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEView.m; sourceTree = "<group>"; };
 		9FC850C82D6B2091000DBBA3 /* AEMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMaterial.h; sourceTree = "<group>"; };
 		9FC850C92D6B2091000DBBA3 /* AEMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMaterial.m; sourceTree = "<group>"; };
+		9FC850E12D6EB4C0000DBBA3 /* AEBehaviour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEBehaviour.h; sourceTree = "<group>"; };
+		9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEBehaviour.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 			children = (
 				9FC850C32D6B2091000DBBA3 /* AEEngine.h */,
 				9FC850962D6B2091000DBBA3 /* AEEngine.m */,
+				9FC850E02D6EB431000DBBA3 /* Script */,
 				9FC850972D6B2091000DBBA3 /* DataTypes */,
 				9FC850A02D6B2091000DBBA3 /* Render */,
 				9FC850A92D6B2091000DBBA3 /* World */,
@@ -165,13 +169,13 @@
 		9FC850972D6B2091000DBBA3 /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
+				9FC8509D2D6B2091000DBBA3 /* AESkybox.h */,
 				9FC850982D6B2091000DBBA3 /* AESkybox.m */,
+				9FC8509C2D6B2091000DBBA3 /* AEShader.h */,
 				9FC850992D6B2091000DBBA3 /* AEShader.m */,
 				9FC8509A2D6B2091000DBBA3 /* AEElement.h */,
-				9FC8509B2D6B2091000DBBA3 /* AETexture.h */,
-				9FC8509C2D6B2091000DBBA3 /* AEShader.h */,
-				9FC8509D2D6B2091000DBBA3 /* AESkybox.h */,
 				9FC8509E2D6B2091000DBBA3 /* AEElement.m */,
+				9FC8509B2D6B2091000DBBA3 /* AETexture.h */,
 				9FC8509F2D6B2091000DBBA3 /* AETexture.m */,
 			);
 			path = DataTypes;
@@ -224,16 +228,16 @@
 		9FC850B42D6B2091000DBBA3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9FC850BA2D6B2091000DBBA3 /* AEComponent.h */,
+				9FC850BE2D6B2091000DBBA3 /* AEComponent.m */,
 				9FC850BB2D6B2091000DBBA3 /* AEBasicGeometry.h */,
 				9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */,
 				9FC850B62D6B2091000DBBA3 /* AEScene.m */,
 				9FC850B72D6B2091000DBBA3 /* AEMesh.h */,
 				9FC850B82D6B2091000DBBA3 /* AEModel.m */,
 				9FC850B92D6B2091000DBBA3 /* AECamera.m */,
-				9FC850BA2D6B2091000DBBA3 /* AEComponent.h */,
 				9FC850BC2D6B2091000DBBA3 /* AEMesh.m */,
 				9FC850BD2D6B2091000DBBA3 /* AEScene.h */,
-				9FC850BE2D6B2091000DBBA3 /* AEComponent.m */,
 				9FC850BF2D6B2091000DBBA3 /* AECamera.h */,
 				9FC850C02D6B2091000DBBA3 /* AEModel.h */,
 			);
@@ -264,6 +268,15 @@
 				9FC850C92D6B2091000DBBA3 /* AEMaterial.m */,
 			);
 			path = Material;
+			sourceTree = "<group>";
+		};
+		9FC850E02D6EB431000DBBA3 /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				9FC850E12D6EB4C0000DBBA3 /* AEBehaviour.h */,
+				9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */,
+			);
+			path = Script;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +354,7 @@
 				9FC850CD2D6B2091000DBBA3 /* AEElement.m in Sources */,
 				9FC850D62D6B2091000DBBA3 /* AEDebugTools.m in Sources */,
 				9FC850DE2D6B2091000DBBA3 /* AEView.m in Sources */,
+				9FC850E32D6EB4C0000DBBA3 /* AEBehaviour.m in Sources */,
 				9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */,
 				9FC850CB2D6B2091000DBBA3 /* AESkybox.m in Sources */,
 				9FC850D42D6B2091000DBBA3 /* AEMath.m in Sources */,
