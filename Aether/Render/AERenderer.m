@@ -139,14 +139,7 @@ struct Uniforms {
             _uniform.projectionMatrix = [scene getCamera].projectionMatrix;
             _uniform.viewMatrix = [scene getCamera].viewMatrix;
         }
-        // model
-        matrix_float4x4 trans = Translation(0, 0, 0);
-        matrix_float4x4 rotation = Rotation_float4x4(simd_make_float3(0,0,0));
-        matrix_float4x4 scale = scaling(0.1, 0.05, 0.1);
-        matrix_float4x4 modelMatrix = matrix_multiply(trans, matrix_multiply(rotation, scale));
-        _uniform.modelMatrix = modelMatrix;
         
-        [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
         // Set the pipeline state.
         AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"BasicPipeline"];
         [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
@@ -154,6 +147,17 @@ struct Uniforms {
         for (AEComponent *comp in scene.objects) {
             if ([comp isKindOfClass:[AEGeometry class]]) {
                 AEGeometry* geometry = (AEGeometry*)comp;
+                
+                
+                // model
+                matrix_float4x4 trans = Translation_float4x4(geometry.position);
+                matrix_float4x4 rotation = Rotation_float4x4(simd_make_float3(0,0,0));
+                matrix_float4x4 scale = scaling(0.1, 0.05, 0.1);
+                matrix_float4x4 modelMatrix = matrix_multiply(trans, matrix_multiply(rotation, scale));
+                _uniform.modelMatrix = modelMatrix;
+                
+                [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
+                
                 [geometry render:renderEncoder];
             }
         }

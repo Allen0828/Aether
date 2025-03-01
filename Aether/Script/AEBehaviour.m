@@ -9,4 +9,12 @@
 
 @implementation AEBehaviour
 
+- (instancetype)init {
+    if (self=[super init]) {
+        self.isBehaviour = true;
+        
+    }
+    return self;
+}
+
 @end

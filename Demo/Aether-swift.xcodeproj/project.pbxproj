@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FADCA242D72D44700AF2F96 /* panorama_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA232D72D44700AF2F96 /* panorama_1.png */; };
+		9FADCA262D72D7FD00AF2F96 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA252D72D7FD00AF2F96 /* texture.png */; };
+		9FADCA2A2D72FEAC00AF2F96 /* cube-sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA292D72FEAC00AF2F96 /* cube-sky.png */; };
 		9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */; };
 		9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */; };
 		9FC84FD12D61C9EE000DBBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9FADCA232D72D44700AF2F96 /* panorama_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panorama_1.png; sourceTree = "<group>"; };
+		9FADCA252D72D7FD00AF2F96 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
+		9FADCA292D72FEAC00AF2F96 /* cube-sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cube-sky.png"; sourceTree = "<group>"; };
 		9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aether-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FADCA222D72D43200AF2F96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FADCA292D72FEAC00AF2F96 /* cube-sky.png */,
+				9FADCA252D72D7FD00AF2F96 /* texture.png */,
+				9FADCA232D72D44700AF2F96 /* panorama_1.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9FC84FBD2D61C9EE000DBBA3 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,7 @@
 		9FC84FC82D61C9EE000DBBA3 /* Aether-swift */ = {
 			isa = PBXGroup;
 			children = (
+				9FADCA222D72D43200AF2F96 /* Resources */,
 				9FC850952D6B2091000DBBA3 /* Aether */,
 				9FC8502F2D646FF1000DBBA3 /* DemoScene.swift */,
 				9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */,
@@ -338,6 +355,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FADCA262D72D7FD00AF2F96 /* texture.png in Resources */,
+				9FADCA242D72D44700AF2F96 /* panorama_1.png in Resources */,
+				9FADCA2A2D72FEAC00AF2F96 /* cube-sky.png in Resources */,
 				9FC84FD62D61C9EF000DBBA3 /* LaunchScreen.storyboard in Resources */,
 				9FC84FD32D61C9EF000DBBA3 /* Assets.xcassets in Resources */,
 				9FC84FD12D61C9EE000DBBA3 /* Main.storyboard in Resources */,

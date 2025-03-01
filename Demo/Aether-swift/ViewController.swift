@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
         
+        let test = Bundle.main.path(forResource: "texture.png", ofType: nil);
+        print(test)
+        
         
         mLayer.frame = self.view.layer.frame;
         mLayer.backgroundColor = UIColor.green.cgColor;

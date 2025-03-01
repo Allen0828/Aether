@@ -56,6 +56,7 @@
 }
 
 - (void)attachBehaviour:(AEBehaviour*)beh {
+    beh.component = self;
     [self.elements addObject:beh];
 }
 - (void)detachBehaviour:(AEBehaviour*)beh {

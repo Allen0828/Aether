@@ -12,6 +12,8 @@
 
 @interface AEElement : NSObject
 
+@property (nonatomic,assign) BOOL isBehaviour;
+@property (nonatomic,weak) AEComponent *component;
 
 - (AEComponent*)getComponent;
 
@@ -19,7 +21,7 @@
 - (void)update;
 - (void)unload;
 
-- (BOOL)isBehaviour;
+
 
 
 @end

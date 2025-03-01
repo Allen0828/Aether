@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Metal/Metal.h>
 
 typedef enum : NSUInteger {
     Disabled,
@@ -62,14 +63,20 @@ typedef enum : NSUInteger {
 @property (nonatomic,assign) NSInteger ActiveDynamicPropertiesLine;
 @property (nonatomic,assign) BOOL CacheGraphBasedShader;
 
-
 - (BOOL)IsForceTransparent;
 - (void)SetAdditiveBlending:(BOOL)bAdditive;
 - (CGFloat)GetOpacity;
 - (BOOL)GetUseLinearColor;
 - (BOOL)HasDynamicProperties;
 
+- (void)SetTexture:(NSString*)filePath;
+- (id<MTLTexture>)getTexture;
+
 - (NSArray*)GetTextureList;
 
 @end
 
+
+@interface AEUnlitMaterial : AEMaterial
+
+@end

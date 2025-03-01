@@ -15,11 +15,16 @@ class testBeh: AEBehaviour {
     
     override func update() {
         print("test scene Beh update")
+        
+        let name = getComponent().componentName
+        print("test comp Beh update: ", name)
     }
     
 }
 
 class testCompBeh: AEBehaviour {
+    
+    private var posZ: Float = 0.0
     
     override init() {
         super.init()
@@ -27,7 +32,10 @@ class testCompBeh: AEBehaviour {
     
     override func update() {
         //getComponent()
-        print("test comp Beh update")
+        posZ += 0.001
+        let comp = getComponent()
+        comp?.position = simd_float3(0, 0, 0+posZ)
+        
     }
     
 }
@@ -40,6 +48,14 @@ class DemoScene: AEScene {
         
         let box = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
         box?.position = simd_float3(1.0, 1.0, 0);
+        
+        let mat = AEUnlitMaterial()
+        
+        
+        let path = Bundle.main.path(forResource: "cube-sky", ofType: "png")
+        mat.setTexture(path ?? "")
+        
+        box?.setMaterial(mat)
         
         self.addObject(box!)
         

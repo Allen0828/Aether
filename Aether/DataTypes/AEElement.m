@@ -7,19 +7,22 @@
 
 #import "AEElement.h"
 
+@interface AEElement ()
+
+
+
+@end
+
 @implementation AEElement
 
 - (AEComponent *)getComponent {
-    return NULL;
+    return _component;
 }
 
 - (void)initObject {
     
 }
 
-- (BOOL)isBehaviour {
-    return false;
-}
 
 - (void)unload {
 }
