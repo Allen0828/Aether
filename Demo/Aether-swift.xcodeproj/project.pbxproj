@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F8F47C92D74409C00A03C9E /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */; };
+		9F8F47CB2D74421000A03C9E /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */; };
+		9F8F47CD2D7443FF00A03C9E /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */; };
+		9F8F47CF2D74467400A03C9E /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CE2D74467400A03C9E /* tonemapping.metal */; };
 		9FADCA242D72D44700AF2F96 /* panorama_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA232D72D44700AF2F96 /* panorama_1.png */; };
 		9FADCA262D72D7FD00AF2F96 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA252D72D7FD00AF2F96 /* texture.png */; };
 		9FADCA2A2D72FEAC00AF2F96 /* cube-sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA292D72FEAC00AF2F96 /* cube-sky.png */; };
@@ -44,6 +48,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vs_unlit_textured.metal; sourceTree = "<group>"; };
+		9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = fs_unlit_textured.metal; sourceTree = "<group>"; };
+		9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = viewSettings.metal; sourceTree = "<group>"; };
+		9F8F47CE2D74467400A03C9E /* tonemapping.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = tonemapping.metal; sourceTree = "<group>"; };
 		9FADCA232D72D44700AF2F96 /* panorama_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panorama_1.png; sourceTree = "<group>"; };
 		9FADCA252D72D7FD00AF2F96 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
 		9FADCA292D72FEAC00AF2F96 /* cube-sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cube-sky.png"; sourceTree = "<group>"; };
@@ -264,7 +272,11 @@
 		9FC850C12D6B2091000DBBA3 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */,
 				9FC850C22D6B2091000DBBA3 /* Basic.metal */,
+				9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */,
+				9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */,
+				9F8F47CE2D74467400A03C9E /* tonemapping.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -376,12 +388,14 @@
 				9FC850DE2D6B2091000DBBA3 /* AEView.m in Sources */,
 				9FC850E32D6EB4C0000DBBA3 /* AEBehaviour.m in Sources */,
 				9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */,
+				9F8F47C92D74409C00A03C9E /* vs_unlit_textured.metal in Sources */,
 				9FC850CB2D6B2091000DBBA3 /* AESkybox.m in Sources */,
 				9FC850D42D6B2091000DBBA3 /* AEMath.m in Sources */,
 				9FC850CC2D6B2091000DBBA3 /* AEShader.m in Sources */,
 				9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */,
 				9FC850DB2D6B2091000DBBA3 /* AEMesh.m in Sources */,
 				9FC850302D646FF1000DBBA3 /* DemoScene.swift in Sources */,
+				9F8F47CB2D74421000A03C9E /* fs_unlit_textured.metal in Sources */,
 				9FC850DC2D6B2091000DBBA3 /* AEComponent.m in Sources */,
 				9FC850D22D6B2091000DBBA3 /* AERenderer.m in Sources */,
 				9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */,
@@ -389,7 +403,9 @@
 				9FC8502A2D646FB9000DBBA3 /* DemoScene.swift in Sources */,
 				9FC850D12D6B2091000DBBA3 /* AEResourcePool.m in Sources */,
 				9FC850CA2D6B2091000DBBA3 /* AEEngine.m in Sources */,
+				9F8F47CF2D74467400A03C9E /* tonemapping.metal in Sources */,
 				9FC850CE2D6B2091000DBBA3 /* AETexture.m in Sources */,
+				9F8F47CD2D7443FF00A03C9E /* viewSettings.metal in Sources */,
 				9FC850DD2D6B2091000DBBA3 /* Basic.metal in Sources */,
 				9FC850DF2D6B2091000DBBA3 /* AEMaterial.m in Sources */,
 				9FC850CF2D6B2091000DBBA3 /* AEPipelineState.m in Sources */,
