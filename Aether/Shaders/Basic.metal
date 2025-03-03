@@ -16,6 +16,7 @@ struct VertexIn {
 };
 struct VertexOut {
     float4 position [[position]];
+    float2 uv;
 };
 struct Uniforms {
     float4x4 modelMatrix;

@@ -22,6 +22,7 @@ struct _Global
 
 struct _fragment_in
 {
+    float2 uv;
 #if defined(DIFFUSE_MAP)
     float2 v_texcoord0  [[user(tc0)]];
 #endif
@@ -39,30 +40,31 @@ struct _fragment_out
 };
 
 
-//#include "view_settings.metal"
+#include "viewSettings.metal"
 //#include "tonemapping.metal"
-//
-//
+
+
 //// Transforms 2D UV by scale/bias property
 //#define TRANSFORM_TEX(tex, name) (tex.xy * name.xy + name.zw)
 //
-//fragment _fragment_out xlatMtlMain(_fragment_in in [[stage_in]], constant _Global& _mtl_u,
-//                                   constant _ubo_view_settings& ubo_viewSettings
-//#ifdef DIFFUSE_MAP
-//                                   ,texture2d<float> s_texColor
-//                                   ,sampler s_texColorSampler
-//#endif
-//#ifdef VIRTUAL_OCCLUSION_TOF
-//                                   ,texture2d<float> s_tofMap
-//                                   ,sampler s_tofMapSampler
-//                                   ,texture2d<float> s_tofMaskMap
-//                                   ,sampler s_tofMaskMapSampler
-//                                   ,texture2d<float> s_cameraTexture
-//                                   ,sampler s_cameraTextureSampler
-//                                   ,float4 fragCoord [[position]]
-//#endif
-//                                   )
-//{
+fragment _fragment_out xlatMtlMain(_fragment_in in [[stage_in]], constant _Global& _mtl_u,
+                                   constant _ubo_view_settings& ubo_viewSettings
+                                   ,texture2d<float> baseColorTexture [[texture(1)]]
+#ifdef DIFFUSE_MAP
+                                   ,texture2d<float> s_texColor
+                                   ,sampler s_texColorSampler
+#endif
+#ifdef VIRTUAL_OCCLUSION_TOF
+                                   ,texture2d<float> s_tofMap
+                                   ,sampler s_tofMapSampler
+                                   ,texture2d<float> s_tofMaskMap
+                                   ,sampler s_tofMaskMapSampler
+                                   ,texture2d<float> s_cameraTexture
+                                   ,sampler s_cameraTextureSampler
+                                   ,float4 fragCoord [[position]]
+#endif
+                                   )
+{
 //#if defined(VIRTUAL_OCCLUSION_TOF)
 //    float2 tsize = float2(s_tofMap.get_width(), s_tofMap.get_height());
 //    float2 screenSpaceUV = GetTofTextureScreenUv(_mtl_u, fragCoord, tsize);
@@ -87,10 +89,19 @@ struct _fragment_out
 //        outColor.rgb = ACESFilm(outColor.rgb, GetExposure(ubo_viewSettings));
 //    }
 //
-//    _fragment_out out = {};
+    _fragment_out out = {};
 //    out.gl_FragColor0 = outColor;
 //#ifdef OIT
 //    out.gl_FragColor1 = float4(1.0);
 //#endif
-//    return out;
-//}
+    if (!is_null_texture(baseColorTexture)) {
+        constexpr sampler textureSampler(filter::linear, mip_filter::linear, max_anisotropy(8), address::repeat);
+        float3 baseColor = baseColorTexture.sample(textureSampler, in.uv*1).rgb;
+        out.gl_FragColor0 = float4(baseColor, 1);
+    }
+    else
+    {
+        out.gl_FragColor0 = float4(1,1,1,1);
+    }
+    return out;
+}

@@ -15,6 +15,7 @@
 #import "AEMath.h"
 
 #import "AEBasicGeometry.h"
+#import "AEMaterial.h"
 
 
 struct Uniforms {
@@ -56,6 +57,7 @@ struct Uniforms {
     id<MTLLibrary> library = [self.device newDefaultLibrary];
     id<MTLFunction> vertexFunction = [library newFunctionWithName:@"main_vertex"];
     id<MTLFunction> fragmentFunction = [library newFunctionWithName:@"main_fragment"];
+    id<MTLFunction> unlit_fs = [library newFunctionWithName:@"xlatMtlMain"];
     
     NSError *error;
     MTKMeshBufferAllocator *allocator = [[MTKMeshBufferAllocator alloc] initWithDevice:self.device];
@@ -82,7 +84,7 @@ struct Uniforms {
 //
     AEPipelineState *pipelineState = [[AEPipelineState alloc] initWithDevice:self.device
                                                                vertexFunction:vertexFunction
-                                                              fragmentFunction:fragmentFunction
+                                                              fragmentFunction:unlit_fs
                                                               vertexDescriptor:MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor)
                                                                  pixelFormat:MTLPixelFormatBGRA8Unorm];
     [self.pipelineStateManager addPipelineState:pipelineState withName:@"BasicPipeline"];
@@ -157,6 +159,9 @@ struct Uniforms {
                 _uniform.modelMatrix = modelMatrix;
                 
                 [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
+                
+                AEMaterial *mat = [geometry getMaterial];
+                [renderEncoder setFragmentTexture:[mat getTexture] atIndex:1];
                 
                 [geometry render:renderEncoder];
             }

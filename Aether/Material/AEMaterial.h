@@ -9,12 +9,12 @@
 #import <Metal/Metal.h>
 
 typedef enum : NSUInteger {
-    Disabled,
-    AlphaBlending,
-    AdditiveBlending,
-    OIT,
-    PremultiplyAlphaBlending,
-    Masked,
+    BlendDisabled,
+    BlendAlphaBlending,
+    BlendAdditiveBlending,
+    BlendOIT,
+    BlendPremultiplyAlphaBlending,
+    BlendMasked,
 } EBlendFunc;
 
 typedef enum : NSUInteger {
