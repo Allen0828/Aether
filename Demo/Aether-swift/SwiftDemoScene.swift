@@ -5,7 +5,7 @@
 //  Created by Allen on 2025/2/18.
 //
 
-import UIKit
+
 
 class testBeh: AEBehaviour {
     
@@ -40,7 +40,7 @@ class testCompBeh: AEBehaviour {
     
 }
 
-class DemoScene: AEScene {
+class SwiftDemoScene: AEScene {
     override init() {
         super.init()
         self.componentName = "demoScene"
@@ -52,7 +52,7 @@ class DemoScene: AEScene {
         let mat = AEUnlitMaterial()
         
         
-        let path = Bundle.main.path(forResource: "cube-sky", ofType: "png")
+        let path = Bundle.main.path(forResource: "panorama_1", ofType: "png")
         mat.setTexture(path ?? "")
         
         box?.setMaterial(mat)

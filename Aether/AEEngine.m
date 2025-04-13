@@ -12,7 +12,7 @@
 #import "View/AEView.h"
 
 #if TARGET_OS_OSX
-#include <QuartzCore/CVDisplayLink.h>
+#import <QuartzCore/QuartzCore.h>
 #endif
 
 #if TARGET_OS_IOS
@@ -31,27 +31,13 @@ static id<MTLDevice> m_device;
 #if TARGET_OS_IOS
 @property (nonatomic,strong) CADisplayLink *displayLink;
 #elif TARGET_OS_OSX
-@property (nonatomic,assign) CVDisplayLinkRef displayLink;
+@property (nonatomic,strong) CADisplayLink *displayLink;
 #endif
 
 - (void)drawFrame;
 
 @end
 
-#if TARGET_OS_OSX
-CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink,
-                             const CVTimeStamp *inNow,
-                             const CVTimeStamp *inOutputTime,
-                             CVOptionFlags flagsIn,
-                             CVOptionFlags *flagsOut,
-                             void *displayLinkContext) {
-    @autoreleasepool {
-        AEEngine *engine = (__bridge AEEngine *)displayLinkContext;
-        [engine drawFrame];
-    }
-    return kCVReturnSuccess;
-}
-#endif
 
 @implementation AEEngine
 
@@ -71,7 +57,7 @@ CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink,
 #if TARGET_OS_IOS
         layer.backgroundColor = [UIColor blueColor].CGColor;
 #elif TARGET_OS_OSX
-        layer.backgroundColor = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1.0); // macOS equivalent
+        //layer.backgroundColor = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1.0); // macOS equivalent
 #endif
         self.fps = 30;
         [self setupMetal];
@@ -110,22 +96,19 @@ CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink,
     self.displayLink.preferredFramesPerSecond = self.fps;
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 #elif TARGET_OS_OSX
-    CVDisplayLinkCreateWithActiveCGDisplays(&_displayLink);
-    CVDisplayLinkSetOutputCallback(_displayLink, &DisplayLinkCallback, (__bridge void *)(self));
-    CVDisplayLinkStart(_displayLink);
+    
+    NSScreen *screen = [NSScreen mainScreen];
+    if (screen) {
+        self.displayLink = [screen displayLinkWithTarget:self selector:@selector(drawFrame)];
+        [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
 #endif
     return true;
 }
 
 - (BOOL)Shutdown {
-#if TARGET_OS_IOS
     [self.displayLink invalidate];
     self.displayLink = nil;
-#elif TARGET_OS_OSX
-    CVDisplayLinkStop(_displayLink);
-    CVDisplayLinkRelease(_displayLink);
-    _displayLink = NULL;
-#endif
     return true;
 }
 

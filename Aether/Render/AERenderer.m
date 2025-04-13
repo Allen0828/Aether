@@ -67,6 +67,8 @@ struct Uniforms {
     pipelineDes.vertexFunction = vertexFunction;
     pipelineDes.fragmentFunction = fragmentFunction;
     pipelineDes.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
+  
+    
     pipelineDes.vertexDescriptor = MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor);
     if (@available(iOS 16.0, *)) {
         pipelineDes.sampleCount = 4;
@@ -103,6 +105,8 @@ struct Uniforms {
     msaa.textureType = MTLTextureType2DMultisample;  // 多重采样
     msaa.sampleCount = 4;
     msaa.usage = MTLTextureUsageRenderTarget;
+    msaa.storageMode = MTLStorageModeMemoryless; //MTLStorageModePrivate;
+
     id<MTLTexture> msaaTex = [self.device newTextureWithDescriptor:msaa];
     self.msaaTexture = msaaTex;
 }
@@ -128,6 +132,9 @@ struct Uniforms {
             renderPassDescriptor.colorAttachments[0].storeAction = MTLStoreActionStore;
         }
         renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
+//        renderPassDescriptor.colorAttachments[0].storeAction = MTLStoreActionDontCare;
+        
+//        renderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
         renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0, 0, 0, 1);
         
 

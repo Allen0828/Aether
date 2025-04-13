@@ -7,6 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0625152D9A758F002FC5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F06250F2D9A758F002FC5D2 /* Main.storyboard */; };
+		9F0625AC2DAB8A0C002FC5D2 /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */; };
+		9F0625AD2DAB8A0C002FC5D2 /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */; };
+		9F0625B42DAB9035002FC5D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */; };
+		9F0625B52DAB903A002FC5D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */; };
+		9F0625B62DAB9074002FC5D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */; };
+		9F0625B72DAB9233002FC5D2 /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850962D6B2091000DBBA3 /* AEEngine.m */; };
+		9F0625B82DAB923E002FC5D2 /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BE2D6B2091000DBBA3 /* AEComponent.m */; };
+		9F0625B92DAB9243002FC5D2 /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */; };
+		9F0625BA2DAB9247002FC5D2 /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B62D6B2091000DBBA3 /* AEScene.m */; };
+		9F0625BB2DAB9253002FC5D2 /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B82D6B2091000DBBA3 /* AEModel.m */; };
+		9F0625BC2DAB925C002FC5D2 /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BC2D6B2091000DBBA3 /* AEMesh.m */; };
+		9F0625BD2DAB9263002FC5D2 /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B92D6B2091000DBBA3 /* AECamera.m */; };
+		9F0625BE2DAB926E002FC5D2 /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */; };
+		9F0625BF2DAB9272002FC5D2 /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C22D6B2091000DBBA3 /* Basic.metal */; };
+		9F0625C02DAB9276002FC5D2 /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */; };
+		9F0625C12DAB927B002FC5D2 /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */; };
+		9F0625C22DAB9280002FC5D2 /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CE2D74467400A03C9E /* tonemapping.metal */; };
+		9F0625C32DAB9286002FC5D2 /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C62D6B2091000DBBA3 /* AEView.m */; };
+		9F0625C42DAB928C002FC5D2 /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C92D6B2091000DBBA3 /* AEMaterial.m */; };
+		9F0625C52DAB929B002FC5D2 /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */; };
+		9F0625C62DAB929F002FC5D2 /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */; };
+		9F0625C72DAB92A6002FC5D2 /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AD2D6B2091000DBBA3 /* AEMath.m */; };
+		9F0625C82DAB92AC002FC5D2 /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */; };
+		9F0625C92DAB92B2002FC5D2 /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */; };
+		9F0625CA2DAB92B7002FC5D2 /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */; };
+		9F0625CB2DAB92BC002FC5D2 /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */; };
+		9F0625CC2DAB92C1002FC5D2 /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A82D6B2091000DBBA3 /* AERenderer.m */; };
+		9F0625CD2DAB92C7002FC5D2 /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850982D6B2091000DBBA3 /* AESkybox.m */; };
+		9F0625CE2DAB92D3002FC5D2 /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850992D6B2091000DBBA3 /* AEShader.m */; };
+		9F0625CF2DAB92D9002FC5D2 /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509E2D6B2091000DBBA3 /* AEElement.m */; };
+		9F0625D02DAB92DD002FC5D2 /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509F2D6B2091000DBBA3 /* AETexture.m */; };
+		9F0625D12DAB92E2002FC5D2 /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */; };
+		9F0625D22DAB9843002FC5D2 /* SwiftDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */; };
+		9F0625D32DABAE24002FC5D2 /* cube-sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA292D72FEAC00AF2F96 /* cube-sky.png */; };
+		9F0625D42DABAE29002FC5D2 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA252D72D7FD00AF2F96 /* texture.png */; };
+		9F0625D52DABAE2E002FC5D2 /* panorama_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FADCA232D72D44700AF2F96 /* panorama_1.png */; };
 		9F8F47C92D74409C00A03C9E /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */; };
 		9F8F47CB2D74421000A03C9E /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */; };
 		9F8F47CD2D7443FF00A03C9E /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */; };
@@ -20,8 +57,7 @@
 		9FC84FD32D61C9EF000DBBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */; };
 		9FC84FD62D61C9EF000DBBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */; };
 		9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FDF2D61CA54000DBBA3 /* TestLog.m */; };
-		9FC8502A2D646FB9000DBBA3 /* DemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* DemoScene.swift */; };
-		9FC850302D646FF1000DBBA3 /* DemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8502F2D646FF1000DBBA3 /* DemoScene.swift */; };
+		9FC8502A2D646FB9000DBBA3 /* SwiftDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */; };
 		9FC850CA2D6B2091000DBBA3 /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850962D6B2091000DBBA3 /* AEEngine.m */; };
 		9FC850CB2D6B2091000DBBA3 /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850982D6B2091000DBBA3 /* AESkybox.m */; };
 		9FC850CC2D6B2091000DBBA3 /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850992D6B2091000DBBA3 /* AEShader.m */; };
@@ -48,6 +84,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F0624FD2D9A4500002FC5D2 /* Aether-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aether-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F06250C2D9A758F002FC5D2 /* Aether_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aether_Mac.entitlements; sourceTree = "<group>"; };
+		9F0625112D9A758F002FC5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F0625AA2DAB8A0C002FC5D2 /* DemoScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoScene.h; sourceTree = "<group>"; };
+		9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoScene.m; sourceTree = "<group>"; };
 		9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vs_unlit_textured.metal; sourceTree = "<group>"; };
 		9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = fs_unlit_textured.metal; sourceTree = "<group>"; };
 		9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = viewSettings.metal; sourceTree = "<group>"; };
@@ -65,8 +106,7 @@
 		9FC84FDD2D61CA54000DBBA3 /* Aether-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aether-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9FC84FDE2D61CA54000DBBA3 /* TestLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLog.h; sourceTree = "<group>"; };
 		9FC84FDF2D61CA54000DBBA3 /* TestLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLog.m; sourceTree = "<group>"; };
-		9FC850292D646FB9000DBBA3 /* DemoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoScene.swift; sourceTree = "<group>"; };
-		9FC8502F2D646FF1000DBBA3 /* DemoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScene.swift; sourceTree = "<group>"; };
+		9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoScene.swift; sourceTree = "<group>"; };
 		9FC850962D6B2091000DBBA3 /* AEEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEEngine.m; sourceTree = "<group>"; };
 		9FC850982D6B2091000DBBA3 /* AESkybox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESkybox.m; sourceTree = "<group>"; };
 		9FC850992D6B2091000DBBA3 /* AEShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEShader.m; sourceTree = "<group>"; };
@@ -115,6 +155,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F0624FA2D9A4500002FC5D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FC84FC32D61C9EE000DBBA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,6 +172,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F06259E2DAB7655002FC5D2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */,
+				9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		9F06259F2DAB7664002FC5D2 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				9F06250C2D9A758F002FC5D2 /* Aether_Mac.entitlements */,
+				9F06250F2D9A758F002FC5D2 /* Main.storyboard */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		9F0625A62DAB89A2002FC5D2 /* DemoScene */ = {
+			isa = PBXGroup;
+			children = (
+				9F0625AA2DAB8A0C002FC5D2 /* DemoScene.h */,
+				9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */,
+			);
+			path = DemoScene;
+			sourceTree = "<group>";
+		};
 		9FADCA222D72D43200AF2F96 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */,
+				9F0624FD2D9A4500002FC5D2 /* Aether-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,19 +229,18 @@
 		9FC84FC82D61C9EE000DBBA3 /* Aether-swift */ = {
 			isa = PBXGroup;
 			children = (
+				9F06259F2DAB7664002FC5D2 /* Mac */,
+				9F06259E2DAB7655002FC5D2 /* iOS */,
 				9FADCA222D72D43200AF2F96 /* Resources */,
 				9FC850952D6B2091000DBBA3 /* Aether */,
-				9FC8502F2D646FF1000DBBA3 /* DemoScene.swift */,
 				9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */,
 				9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */,
-				9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */,
 				9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */,
-				9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */,
 				9FC84FD72D61C9EF000DBBA3 /* Info.plist */,
 				9FC84FDE2D61CA54000DBBA3 /* TestLog.h */,
 				9FC84FDF2D61CA54000DBBA3 /* TestLog.m */,
 				9FC84FDD2D61CA54000DBBA3 /* Aether-swift-Bridging-Header.h */,
-				9FC850292D646FB9000DBBA3 /* DemoScene.swift */,
+				9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */,
 			);
 			path = "Aether-swift";
 			sourceTree = "<group>";
@@ -174,6 +248,7 @@
 		9FC850952D6B2091000DBBA3 /* Aether */ = {
 			isa = PBXGroup;
 			children = (
+				9F0625A62DAB89A2002FC5D2 /* DemoScene */,
 				9FC850C32D6B2091000DBBA3 /* AEEngine.h */,
 				9FC850962D6B2091000DBBA3 /* AEEngine.m */,
 				9FC850E02D6EB431000DBBA3 /* Script */,
@@ -209,13 +284,13 @@
 		9FC850A02D6B2091000DBBA3 /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				9FC850A62D6B2091000DBBA3 /* AEPipelineState.h */,
 				9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */,
 				9FC850A22D6B2091000DBBA3 /* AEPipelineStateManager.h */,
-				9FC850A32D6B2091000DBBA3 /* AEResourcePool.h */,
-				9FC850A42D6B2091000DBBA3 /* AERenderer.h */,
 				9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */,
-				9FC850A62D6B2091000DBBA3 /* AEPipelineState.h */,
+				9FC850A32D6B2091000DBBA3 /* AEResourcePool.h */,
 				9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */,
+				9FC850A42D6B2091000DBBA3 /* AERenderer.h */,
 				9FC850A82D6B2091000DBBA3 /* AERenderer.m */,
 			);
 			path = Render;
@@ -233,8 +308,8 @@
 		9FC850AC2D6B2091000DBBA3 /* Math */ = {
 			isa = PBXGroup;
 			children = (
-				9FC850AD2D6B2091000DBBA3 /* AEMath.m */,
 				9FC850AE2D6B2091000DBBA3 /* AEMath.h */,
+				9FC850AD2D6B2091000DBBA3 /* AEMath.m */,
 			);
 			path = Math;
 			sourceTree = "<group>";
@@ -242,10 +317,10 @@
 		9FC850AF2D6B2091000DBBA3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */,
-				9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */,
 				9FC850B22D6B2091000DBBA3 /* AEPerformanceMonitor.h */,
+				9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */,
 				9FC850B32D6B2091000DBBA3 /* AEDebugTools.h */,
+				9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -257,14 +332,14 @@
 				9FC850BE2D6B2091000DBBA3 /* AEComponent.m */,
 				9FC850BB2D6B2091000DBBA3 /* AEBasicGeometry.h */,
 				9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */,
+				9FC850BD2D6B2091000DBBA3 /* AEScene.h */,
 				9FC850B62D6B2091000DBBA3 /* AEScene.m */,
 				9FC850B72D6B2091000DBBA3 /* AEMesh.h */,
-				9FC850B82D6B2091000DBBA3 /* AEModel.m */,
-				9FC850B92D6B2091000DBBA3 /* AECamera.m */,
 				9FC850BC2D6B2091000DBBA3 /* AEMesh.m */,
-				9FC850BD2D6B2091000DBBA3 /* AEScene.h */,
-				9FC850BF2D6B2091000DBBA3 /* AECamera.h */,
 				9FC850C02D6B2091000DBBA3 /* AEModel.h */,
+				9FC850B82D6B2091000DBBA3 /* AEModel.m */,
+				9FC850BF2D6B2091000DBBA3 /* AECamera.h */,
+				9FC850B92D6B2091000DBBA3 /* AECamera.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -311,6 +386,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9F0624FC2D9A4500002FC5D2 /* Aether-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F06250B2D9A4502002FC5D2 /* Build configuration list for PBXNativeTarget "Aether-Mac" */;
+			buildPhases = (
+				9F0624F92D9A4500002FC5D2 /* Sources */,
+				9F0624FA2D9A4500002FC5D2 /* Frameworks */,
+				9F0624FB2D9A4500002FC5D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aether-Mac";
+			packageProductDependencies = (
+			);
+			productName = "Aether-Mac";
+			productReference = 9F0624FD2D9A4500002FC5D2 /* Aether-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		9FC84FC52D61C9EE000DBBA3 /* Aether-swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FC84FDA2D61C9EF000DBBA3 /* Build configuration list for PBXNativeTarget "Aether-swift" */;
@@ -335,9 +429,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					9F0624FC2D9A4500002FC5D2 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
 					9FC84FC52D61C9EE000DBBA3 = {
 						CreatedOnToolsVersion = 15.1;
 						LastSwiftMigration = 1510;
@@ -358,11 +456,24 @@
 			projectRoot = "";
 			targets = (
 				9FC84FC52D61C9EE000DBBA3 /* Aether-swift */,
+				9F0624FC2D9A4500002FC5D2 /* Aether-Mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F0624FB2D9A4500002FC5D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0625B62DAB9074002FC5D2 /* Assets.xcassets in Resources */,
+				9F0625152D9A758F002FC5D2 /* Main.storyboard in Resources */,
+				9F0625D32DABAE24002FC5D2 /* cube-sky.png in Resources */,
+				9F0625D52DABAE2E002FC5D2 /* panorama_1.png in Resources */,
+				9F0625D42DABAE29002FC5D2 /* texture.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FC84FC42D61C9EE000DBBA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +490,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F0624F92D9A4500002FC5D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0625C02DAB9276002FC5D2 /* vs_unlit_textured.metal in Sources */,
+				9F0625B82DAB923E002FC5D2 /* AEComponent.m in Sources */,
+				9F0625CE2DAB92D3002FC5D2 /* AEShader.m in Sources */,
+				9F0625C12DAB927B002FC5D2 /* fs_unlit_textured.metal in Sources */,
+				9F0625BC2DAB925C002FC5D2 /* AEMesh.m in Sources */,
+				9F0625CA2DAB92B7002FC5D2 /* AEPipelineStateManager.m in Sources */,
+				9F0625C32DAB9286002FC5D2 /* AEView.m in Sources */,
+				9F0625BF2DAB9272002FC5D2 /* Basic.metal in Sources */,
+				9F0625B52DAB903A002FC5D2 /* ViewController.swift in Sources */,
+				9F0625BA2DAB9247002FC5D2 /* AEScene.m in Sources */,
+				9F0625BB2DAB9253002FC5D2 /* AEModel.m in Sources */,
+				9F0625B72DAB9233002FC5D2 /* AEEngine.m in Sources */,
+				9F0625B42DAB9035002FC5D2 /* AppDelegate.swift in Sources */,
+				9F0625C22DAB9280002FC5D2 /* tonemapping.metal in Sources */,
+				9F0625CD2DAB92C7002FC5D2 /* AESkybox.m in Sources */,
+				9F0625BE2DAB926E002FC5D2 /* viewSettings.metal in Sources */,
+				9F0625D02DAB92DD002FC5D2 /* AETexture.m in Sources */,
+				9F0625B92DAB9243002FC5D2 /* AEBasicGeometry.m in Sources */,
+				9F0625D22DAB9843002FC5D2 /* SwiftDemoScene.swift in Sources */,
+				9F0625BD2DAB9263002FC5D2 /* AECamera.m in Sources */,
+				9F0625AD2DAB8A0C002FC5D2 /* DemoScene.m in Sources */,
+				9F0625C82DAB92AC002FC5D2 /* AEWorldContext.m in Sources */,
+				9F0625C62DAB929F002FC5D2 /* AEDebugTools.m in Sources */,
+				9F0625CB2DAB92BC002FC5D2 /* AEResourcePool.m in Sources */,
+				9F0625CF2DAB92D9002FC5D2 /* AEElement.m in Sources */,
+				9F0625CC2DAB92C1002FC5D2 /* AERenderer.m in Sources */,
+				9F0625C42DAB928C002FC5D2 /* AEMaterial.m in Sources */,
+				9F0625C52DAB929B002FC5D2 /* AEPerformanceMonitor.m in Sources */,
+				9F0625D12DAB92E2002FC5D2 /* AEBehaviour.m in Sources */,
+				9F0625C72DAB92A6002FC5D2 /* AEMath.m in Sources */,
+				9F0625C92DAB92B2002FC5D2 /* AEPipelineState.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FC84FC22D61C9EE000DBBA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,13 +543,12 @@
 				9FC850CC2D6B2091000DBBA3 /* AEShader.m in Sources */,
 				9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */,
 				9FC850DB2D6B2091000DBBA3 /* AEMesh.m in Sources */,
-				9FC850302D646FF1000DBBA3 /* DemoScene.swift in Sources */,
 				9F8F47CB2D74421000A03C9E /* fs_unlit_textured.metal in Sources */,
 				9FC850DC2D6B2091000DBBA3 /* AEComponent.m in Sources */,
 				9FC850D22D6B2091000DBBA3 /* AERenderer.m in Sources */,
 				9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */,
 				9FC850D72D6B2091000DBBA3 /* AEBasicGeometry.m in Sources */,
-				9FC8502A2D646FB9000DBBA3 /* DemoScene.swift in Sources */,
+				9FC8502A2D646FB9000DBBA3 /* SwiftDemoScene.swift in Sources */,
 				9FC850D12D6B2091000DBBA3 /* AEResourcePool.m in Sources */,
 				9FC850CA2D6B2091000DBBA3 /* AEEngine.m in Sources */,
 				9F8F47CF2D74467400A03C9E /* tonemapping.metal in Sources */,
@@ -409,6 +557,7 @@
 				9FC850DD2D6B2091000DBBA3 /* Basic.metal in Sources */,
 				9FC850DF2D6B2091000DBBA3 /* AEMaterial.m in Sources */,
 				9FC850CF2D6B2091000DBBA3 /* AEPipelineState.m in Sources */,
+				9F0625AC2DAB8A0C002FC5D2 /* DemoScene.m in Sources */,
 				9FC850D82D6B2091000DBBA3 /* AEScene.m in Sources */,
 				9FC850D32D6B2091000DBBA3 /* AEWorldContext.m in Sources */,
 				9FC850D52D6B2091000DBBA3 /* AEPerformanceMonitor.m in Sources */,
@@ -421,6 +570,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9F06250F2D9A758F002FC5D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F0625112D9A758F002FC5D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,6 +597,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9F0625092D9A4502002FC5D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Aether-swift/Mac/Aether_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9F06250A2D9A4502002FC5D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Aether-swift/Mac/Aether_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		9FC84FD82D61C9EF000DBBA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -623,6 +839,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9F06250B2D9A4502002FC5D2 /* Build configuration list for PBXNativeTarget "Aether-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F0625092D9A4502002FC5D2 /* Debug */,
+				9F06250A2D9A4502002FC5D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9FC84FC12D61C9EE000DBBA3 /* Build configuration list for PBXProject "Aether-swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -51,6 +51,7 @@ struct _vertex_out
 #endif
     float4 gl_Position  [[position]];
     float gl_PointSize [[point_size]];
+    
 };
 
 

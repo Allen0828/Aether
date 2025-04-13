@@ -7,6 +7,7 @@
 
 #import "AEView.h"
 #import "AERenderer.h"
+#import "AEEngine.h"
 
 @interface AEView ()
 
@@ -22,6 +23,10 @@
         NSLog(@"View Init %lu", layer.pixelFormat);  // MTLPixelFormatBGRA8Unorm
         _layer = layer;
         _layer.framebufferOnly = NO;  // 默认使用2重采样
+        if (_layer.device == NULL) {
+            // mac
+            _layer.device = AEEngine.device;
+        }
     }
     return self;
 }

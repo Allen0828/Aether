@@ -28,6 +28,7 @@ vertex VertexOut main_vertex(const VertexIn vertex_in [[stage_in]], constant Uni
     VertexOut out;
     
     out.position = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * vertex_in.position;
+    out.uv = vertex_in.uv;
 //    out.position = vertex_in.position;
     return out;
 }
