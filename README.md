@@ -45,14 +45,14 @@ end
 ```swift
 
 let mLayer = CAMetalLayer()
-mLayer.frame = sekf.view.layer.frame
+mLayer.frame = self.view.layer.frame
 self.view.layer.addSublayer(mLayer)
 
 let engine = AEEngine(layer: mLayer)
 engine?.createEngineLoopContext()
 
 let context = engine?.getRuntimeContext()
-context?.load(DemoScene())
+context?.load(DemoScene())    // demo scene 在仓库中内置
 
 ```
 
