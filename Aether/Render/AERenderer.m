@@ -16,6 +16,8 @@
 
 #import "AEBasicGeometry.h"
 #import "AEMaterial.h"
+#import "AELight.h"
+#import <simd/simd.h>
 
 
 struct Uniforms {
@@ -23,6 +25,36 @@ struct Uniforms {
     matrix_float4x4 viewMatrix;
     matrix_float4x4 projectionMatrix;
 };
+
+typedef struct {
+    simd_float3 position;
+    ELigheType lightType;
+    simd_float3 diffuse;
+    simd_float3 specular;
+    CGFloat specularScale;
+} AELightStruct;
+
+
+AELightStruct convertAELightToStruct(AELight *AELightObject) {
+    AELightStruct lightStruct = { 0 };
+    if ([AELightObject respondsToSelector:@selector(lightType)]) {
+        lightStruct.lightType = [AELightObject lightType];
+    }
+    if ([AELightObject respondsToSelector:@selector(diffuse)]) {
+        LightColor lc = [AELightObject diffuse];
+        lightStruct.diffuse = simd_make_float3(lc.r, lc.g, lc.b);
+    }
+    if ([AELightObject respondsToSelector:@selector(specular)]) {
+        LightColor lc = [AELightObject specular];
+        lightStruct.specular = simd_make_float3(lc.r, lc.g, lc.b);
+    }
+    if ([AELightObject respondsToSelector:@selector(specularScale)]) {
+        lightStruct.specularScale = [AELightObject specularScale];
+    }
+    
+    lightStruct.position = [AELightObject position];
+    return lightStruct;
+}
 
 @interface AERenderer ()
 
@@ -84,13 +116,19 @@ struct Uniforms {
 //    id<MTLFunction> fragmentFunction = [library newFunctionWithName:@"main_fragment"];
 //    MTLVertexDescriptor *vertexDescriptor = [self createVertexDescriptor];
 //
-    AEPipelineState *pipelineState = [[AEPipelineState alloc] initWithDevice:self.device
+    AEPipelineState *unlit = [[AEPipelineState alloc] initWithDevice:self.device
                                                                vertexFunction:vertexFunction
                                                               fragmentFunction:unlit_fs
                                                               vertexDescriptor:MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor)
                                                                  pixelFormat:MTLPixelFormatBGRA8Unorm];
-    [self.pipelineStateManager addPipelineState:pipelineState withName:@"BasicPipeline"];
-
+    [self.pipelineStateManager addPipelineState:unlit withName:@"Unlit"];
+    
+    AEPipelineState *standard = [[AEPipelineState alloc] initWithDevice:self.device
+                                                               vertexFunction:vertexFunction
+                                                              fragmentFunction:fragmentFunction
+                                                              vertexDescriptor:MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor)
+                                                                 pixelFormat:MTLPixelFormatBGRA8Unorm];
+    [self.pipelineStateManager addPipelineState:standard withName:@"Standard"];
 }
 
 - (void)setMSAA {
@@ -150,13 +188,29 @@ struct Uniforms {
         }
         
         // Set the pipeline state.
-        AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"BasicPipeline"];
-        [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
-        
         for (AEComponent *comp in scene.objects) {
             if ([comp isKindOfClass:[AEGeometry class]]) {
                 AEGeometry* geometry = (AEGeometry*)comp;
+                AEMaterial *mat = [geometry getMaterial];
                 
+                
+                if ([mat isKindOfClass:[AEUnlitMaterial class]]) {
+                    AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"Unlit"];
+                    [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
+                    
+                } else if ([mat isKindOfClass:[AEStandardMaterial class]]) {
+                    AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"Standard"];
+                    [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
+                    
+                }
+                AEComponent *lightComp = scene.objects[2];
+                if ([lightComp isKindOfClass:[AELight class]]) {
+                    AELightStruct light = convertAELightToStruct((AELight*)lightComp);
+//                    id<MTLBuffer> lightsBuffer = [self.device newBufferWithLength:sizeof(light) options:MTLResourceStorageModeShared];
+//                    [renderEncoder setFragmentBuffer:lightsBuffer offset:0 atIndex:11];
+                    [renderEncoder setFragmentBytes:&light length:sizeof(light) atIndex:11];
+                    
+                }
                 
                 // model
                 matrix_float4x4 trans = Translation_float4x4(geometry.position);
@@ -166,13 +220,13 @@ struct Uniforms {
                 _uniform.modelMatrix = modelMatrix;
                 
                 [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
-                
-                AEMaterial *mat = [geometry getMaterial];
                 [renderEncoder setFragmentTexture:[mat getTexture] atIndex:1];
-                
                 [geometry render:renderEncoder];
             }
+            
         }
+        
+
         
         // Here you would set other render command encoder state and draw calls.
 //        [self.view render];
@@ -184,6 +238,8 @@ struct Uniforms {
         [commandBuffer presentDrawable:drawable];
     }
     [commandBuffer commit];
+    
+    //lightsBuffer = nil;
 }
 
 - (void)renderSkybox:(AESkybox*)skybox Encoder:(id<MTLRenderCommandEncoder>)encoder {

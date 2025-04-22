@@ -68,10 +68,13 @@
 @end
 
 
+@implementation AEStandardMaterial
 
+@end
 
 @implementation AEUnlitMaterial
 
 
 
 @end
+

@@ -76,6 +76,9 @@ typedef enum : NSUInteger {
 
 @end
 
+@interface AEStandardMaterial : AEMaterial
+
+@end
 
 @interface AEUnlitMaterial : AEMaterial
 

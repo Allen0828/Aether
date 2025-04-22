@@ -14,10 +14,10 @@ class testBeh: AEBehaviour {
     }
     
     override func update() {
-        print("test scene Beh update")
+        //print("test scene Beh update")
         
         let name = getComponent().componentName
-        print("test comp Beh update: ", name)
+        //print("test comp Beh update: ", name)
     }
     
 }
@@ -34,7 +34,7 @@ class testCompBeh: AEBehaviour {
         //getComponent()
         posZ += 0.001
         let comp = getComponent()
-        comp?.position = simd_float3(0, 0, 0+posZ)
+        //comp?.position = simd_float3(0, 0, 0+posZ)
         
     }
     
@@ -44,22 +44,48 @@ class SwiftDemoScene: AEScene {
     override init() {
         super.init()
         self.componentName = "demoScene"
-        self.setCamera(AECamera());
+        self.setCamera(AECamera())
         
         let box = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
-        box?.position = simd_float3(1.0, 1.0, 0);
+        box?.position = simd_float3(0.01, 0.05, 0.01);
         
         let mat = AEUnlitMaterial()
+        // Resources/bricks@2x.png
         
-        
-        let path = Bundle.main.path(forResource: "panorama_1", ofType: "png")
+        let path = Bundle.main.path(forResource: "texture.png", ofType: "")
+        print("img path:", path ?? "")
         mat.setTexture(path ?? "")
-        
         box?.setMaterial(mat)
-        
         self.addObject(box!)
+        
+        let box1 = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
+        box1?.position = simd_float3(0.0, -0.04, 0.0);
+        let stand = AEStandardMaterial()
+        stand.setTexture(path ?? "")
+        box1?.setMaterial(stand)
+       
+        self.addObject(box1!)
         
         box?.attach(testCompBeh())
         self.attach(testBeh())
+        
+    
+        
+        let light = AELight()
+        light?.componentName = "light"
+        light?.lightType = DirectionalLight
+        light?.position = simd_make_float3(3, 3, -2)
+        light?.diffuse = LightColor(r: 1, g: 1, b: 1)
+        light?.specular = LightColor(r: 0.6, g: 0.6, b: 0.6)
+        
+        self.addObject(light!)
+        
+//        light.position = simd_make_float3(3, 3, -2);
+//        light.color = simd_make_float3(1, 1, 1);
+//        light.specularColor = simd_make_float3(0.6, 0.6, 0.6);
+//        light.intensity = 1;
+//        light.attenuation = simd_make_float3(1, 0, 0);
+//        light.type = SunLight;
+        
     }
 }

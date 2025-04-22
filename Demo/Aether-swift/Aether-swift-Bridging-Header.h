@@ -6,6 +6,7 @@
 #import "AEEngine.h"
 #import "AEMaterial.h"
 #import "DemoScene.h"
+#import "AELight.h"
 
 #import <TargetConditionals.h>
 

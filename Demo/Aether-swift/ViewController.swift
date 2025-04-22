@@ -18,8 +18,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
         
+        
+        
         let test = Bundle.main.path(forResource: "texture.png", ofType: nil);
         print(test)
+        
         
         
         mLayer.frame = self.view.layer.frame;
@@ -33,6 +36,12 @@ class ViewController: UIViewController {
         let context = engine?.getRuntimeContext()
         
         context?.load(SwiftDemoScene())
+        
+        let path = Bundle.main.path(forResource: "texture.png", ofType: "")
+        
+        let img = UIImageView(image: UIImage(contentsOfFile: path!)!) // UIImage(named: "bricks")!
+        img.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        //self.view.addSubview(img)
     }
 
 
