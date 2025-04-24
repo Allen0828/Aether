@@ -33,6 +33,8 @@
 
 @implementation AEModel
 
+
+
 - (instancetype)initWithURL:(NSURL *)modelURL device:(id<MTLDevice>)device {
     self = [super init];
     if (self) {

@@ -15,11 +15,11 @@
 
 @interface AEScene : AEComponent
 
-@property (nonatomic, strong) NSMutableArray<AEComponent *> *objects;
+//@property (nonatomic, strong) NSMutableArray<AEComponent *> *objects;
 
 
-- (void)addObject:(AEComponent *)object;
-- (void)removeObject:(AEComponent *)object;
+//- (void)addObject:(AEComponent *)object;
+//- (void)removeObject:(AEComponent *)object;
 
 - (void)setCamera:(AECamera*)camera;
 - (AESkybox*)getSkybox;

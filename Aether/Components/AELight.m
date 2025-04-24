@@ -9,4 +9,8 @@
 
 @implementation AELight
 
+- (EComponent_ClassType)classType {
+    return Light;
+}
+
 @end

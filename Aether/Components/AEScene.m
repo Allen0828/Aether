@@ -22,9 +22,13 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _objects = [NSMutableArray array];
+        //_objects = [NSMutableArray array];
     }
     return self;
+}
+
+- (EComponent_ClassType)classType {
+    return Scene;
 }
 
 - (void)setCamera:(AECamera *)camera {
@@ -39,16 +43,16 @@
 }
 
 - (void)addObject:(AEComponent *)object {
-    [self.objects addObject:object];
+    //[self.objects addObject:object];
 }
 
 - (void)removeObject:(AEComponent *)object {
-    [self.objects removeObject:object];
+    //[self.objects removeObject:object];
 }
 
 - (void)update {
     
-    for (AEComponent *object in self.objects) {
+    for (AEComponent *object in [self getChildren]) {
         [object update];
     }
     // update self beh

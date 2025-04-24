@@ -187,47 +187,40 @@ AELightStruct convertAELightToStruct(AELight *AELightObject) {
             _uniform.viewMatrix = [scene getCamera].viewMatrix;
         }
         
-        // Set the pipeline state.
-        for (AEComponent *comp in scene.objects) {
-            if ([comp isKindOfClass:[AEGeometry class]]) {
-                AEGeometry* geometry = (AEGeometry*)comp;
-                AEMaterial *mat = [geometry getMaterial];
-                
-                
-                if ([mat isKindOfClass:[AEUnlitMaterial class]]) {
-                    AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"Unlit"];
-                    [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
-                    
-                } else if ([mat isKindOfClass:[AEStandardMaterial class]]) {
-                    AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"Standard"];
-                    [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
-                    
-                }
-                AEComponent *lightComp = scene.objects[2];
-                if ([lightComp isKindOfClass:[AELight class]]) {
-                    AELightStruct light = convertAELightToStruct((AELight*)lightComp);
+        NSArray<AEComponent*>* lights = [scene findChildComponentByType:Light];
+        for (AEComponent* comp in lights) {
+            if ([comp isKindOfClass:[AELight class]]) {
+                AELightStruct light = convertAELightToStruct((AELight*)comp);
 //                    id<MTLBuffer> lightsBuffer = [self.device newBufferWithLength:sizeof(light) options:MTLResourceStorageModeShared];
 //                    [renderEncoder setFragmentBuffer:lightsBuffer offset:0 atIndex:11];
-                    [renderEncoder setFragmentBytes:&light length:sizeof(light) atIndex:11];
-                    
-                }
-                
-                // model
-                matrix_float4x4 trans = Translation_float4x4(geometry.position);
-                matrix_float4x4 rotation = Rotation_float4x4(simd_make_float3(0,0,0));
-                matrix_float4x4 scale = scaling(0.1, 0.05, 0.1);
-                matrix_float4x4 modelMatrix = matrix_multiply(trans, matrix_multiply(rotation, scale));
-                _uniform.modelMatrix = modelMatrix;
-                
-                [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
-                [renderEncoder setFragmentTexture:[mat getTexture] atIndex:1];
-                [geometry render:renderEncoder];
+                [renderEncoder setFragmentBytes:&light length:sizeof(light) atIndex:11];
             }
+        }
+        NSArray<AEComponent*>* geometries = [scene findChildComponentByType:BoxGeometry];
+        for (AEComponent* comp in geometries) {
+            AEGeometry* geometry = (AEGeometry*)comp;
+            AEMaterial *mat = [geometry getMaterial];
             
+            if ([mat isKindOfClass:[AEUnlitMaterial class]]) {
+                AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"Unlit"];
+                [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
+            } else if ([mat isKindOfClass:[AEStandardMaterial class]]) {
+                AEPipelineState *pipelineState = [self.pipelineStateManager pipelineStateWithName:@"Standard"];
+                [renderEncoder setRenderPipelineState:pipelineState.pipelineState];
+            }
+            // model
+            matrix_float4x4 trans = Translation_float4x4(geometry.position);
+            matrix_float4x4 rotation = Rotation_float4x4(simd_make_float3(0,0,0));
+            matrix_float4x4 scale = scaling(0.1, 0.05, 0.1);
+            matrix_float4x4 modelMatrix = matrix_multiply(trans, matrix_multiply(rotation, scale));
+            _uniform.modelMatrix = modelMatrix;
+            
+            [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
+            [renderEncoder setFragmentTexture:[mat getTexture] atIndex:1];
+            [geometry render:renderEncoder];
         }
         
-
-        
+        // Set the pipeline state.
         // Here you would set other render command encoder state and draw calls.
 //        [self.view render];
         

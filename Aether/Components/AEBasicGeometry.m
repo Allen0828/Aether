@@ -26,6 +26,10 @@
 
 @implementation AEGeometry
 
+- (EComponent_ClassType)classType {
+    return BoxGeometry;
+}
+
 - (AEMaterial*)getMaterial {
     return self.mat;
 }

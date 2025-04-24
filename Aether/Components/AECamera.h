@@ -5,19 +5,18 @@
 //  Created by Allen on 2024/12/31.
 //
 
-// AECamera.h
-#import <Foundation/Foundation.h>
 #import <simd/simd.h>
+#import "AEComponent.h"
 
 typedef enum : NSUInteger {
     Perspective,
     Orthographic
 } EProjectionMode;
 
-@interface AECamera : NSObject
+@interface AECamera : AEComponent
 
 @property (nonatomic,assign) EProjectionMode projectionMode;
-@property (nonatomic,assign) simd_float3 position;
+
 @property (nonatomic,assign) simd_float3 target;
 @property (nonatomic,assign) simd_float3 upDirection;
 @property (nonatomic,assign) CGFloat fov; // Field of view (degrees)

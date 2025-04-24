@@ -18,9 +18,9 @@ typedef enum : NSUInteger {
 } EBlendFunc;
 
 typedef enum : NSUInteger {
-    None,
-    Back,
-    Front,
+    ModeNone,
+    ModeBack,
+    ModeFront,
 } EFaceCullingMode;
 
 typedef enum : NSUInteger {

@@ -56,7 +56,8 @@ class SwiftDemoScene: AEScene {
         print("img path:", path ?? "")
         mat.setTexture(path ?? "")
         box?.setMaterial(mat)
-        self.addObject(box!)
+        self.addChildComponent(box!)
+//        self.addObject(box!)
         
         let box1 = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
         box1?.position = simd_float3(0.0, -0.04, 0.0);
@@ -64,7 +65,7 @@ class SwiftDemoScene: AEScene {
         stand.setTexture(path ?? "")
         box1?.setMaterial(stand)
        
-        self.addObject(box1!)
+        self.addChildComponent(box1!)
         
         box?.attach(testCompBeh())
         self.attach(testBeh())
@@ -78,7 +79,7 @@ class SwiftDemoScene: AEScene {
         light?.diffuse = LightColor(r: 1, g: 1, b: 1)
         light?.specular = LightColor(r: 0.6, g: 0.6, b: 0.6)
         
-        self.addObject(light!)
+        self.addChildComponent(light!)
         
 //        light.position = simd_make_float3(3, 3, -2);
 //        light.color = simd_make_float3(1, 1, 1);

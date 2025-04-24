@@ -13,6 +13,10 @@
 
 @implementation AECamera
 
+- (EComponent_ClassType)classType {
+    return Camera;
+}
+
 - (instancetype)init {
     if (self=[super init]) {
         _aspectRatio = 1.0;
@@ -21,7 +25,7 @@
         _far = 500;
        
         
-        _position = simd_make_float3(10, 6, -6);
+        self.position = simd_make_float3(10, 6, -6);
         _target = simd_make_float3(0, 0, 0);
         _upDirection = simd_make_float3(0, 1, 0);
         
