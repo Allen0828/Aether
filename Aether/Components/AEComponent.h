@@ -10,13 +10,13 @@
 
 
 typedef enum : NSUInteger {
-    None = 0,
-    Component,
-    Model,
-    Light,
-    Camera,
-    Scene,
-    BoxGeometry,
+    None_Type = 0,
+    Component_Type,
+    Model_Type,
+    Light_Type,
+    Camera_Type,
+    Scene_Type,
+    Geometry_Type,
 } EComponent_ClassType;
 
 

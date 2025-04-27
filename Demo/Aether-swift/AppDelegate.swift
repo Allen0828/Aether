@@ -5,9 +5,7 @@
 //  Created by Allen on 2025/2/16.
 //
 
-import TargetConditionals
-
-//#if TARGET_OS_IOS
+#if os(iOS)
 import UIKit
 
 @main
@@ -26,10 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
-//#endif
-
-#if TARGET_OS_OSX
+#else
 import Cocoa
 
 @main
@@ -48,5 +43,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 }
-
 #endif
+
+

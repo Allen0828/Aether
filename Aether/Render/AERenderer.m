@@ -187,7 +187,7 @@ AELightStruct convertAELightToStruct(AELight *AELightObject) {
             _uniform.viewMatrix = [scene getCamera].viewMatrix;
         }
         
-        NSArray<AEComponent*>* lights = [scene findChildComponentByType:Light];
+        NSArray<AEComponent*>* lights = [scene findChildComponentByType:Light_Type];
         for (AEComponent* comp in lights) {
             if ([comp isKindOfClass:[AELight class]]) {
                 AELightStruct light = convertAELightToStruct((AELight*)comp);
@@ -196,7 +196,7 @@ AELightStruct convertAELightToStruct(AELight *AELightObject) {
                 [renderEncoder setFragmentBytes:&light length:sizeof(light) atIndex:11];
             }
         }
-        NSArray<AEComponent*>* geometries = [scene findChildComponentByType:BoxGeometry];
+        NSArray<AEComponent*>* geometries = [scene findChildComponentByType:Geometry_Type];
         for (AEComponent* comp in geometries) {
             AEGeometry* geometry = (AEGeometry*)comp;
             AEMaterial *mat = [geometry getMaterial];

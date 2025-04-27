@@ -600,6 +600,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_MACOS=1",
+					"$(inherited)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -630,6 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_MACOS=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -777,6 +782,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_IOS=1",
+					"$(inherited)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aether-swift/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -808,6 +817,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_IOS=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Aether-swift/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

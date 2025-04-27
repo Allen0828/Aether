@@ -27,7 +27,7 @@
 @implementation AEGeometry
 
 - (EComponent_ClassType)classType {
-    return BoxGeometry;
+    return Geometry_Type;
 }
 
 - (AEMaterial*)getMaterial {

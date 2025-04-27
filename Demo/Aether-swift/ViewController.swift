@@ -6,7 +6,7 @@
 //
 
 
-//#if TARGET_OS_IOS
+#if os(iOS)
 import UIKit
 
 class ViewController: UIViewController {
@@ -47,13 +47,8 @@ class ViewController: UIViewController {
 
 }
 
-//#endif
-
-
-#if TARGET_OS_OSX
-
+#elseif os(macOS)
 import Cocoa
-
 
 class ViewController: NSViewController {
 
@@ -85,6 +80,8 @@ class ViewController: NSViewController {
         }
     }
 }
+
+#else
 
 #endif
 

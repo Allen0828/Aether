@@ -19,16 +19,16 @@
 
 @implementation AEScene
 
+- (EComponent_ClassType)classType {
+    return Scene_Type;
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
         //_objects = [NSMutableArray array];
     }
     return self;
-}
-
-- (EComponent_ClassType)classType {
-    return Scene;
 }
 
 - (void)setCamera:(AECamera *)camera {

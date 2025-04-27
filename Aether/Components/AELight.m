@@ -10,7 +10,7 @@
 @implementation AELight
 
 - (EComponent_ClassType)classType {
-    return Light;
+    return Light_Type;
 }
 
 @end

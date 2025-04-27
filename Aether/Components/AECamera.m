@@ -14,7 +14,7 @@
 @implementation AECamera
 
 - (EComponent_ClassType)classType {
-    return Camera;
+    return Camera_Type;
 }
 
 - (instancetype)init {
