@@ -5,18 +5,6 @@ Aether 库基于 Metal 框架开发，专为高效图形渲染和计算任务打
 [English Document](https://github.com/Allen0828/AAEngine/blob/master/README_EN.md)
 
 
-## Features
-- [x] 光照
-- [x] 基础材质
-- [x] 法线
-- [x] 纹理
-- [ ] 阴影
-- [ ] 粒子
-- [ ] PBR
-- [ ] 动画
-- [ ] gLTF
-
-
 ## 使用方式
 #### Swift Package Manager  推荐
 
@@ -56,6 +44,10 @@ context?.load(DemoScene())    // demo scene 在仓库中内置
 
 ```
 
+##### 2 为组件添加 Behaviour
+```swift
+
+```
 
 
 
