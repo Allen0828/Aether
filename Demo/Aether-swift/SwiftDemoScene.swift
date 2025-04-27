@@ -37,7 +37,6 @@ class testCompBeh: AEBehaviour {
         //comp?.position = simd_float3(0, 0, 0+posZ)
         
     }
-    
 }
 
 class SwiftDemoScene: AEScene {
@@ -64,10 +63,13 @@ class SwiftDemoScene: AEScene {
         let stand = AEStandardMaterial()
         stand.setTexture(path ?? "")
         box1?.setMaterial(stand)
-       
+
         self.addChildComponent(box1!)
-        
         box?.attach(testCompBeh())
+       
+       
+        
+        
         self.attach(testBeh())
         
     
