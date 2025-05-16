@@ -19,14 +19,14 @@
 @interface AEEngine : NSObject
 
 // 默认使用 MTLCreateSystemDefaultDevice()  如果需要指定GPU 请在engine 初始化之前进行配置
-+ (id<MTLDevice>)device;
-+ (void)setDevice:(id<MTLDevice>)device;
++ (nullable id<MTLDevice>)device;
++ (void)setDevice:(nullable id<MTLDevice>)device;
 
 
 /// 默认60帧
 @property (nonatomic,assign) NSInteger fps;
 
-- (instancetype)initWithLayer:(CAMetalLayer*)layer;
+- (nonnull instancetype)initWithLayer:(nonnull CAMetalLayer*)layer;
 
 - (BOOL)Shutdown;
 
@@ -34,7 +34,7 @@
 - (BOOL)CreateEngineLoopContext;
 
 
-- (AEWorldContext*)GetRuntimeContext;
+- (nonnull AEWorldContext*)GetRuntimeContext;
 
 - (void)UpdateWorld;
 

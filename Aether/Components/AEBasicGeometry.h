@@ -13,47 +13,47 @@
 
 @interface AEGeometry : AEComponent
 
-- (AEMaterial*)getMaterial;
-- (void)SetMaterial:(AEMaterial*)mat;
+- (nonnull AEMaterial*)getMaterial;
+- (void)SetMaterial:(nonnull AEMaterial*)mat;
 
-- (AEMesh*)getMeshData;
-- (void)SetMeshData:(AEMesh*)mesh;
+- (nullable AEMesh*)getMeshData;
+- (void)SetMeshData:(nullable AEMesh*)mesh;
 
-- (void)render:(id<MTLRenderCommandEncoder>)encoder;
+- (void)render:(nullable id<MTLRenderCommandEncoder>)encoder;
 
 @end
 
 
 @interface AEPlaneGeometry : AEGeometry
 
-- (instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments;
+- (nonnull instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments;
 - (void)resize:(vector_float3)extent segments:(vector_uint2)segments;
 
 @end
 
 @interface AEBoxGeometry : AEGeometry
 
-- (instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint3)segments normals:(BOOL)inwardNormals;
+- (nonnull instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint3)segments normals:(BOOL)inwardNormals;
 
 
 @end
 
 @interface AESphereGeometry : AEGeometry
 
-- (instancetype)initWithStacks:(int)stacks slices:(int)slices radius:(float)radius;
+- (nonnull instancetype)initWithStacks:(int)stacks slices:(int)slices radius:(float)radius;
 - (void)resize:(int)stacks slices:(int)slices radius:(float)radius;
 
 @end
 
 @interface AECylinderGeometry : AEGeometry
 
-- (instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments normals:(BOOL)inwardNormals topCap:(BOOL)tCap bottomCap:(BOOL)bCap;
+- (nonnull instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments normals:(BOOL)inwardNormals topCap:(BOOL)tCap bottomCap:(BOOL)bCap;
 
 @end
 
 @interface AEConeGeometry : AEGeometry
 
-- (instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments normals:(BOOL)inwardNormals cap:(BOOL)cap;
+- (nonnull instancetype)initWithExtent:(vector_float3)extent segments:(vector_uint2)segments normals:(BOOL)inwardNormals cap:(BOOL)cap;
 
 
 @end

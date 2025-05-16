@@ -32,10 +32,10 @@ class ViewController: UIViewController {
         
         TestLog.show();
         let engine = AEEngine(layer: mLayer)
-        engine?.createEngineLoopContext()
-        let context = engine?.getRuntimeContext()
+        engine.createEngineLoopContext()
+        let context = engine.getRuntimeContext()
         
-        context?.load(SwiftDemoScene())
+        context.load(SwiftDemoScene())
         
         let path = Bundle.main.path(forResource: "texture.png", ofType: "")
         
