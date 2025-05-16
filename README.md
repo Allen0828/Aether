@@ -37,10 +37,10 @@ mLayer.frame = self.view.layer.frame
 self.view.layer.addSublayer(mLayer)
 
 let engine = AEEngine(layer: mLayer)
-engine?.createEngineLoopContext()
+engine.createEngineLoopContext()
 
-let context = engine?.getRuntimeContext()
-context?.load(DemoScene())    // demo scene 在仓库中内置
+let context = engine.getRuntimeContext()
+context.load(DemoScene())    // demo scene 在仓库中内置
 
 ```
 
@@ -55,27 +55,43 @@ class testCompBeh: AEBehaviour {
     }
     
     override func update() {
-        //getComponent()
         posZ += 0.001
         let comp = getComponent()
-        //comp?.position = simd_float3(0, 0, 0+posZ)
+        comp?.position = simd_float3(0, 0, 0+posZ)
         
     }
 }
 
-
-let box1 = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
-box1?.position = simd_float3(0.0, -0.04, 0.0);
-let stand = AEStandardMaterial()
-stand.setTexture(path ?? "")
-box1?.setMaterial(stand)
-
-self.addChildComponent(box1!)
-box1?.attach(testCompBeh())
+class SwiftDemoScene: AEScene {
+    override init() {
+        super.init()
+        // ...
+        let box1 = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
+        box1.position = simd_float3(0.0, -0.04, 0.0);
+        self.addChildComponent(box1)
+        box.attach(testCompBeh())
+        // ...
+    }
+}
 
 ```
 
-##### 3 灯光
+##### 3 材质
+```swift
+let unlit = AEUnlitMaterial()
+let path = Bundle.main.path(forResource: "texture.png", ofType: "")
+mat.setTexture(path ?? "")
+
+box1.setMaterial(unlit)
+
+let standard = AEStandardMaterial()
+standard.setTexture(path ?? "")
+
+box2.setMaterial(standard)
+
+```
+
+##### 4 灯光
 ```swift
 let light = AELight()
 light?.componentName = "light"
