@@ -1,6 +1,6 @@
-# Aether 库说明文档
+# Aether3D 库说明文档
 
-Aether 库基于 Metal 框架开发，专为高效图形渲染和计算任务打造，充分发挥 GPU 并行计算能力，旨在为开发者提供一套简洁、易用且高性能的工具集，以应对诸如游戏开发、虚拟现实、科学计算可视化等对图形处理和计算性能要求严苛的应用场景。
+Aether3D 库基于 Metal 框架开发，专为高效图形渲染和计算任务打造，充分发挥 GPU 并行计算能力，旨在为开发者提供一套简洁、易用且高性能的工具集，以应对诸如游戏开发、虚拟现实、科学计算可视化等对图形处理和计算性能要求严苛的应用场景。
 
 [English Document](https://github.com/Allen0828/AAEngine/blob/master/README_EN.md)
 
@@ -9,7 +9,7 @@ Aether 库基于 Metal 框架开发，专为高效图形渲染和计算任务打
 #### Swift Package Manager  推荐
 
 - File > Swift Packages > Add Package Dependency
-- Add `https://github.com/Allen0828/AAEngine.git`
+- Add `https://github.com/Allen0828/Aether.git`
 - Select "Up to Next Major" with "0.0.5"
 
 #### CocoaPods
@@ -20,7 +20,7 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'MyApp' do
-  pod 'AAEngine', '~> 0.0.3'
+  pod 'Aether3D', '~> 0.0.4'
 end
 ```
 #### 手动安装
