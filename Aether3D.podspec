@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Aether'
+  s.name             = 'Aether3D'
   s.version          = '0.0.4'
   s.summary          = 'A lightweight metal library that helps programs showcase 3D assets'
 
