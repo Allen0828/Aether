@@ -56,13 +56,13 @@
 }
 
 - (void)renderWithRenderEncoder:(id<MTLRenderCommandEncoder>)renderEncoder {
-    [renderEncoder setVertexBuffer:self.vertexBuffer offset:0 atIndex:0];
-    [renderEncoder setVertexBuffer:self.indexBuffer offset:0 atIndex:1];
-    [renderEncoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle
-                              indexCount:self.indexCount
-                                indexType:MTLIndexTypeUInt16
-                              indexBuffer:self.indexBuffer
-                        indexBufferOffset:0];
+        // Bind vertex buffer at index 1 (index 0 is reserved for uniform data)
+        [renderEncoder setVertexBuffer:self.vertexBuffer offset:0 atIndex:1];
+        [renderEncoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle
+                                                            indexCount:self.indexCount
+                                                                indexType:MTLIndexTypeUInt16
+                                                            indexBuffer:self.indexBuffer
+                                                indexBufferOffset:0];
 }
 
 @end

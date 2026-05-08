@@ -21,6 +21,11 @@
 
 - (void)render:(nullable id<MTLRenderCommandEncoder>)encoder;
 
+// Instancing support
+- (void)setInstanceBuffer:(nullable id<MTLBuffer>)buffer instanceCount:(NSUInteger)count;
+- (nullable id<MTLBuffer>)instanceBuffer;
+- (NSUInteger)instanceCount;
+
 @end
 
 

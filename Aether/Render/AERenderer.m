@@ -103,9 +103,9 @@ AELightStruct convertAELightToStruct(AELight *AELightObject) {
     
     pipelineDes.vertexDescriptor = MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor);
     if (@available(iOS 16.0, *)) {
-        pipelineDes.sampleCount = 4;
-    } else {
         pipelineDes.rasterSampleCount = 4;
+    } else {
+        pipelineDes.sampleCount = 4;
     }
     //self.pipelineState = [self.device newRenderPipelineStateWithDescriptor:pipelineDes error:&error];
     
@@ -116,18 +116,62 @@ AELightStruct convertAELightToStruct(AELight *AELightObject) {
 //    id<MTLFunction> fragmentFunction = [library newFunctionWithName:@"main_fragment"];
 //    MTLVertexDescriptor *vertexDescriptor = [self createVertexDescriptor];
 //
-    AEPipelineState *unlit = [[AEPipelineState alloc] initWithDevice:self.device
-                                                               vertexFunction:vertexFunction
-                                                              fragmentFunction:unlit_fs
-                                                              vertexDescriptor:MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor)
-                                                                 pixelFormat:MTLPixelFormatBGRA8Unorm];
+    // create a vertex descriptor and add per-instance attributes (for instancing)
+    MTLVertexDescriptor *baseDesc = MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor);
+    // We bind vertex buffers at index 1 on CPU side (index 0 reserved for uniforms),
+    // so update the descriptor to read vertex attributes from buffer index 1.
+    const NSUInteger kMaxVertexAttributes = 31;
+    for (NSUInteger ai = 0; ai < kMaxVertexAttributes; ++ai) {
+        MTLVertexAttributeDescriptor *attr = baseDesc.attributes[ai];
+        if (attr && attr.bufferIndex == 0) {
+            attr.bufferIndex = 1;
+        }
+    }
+    // Ensure layout for buffer index 1 exists and matches stride of original layout[0]
+    if (baseDesc.layouts[1] == nil) baseDesc.layouts[1] = [[MTLVertexBufferLayoutDescriptor alloc] init];
+    // copy original stride to layout[1] (we will bind vertex buffers at index 1)
+    baseDesc.layouts[1].stride = baseDesc.layouts[0].stride;
+    // since no attributes reference bufferIndex 0 anymore, clear its stride to avoid Metal validation errors
+    baseDesc.layouts[0].stride = 0;
+    // Reserve buffer index 0 for uniform data, move vertex attributes to start at index 1
+    // The ModelIO descriptor usually uses bufferIndex 0 for vertex data; we keep it but at runtime
+    // we'll bind vertex buffers at index 1. For instancing, use buffer index 2.
+    NSUInteger instanceBufferIndex = 2;
+
+    // Add four float4 attributes to hold a 4x4 model matrix (attributes 3..6)
+     if (baseDesc.attributes[3] == nil) baseDesc.attributes[3] = [[MTLVertexAttributeDescriptor alloc] init];
+     if (baseDesc.attributes[4] == nil) baseDesc.attributes[4] = [[MTLVertexAttributeDescriptor alloc] init];
+     if (baseDesc.attributes[5] == nil) baseDesc.attributes[5] = [[MTLVertexAttributeDescriptor alloc] init];
+     if (baseDesc.attributes[6] == nil) baseDesc.attributes[6] = [[MTLVertexAttributeDescriptor alloc] init];
+
+     baseDesc.attributes[3].format = MTLVertexFormatFloat4;
+     baseDesc.attributes[4].format = MTLVertexFormatFloat4;
+     baseDesc.attributes[5].format = MTLVertexFormatFloat4;
+     baseDesc.attributes[6].format = MTLVertexFormatFloat4;
+
+    baseDesc.attributes[3].bufferIndex = instanceBufferIndex;
+    baseDesc.attributes[4].bufferIndex = instanceBufferIndex;
+    baseDesc.attributes[5].bufferIndex = instanceBufferIndex;
+    baseDesc.attributes[6].bufferIndex = instanceBufferIndex;
+
+     // Configure instance buffer layout
+     if (baseDesc.layouts[instanceBufferIndex] == nil) baseDesc.layouts[instanceBufferIndex] = [[MTLVertexBufferLayoutDescriptor alloc] init];
+    baseDesc.layouts[instanceBufferIndex].stepFunction = MTLVertexStepFunctionPerInstance;
+     baseDesc.layouts[instanceBufferIndex].stepRate = 1;
+     baseDesc.layouts[instanceBufferIndex].stride = sizeof(matrix_float4x4);
+
+     AEPipelineState *unlit = [[AEPipelineState alloc] initWithDevice:self.device
+                                                                                    vertexFunction:vertexFunction
+                                                                                  fragmentFunction:unlit_fs
+                                                                                  vertexDescriptor:baseDesc
+                                                                                      pixelFormat:MTLPixelFormatBGRA8Unorm];
     [self.pipelineStateManager addPipelineState:unlit withName:@"Unlit"];
     
-    AEPipelineState *standard = [[AEPipelineState alloc] initWithDevice:self.device
-                                                               vertexFunction:vertexFunction
-                                                              fragmentFunction:fragmentFunction
-                                                              vertexDescriptor:MTKMetalVertexDescriptorFromModelIO(cube.vertexDescriptor)
-                                                                 pixelFormat:MTLPixelFormatBGRA8Unorm];
+     AEPipelineState *standard = [[AEPipelineState alloc] initWithDevice:self.device
+                                                                                    vertexFunction:vertexFunction
+                                                                                  fragmentFunction:fragmentFunction
+                                                                                  vertexDescriptor:baseDesc
+                                                                                      pixelFormat:MTLPixelFormatBGRA8Unorm];
     [self.pipelineStateManager addPipelineState:standard withName:@"Standard"];
 }
 
@@ -214,8 +258,9 @@ AELightStruct convertAELightToStruct(AELight *AELightObject) {
             matrix_float4x4 scale = scaling(0.1, 0.05, 0.1);
             matrix_float4x4 modelMatrix = matrix_multiply(trans, matrix_multiply(rotation, scale));
             _uniform.modelMatrix = modelMatrix;
-            
-            [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:1];
+
+            // Bind uniform struct to buffer index 0 (shader expects constant _Global at buffer(0)).
+            [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:0];
             [renderEncoder setFragmentTexture:[mat getTexture] atIndex:1];
             [geometry render:renderEncoder];
         }

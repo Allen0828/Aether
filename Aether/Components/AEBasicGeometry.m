@@ -14,11 +14,15 @@
 @interface AEGeometry ()
 
 @property (nonatomic,strong) AEMaterial *mat;
-//@property (nonatomic,strong) AEMesh *mesh;
+@property (nonatomic,strong) AEMesh *meshDataObj;
 
 @property (nonatomic,strong) NSArray<MTKMeshBuffer *> *vertexBuffers;
 @property (nonatomic,strong) NSArray<MTKSubmesh *> *submeshes;
 @property (nonatomic,assign) NSUInteger vertexCount;
+
+// instancing
+@property (nonatomic,strong) id<MTLBuffer> instanceBuffer;
+@property (nonatomic,assign) NSUInteger instCount;
 
 //@property (nonatomic,strong) NSArray<MTKMesh *> *meshes;
 
@@ -38,22 +42,45 @@
 }
 
 - (AEMesh*)getMeshData {
-    return nil; //self.mesh;
+    return self.meshDataObj;
 }
 - (void)SetMeshData:(AEMesh*)mesh {
-    //self.mesh = mesh;
+    self.meshDataObj = mesh;
 }
 
 - (void)render:(id<MTLRenderCommandEncoder>)encoder {
+    // if an AEMesh is attached, let it render itself
+    if (self.meshDataObj) {
+        [self.meshDataObj renderWithRenderEncoder:encoder];
+        return;
+    }
+
+    // Bind vertex buffers starting at index 1 (index 0 reserved for uniform buffer)
     for (int i = 0; i < self.vertexBuffers.count; i++) {
         id<MTLBuffer> buffer = self.vertexBuffers[i].buffer;
-        [encoder setVertexBuffer:buffer offset:0 atIndex:i];
+        [encoder setVertexBuffer:buffer offset:0 atIndex:(i + 1)];
     }
-    
-    for (MTKSubmesh *submesh in self.submeshes) {
-        [encoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle indexCount:submesh.indexCount indexType:submesh.indexType indexBuffer:submesh.indexBuffer.buffer indexBufferOffset:submesh.indexBuffer.offset];
+    // bind instance buffer if present
+    if (self.instanceBuffer && self.instCount > 0) {
+        // instance buffer index is vertexBuffers.count + 1 because vertex buffers start at 1
+        NSUInteger instanceIndex = (uint32_t)self.vertexBuffers.count + 1;
+        [encoder setVertexBuffer:self.instanceBuffer offset:0 atIndex:(uint32_t)instanceIndex];
+        for (MTKSubmesh *submesh in self.submeshes) {
+            [encoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle indexCount:submesh.indexCount indexType:submesh.indexType indexBuffer:submesh.indexBuffer.buffer indexBufferOffset:submesh.indexBuffer.offset instanceCount:(uint32_t)self.instCount];
+        }
+    } else {
+        for (MTKSubmesh *submesh in self.submeshes) {
+            [encoder drawIndexedPrimitives:MTLPrimitiveTypeTriangle indexCount:submesh.indexCount indexType:submesh.indexType indexBuffer:submesh.indexBuffer.buffer indexBufferOffset:submesh.indexBuffer.offset];
+        }
     }
 }
+
+- (void)setInstanceBuffer:(id<MTLBuffer>)buffer instanceCount:(NSUInteger)count {
+    self.instanceBuffer = buffer;
+    self.instCount = count;
+}
+- (id<MTLBuffer>)instanceBuffer { return _instanceBuffer; }
+- (NSUInteger)instanceCount { return _instCount; }
 
 @end
 

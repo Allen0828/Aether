@@ -7,6 +7,13 @@
 #import "AEMaterial.h"
 #import "DemoScene.h"
 #import "AELight.h"
+// Expose resource manager to Swift demo
+#import "AEResourceManager.h"
+// glTF loader
+#import "AEGltfLoader.h"
+// expose mesh/geometry to Swift
+#import "AEMesh.h"
+#import "AEBasicGeometry.h"
 
 #import <TargetConditionals.h>
 

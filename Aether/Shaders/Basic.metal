@@ -11,7 +11,7 @@ using namespace metal;
 constant float pi = 3.1415926535897932384626433832795;
 
 struct VertexIn {
-    float4 position [[attribute(0)]];
+    float3 position [[attribute(0)]];
     float3 normal [[attribute(1)]];
     float2 uv [[attribute(2)]];
 };
@@ -55,11 +55,11 @@ struct _fragment_in
     float2 uv;
 };
 
-vertex VertexOut main_vertex(const VertexIn vertex_in [[stage_in]], constant Uniforms &uniforms [[buffer(1)]])
+vertex VertexOut main_vertex(const VertexIn vertex_in [[stage_in]], constant Uniforms &uniforms [[buffer(0)]])
 {
     VertexOut out;
-    
-    out.position = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * vertex_in.position;
+    float4 pos4 = float4(vertex_in.position, 1.0);
+    out.position = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * pos4;
     out.uv = vertex_in.uv;
 //    out.position = vertex_in.position;
     return out;

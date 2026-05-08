@@ -8,45 +8,72 @@
 
 /* Begin PBXBuildFile section */
 		9F0625152D9A758F002FC5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F06250F2D9A758F002FC5D2 /* Main.storyboard */; };
-		9F0625AC2DAB8A0C002FC5D2 /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */; };
-		9F0625AD2DAB8A0C002FC5D2 /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */; };
 		9F0625B42DAB9035002FC5D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */; };
 		9F0625B52DAB903A002FC5D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */; };
 		9F0625B62DAB9074002FC5D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */; };
-		9F0625B72DAB9233002FC5D2 /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850962D6B2091000DBBA3 /* AEEngine.m */; };
-		9F0625B82DAB923E002FC5D2 /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BE2D6B2091000DBBA3 /* AEComponent.m */; };
-		9F0625B92DAB9243002FC5D2 /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */; };
-		9F0625BA2DAB9247002FC5D2 /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B62D6B2091000DBBA3 /* AEScene.m */; };
-		9F0625BB2DAB9253002FC5D2 /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B82D6B2091000DBBA3 /* AEModel.m */; };
-		9F0625BC2DAB925C002FC5D2 /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BC2D6B2091000DBBA3 /* AEMesh.m */; };
-		9F0625BD2DAB9263002FC5D2 /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B92D6B2091000DBBA3 /* AECamera.m */; };
-		9F0625BE2DAB926E002FC5D2 /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */; };
-		9F0625BF2DAB9272002FC5D2 /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C22D6B2091000DBBA3 /* Basic.metal */; };
-		9F0625C02DAB9276002FC5D2 /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */; };
-		9F0625C12DAB927B002FC5D2 /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */; };
-		9F0625C22DAB9280002FC5D2 /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CE2D74467400A03C9E /* tonemapping.metal */; };
-		9F0625C32DAB9286002FC5D2 /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C62D6B2091000DBBA3 /* AEView.m */; };
-		9F0625C42DAB928C002FC5D2 /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C92D6B2091000DBBA3 /* AEMaterial.m */; };
-		9F0625C52DAB929B002FC5D2 /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */; };
-		9F0625C62DAB929F002FC5D2 /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */; };
-		9F0625C72DAB92A6002FC5D2 /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AD2D6B2091000DBBA3 /* AEMath.m */; };
-		9F0625C82DAB92AC002FC5D2 /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */; };
-		9F0625C92DAB92B2002FC5D2 /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */; };
-		9F0625CA2DAB92B7002FC5D2 /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */; };
-		9F0625CB2DAB92BC002FC5D2 /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */; };
-		9F0625CC2DAB92C1002FC5D2 /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A82D6B2091000DBBA3 /* AERenderer.m */; };
-		9F0625CD2DAB92C7002FC5D2 /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850982D6B2091000DBBA3 /* AESkybox.m */; };
-		9F0625CE2DAB92D3002FC5D2 /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850992D6B2091000DBBA3 /* AEShader.m */; };
-		9F0625CF2DAB92D9002FC5D2 /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509E2D6B2091000DBBA3 /* AEElement.m */; };
-		9F0625D02DAB92DD002FC5D2 /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509F2D6B2091000DBBA3 /* AETexture.m */; };
-		9F0625D12DAB92E2002FC5D2 /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */; };
 		9F0625D22DAB9843002FC5D2 /* SwiftDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */; };
-		9F0625D82DACB318002FC5D2 /* AELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0625D72DACB318002FC5D2 /* AELight.m */; };
-		9F0625D92DACB318002FC5D2 /* AELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0625D72DACB318002FC5D2 /* AELight.m */; };
-		9F8F47C92D74409C00A03C9E /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */; };
-		9F8F47CB2D74421000A03C9E /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */; };
-		9F8F47CD2D7443FF00A03C9E /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */; };
-		9F8F47CF2D74467400A03C9E /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F8F47CE2D74467400A03C9E /* tonemapping.metal */; };
+		9F194DAE2FAD8C98005E836B /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D712FAD8C98005E836B /* AEMesh.m */; };
+		9F194DAF2FAD8C98005E836B /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D952FAD8C98005E836B /* Basic.metal */; };
+		9F194DB02FAD8C98005E836B /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D752FAD8C98005E836B /* AEScene.m */; };
+		9F194DB12FAD8C98005E836B /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6B2FAD8C98005E836B /* AECamera.m */; };
+		9F194DB22FAD8C98005E836B /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D902FAD8C98005E836B /* AEResourcePool.m */; };
+		9F194DB32FAD8C98005E836B /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D732FAD8C98005E836B /* AEModel.m */; };
+		9F194DB42FAD8C98005E836B /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D872FAD8C98005E836B /* AEMath.m */; };
+		9F194DB52FAD8C98005E836B /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8A2FAD8C98005E836B /* AEPipelineState.m */; };
+		9F194DB62FAD8C98005E836B /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7C2FAD8C98005E836B /* AESkybox.m */; };
+		9F194DB72FAD8C98005E836B /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA62FAD8C98005E836B /* AEView.m */; };
+		9F194DB82FAD8C98005E836B /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */; };
+		9F194DB92FAD8C98005E836B /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */; };
+		9F194DBA2FAD8C98005E836B /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7A2FAD8C98005E836B /* AEShader.m */; };
+		9F194DBB2FAD8C98005E836B /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8E2FAD8C98005E836B /* AERenderer.m */; };
+		9F194DBC2FAD8C98005E836B /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D972FAD8C98005E836B /* tonemapping.metal */; };
+		9F194DBD2FAD8C98005E836B /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */; };
+		9F194DBE2FAD8C98005E836B /* AELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6F2FAD8C98005E836B /* AELight.m */; };
+		9F194DBF2FAD8C98005E836B /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D692FAD8C98005E836B /* AEBasicGeometry.m */; };
+		9F194DC02FAD8C98005E836B /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA92FAD8C98005E836B /* AEWorldContext.m */; };
+		9F194DC12FAD8C98005E836B /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D982FAD8C98005E836B /* viewSettings.metal */; };
+		9F194DC22FAD8C98005E836B /* AEGltfLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */; };
+		9F194DC32FAD8C98005E836B /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D782FAD8C98005E836B /* AEElement.m */; };
+		9F194DC42FAD8C98005E836B /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DAC2FAD8C98005E836B /* AEEngine.m */; };
+		9F194DC52FAD8C98005E836B /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D812FAD8C98005E836B /* DemoScene.m */; };
+		9F194DC62FAD8C98005E836B /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9F2FAD8C98005E836B /* AEDebugTools.m */; };
+		9F194DC72FAD8C98005E836B /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6D2FAD8C98005E836B /* AEComponent.m */; };
+		9F194DC82FAD8C98005E836B /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7E2FAD8C98005E836B /* AETexture.m */; };
+		9F194DC92FAD8C98005E836B /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */; };
+		9F194DCA2FAD8C98005E836B /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D842FAD8C98005E836B /* AEMaterial.m */; };
+		9F194DCB2FAD8C98005E836B /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D932FAD8C98005E836B /* AEBehaviour.m */; };
+		9F194DCC2FAD8C98005E836B /* AEResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA32FAD8C98005E836B /* AEResourceManager.m */; };
+		9F194DCD2FAD8C99005E836B /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D712FAD8C98005E836B /* AEMesh.m */; };
+		9F194DCE2FAD8C99005E836B /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D952FAD8C98005E836B /* Basic.metal */; };
+		9F194DCF2FAD8C99005E836B /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D752FAD8C98005E836B /* AEScene.m */; };
+		9F194DD02FAD8C99005E836B /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6B2FAD8C98005E836B /* AECamera.m */; };
+		9F194DD12FAD8C99005E836B /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D902FAD8C98005E836B /* AEResourcePool.m */; };
+		9F194DD22FAD8C99005E836B /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D732FAD8C98005E836B /* AEModel.m */; };
+		9F194DD32FAD8C99005E836B /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D872FAD8C98005E836B /* AEMath.m */; };
+		9F194DD42FAD8C99005E836B /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8A2FAD8C98005E836B /* AEPipelineState.m */; };
+		9F194DD52FAD8C99005E836B /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7C2FAD8C98005E836B /* AESkybox.m */; };
+		9F194DD62FAD8C99005E836B /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA62FAD8C98005E836B /* AEView.m */; };
+		9F194DD72FAD8C99005E836B /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */; };
+		9F194DD82FAD8C99005E836B /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */; };
+		9F194DD92FAD8C99005E836B /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7A2FAD8C98005E836B /* AEShader.m */; };
+		9F194DDA2FAD8C99005E836B /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8E2FAD8C98005E836B /* AERenderer.m */; };
+		9F194DDB2FAD8C99005E836B /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D972FAD8C98005E836B /* tonemapping.metal */; };
+		9F194DDC2FAD8C99005E836B /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */; };
+		9F194DDD2FAD8C99005E836B /* AELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6F2FAD8C98005E836B /* AELight.m */; };
+		9F194DDE2FAD8C99005E836B /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D692FAD8C98005E836B /* AEBasicGeometry.m */; };
+		9F194DDF2FAD8C99005E836B /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA92FAD8C98005E836B /* AEWorldContext.m */; };
+		9F194DE02FAD8C99005E836B /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D982FAD8C98005E836B /* viewSettings.metal */; };
+		9F194DE12FAD8C99005E836B /* AEGltfLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */; };
+		9F194DE22FAD8C99005E836B /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D782FAD8C98005E836B /* AEElement.m */; };
+		9F194DE32FAD8C99005E836B /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DAC2FAD8C98005E836B /* AEEngine.m */; };
+		9F194DE42FAD8C99005E836B /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D812FAD8C98005E836B /* DemoScene.m */; };
+		9F194DE52FAD8C99005E836B /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9F2FAD8C98005E836B /* AEDebugTools.m */; };
+		9F194DE62FAD8C99005E836B /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6D2FAD8C98005E836B /* AEComponent.m */; };
+		9F194DE72FAD8C99005E836B /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7E2FAD8C98005E836B /* AETexture.m */; };
+		9F194DE82FAD8C99005E836B /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */; };
+		9F194DE92FAD8C99005E836B /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D842FAD8C98005E836B /* AEMaterial.m */; };
+		9F194DEA2FAD8C99005E836B /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D932FAD8C98005E836B /* AEBehaviour.m */; };
+		9F194DEB2FAD8C99005E836B /* AEResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA32FAD8C98005E836B /* AEResourceManager.m */; };
 		9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */; };
 		9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */; };
 		9FC84FD12D61C9EE000DBBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */; };
@@ -54,43 +81,69 @@
 		9FC84FD62D61C9EF000DBBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */; };
 		9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FDF2D61CA54000DBBA3 /* TestLog.m */; };
 		9FC8502A2D646FB9000DBBA3 /* SwiftDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */; };
-		9FC850CA2D6B2091000DBBA3 /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850962D6B2091000DBBA3 /* AEEngine.m */; };
-		9FC850CB2D6B2091000DBBA3 /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850982D6B2091000DBBA3 /* AESkybox.m */; };
-		9FC850CC2D6B2091000DBBA3 /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850992D6B2091000DBBA3 /* AEShader.m */; };
-		9FC850CD2D6B2091000DBBA3 /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509E2D6B2091000DBBA3 /* AEElement.m */; };
-		9FC850CE2D6B2091000DBBA3 /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8509F2D6B2091000DBBA3 /* AETexture.m */; };
-		9FC850CF2D6B2091000DBBA3 /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */; };
-		9FC850D02D6B2091000DBBA3 /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */; };
-		9FC850D12D6B2091000DBBA3 /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */; };
-		9FC850D22D6B2091000DBBA3 /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850A82D6B2091000DBBA3 /* AERenderer.m */; };
-		9FC850D32D6B2091000DBBA3 /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */; };
-		9FC850D42D6B2091000DBBA3 /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850AD2D6B2091000DBBA3 /* AEMath.m */; };
-		9FC850D52D6B2091000DBBA3 /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */; };
-		9FC850D62D6B2091000DBBA3 /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */; };
-		9FC850D72D6B2091000DBBA3 /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */; };
-		9FC850D82D6B2091000DBBA3 /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B62D6B2091000DBBA3 /* AEScene.m */; };
-		9FC850D92D6B2091000DBBA3 /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B82D6B2091000DBBA3 /* AEModel.m */; };
-		9FC850DA2D6B2091000DBBA3 /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850B92D6B2091000DBBA3 /* AECamera.m */; };
-		9FC850DB2D6B2091000DBBA3 /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BC2D6B2091000DBBA3 /* AEMesh.m */; };
-		9FC850DC2D6B2091000DBBA3 /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850BE2D6B2091000DBBA3 /* AEComponent.m */; };
-		9FC850DD2D6B2091000DBBA3 /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C22D6B2091000DBBA3 /* Basic.metal */; };
-		9FC850DE2D6B2091000DBBA3 /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C62D6B2091000DBBA3 /* AEView.m */; };
-		9FC850DF2D6B2091000DBBA3 /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850C92D6B2091000DBBA3 /* AEMaterial.m */; };
-		9FC850E32D6EB4C0000DBBA3 /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F0624FD2D9A4500002FC5D2 /* Aether-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aether-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F06250C2D9A758F002FC5D2 /* Aether_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aether_Mac.entitlements; sourceTree = "<group>"; };
 		9F0625112D9A758F002FC5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9F0625AA2DAB8A0C002FC5D2 /* DemoScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoScene.h; sourceTree = "<group>"; };
-		9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoScene.m; sourceTree = "<group>"; };
-		9F0625D62DACB318002FC5D2 /* AELight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AELight.h; sourceTree = "<group>"; };
-		9F0625D72DACB318002FC5D2 /* AELight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AELight.m; sourceTree = "<group>"; };
-		9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vs_unlit_textured.metal; sourceTree = "<group>"; };
-		9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = fs_unlit_textured.metal; sourceTree = "<group>"; };
-		9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = viewSettings.metal; sourceTree = "<group>"; };
-		9F8F47CE2D74467400A03C9E /* tonemapping.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = tonemapping.metal; sourceTree = "<group>"; };
+		9F194D682FAD8C98005E836B /* AEBasicGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEBasicGeometry.h; sourceTree = "<group>"; };
+		9F194D692FAD8C98005E836B /* AEBasicGeometry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEBasicGeometry.m; sourceTree = "<group>"; };
+		9F194D6A2FAD8C98005E836B /* AECamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AECamera.h; sourceTree = "<group>"; };
+		9F194D6B2FAD8C98005E836B /* AECamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AECamera.m; sourceTree = "<group>"; };
+		9F194D6C2FAD8C98005E836B /* AEComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEComponent.h; sourceTree = "<group>"; };
+		9F194D6D2FAD8C98005E836B /* AEComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEComponent.m; sourceTree = "<group>"; };
+		9F194D6E2FAD8C98005E836B /* AELight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AELight.h; sourceTree = "<group>"; };
+		9F194D6F2FAD8C98005E836B /* AELight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AELight.m; sourceTree = "<group>"; };
+		9F194D702FAD8C98005E836B /* AEMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEMesh.h; sourceTree = "<group>"; };
+		9F194D712FAD8C98005E836B /* AEMesh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMesh.m; sourceTree = "<group>"; };
+		9F194D722FAD8C98005E836B /* AEModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEModel.h; sourceTree = "<group>"; };
+		9F194D732FAD8C98005E836B /* AEModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEModel.m; sourceTree = "<group>"; };
+		9F194D742FAD8C98005E836B /* AEScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEScene.h; sourceTree = "<group>"; };
+		9F194D752FAD8C98005E836B /* AEScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEScene.m; sourceTree = "<group>"; };
+		9F194D772FAD8C98005E836B /* AEElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEElement.h; sourceTree = "<group>"; };
+		9F194D782FAD8C98005E836B /* AEElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEElement.m; sourceTree = "<group>"; };
+		9F194D792FAD8C98005E836B /* AEShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEShader.h; sourceTree = "<group>"; };
+		9F194D7A2FAD8C98005E836B /* AEShader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEShader.m; sourceTree = "<group>"; };
+		9F194D7B2FAD8C98005E836B /* AESkybox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESkybox.h; sourceTree = "<group>"; };
+		9F194D7C2FAD8C98005E836B /* AESkybox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESkybox.m; sourceTree = "<group>"; };
+		9F194D7D2FAD8C98005E836B /* AETexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AETexture.h; sourceTree = "<group>"; };
+		9F194D7E2FAD8C98005E836B /* AETexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AETexture.m; sourceTree = "<group>"; };
+		9F194D802FAD8C98005E836B /* DemoScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoScene.h; sourceTree = "<group>"; };
+		9F194D812FAD8C98005E836B /* DemoScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoScene.m; sourceTree = "<group>"; };
+		9F194D832FAD8C98005E836B /* AEMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEMaterial.h; sourceTree = "<group>"; };
+		9F194D842FAD8C98005E836B /* AEMaterial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMaterial.m; sourceTree = "<group>"; };
+		9F194D862FAD8C98005E836B /* AEMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEMath.h; sourceTree = "<group>"; };
+		9F194D872FAD8C98005E836B /* AEMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMath.m; sourceTree = "<group>"; };
+		9F194D892FAD8C98005E836B /* AEPipelineState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPipelineState.h; sourceTree = "<group>"; };
+		9F194D8A2FAD8C98005E836B /* AEPipelineState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPipelineState.m; sourceTree = "<group>"; };
+		9F194D8B2FAD8C98005E836B /* AEPipelineStateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPipelineStateManager.h; sourceTree = "<group>"; };
+		9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPipelineStateManager.m; sourceTree = "<group>"; };
+		9F194D8D2FAD8C98005E836B /* AERenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AERenderer.h; sourceTree = "<group>"; };
+		9F194D8E2FAD8C98005E836B /* AERenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AERenderer.m; sourceTree = "<group>"; };
+		9F194D8F2FAD8C98005E836B /* AEResourcePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEResourcePool.h; sourceTree = "<group>"; };
+		9F194D902FAD8C98005E836B /* AEResourcePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEResourcePool.m; sourceTree = "<group>"; };
+		9F194D922FAD8C98005E836B /* AEBehaviour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEBehaviour.h; sourceTree = "<group>"; };
+		9F194D932FAD8C98005E836B /* AEBehaviour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEBehaviour.m; sourceTree = "<group>"; };
+		9F194D952FAD8C98005E836B /* Basic.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Basic.metal; sourceTree = "<group>"; };
+		9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = fs_unlit_textured.metal; sourceTree = "<group>"; };
+		9F194D972FAD8C98005E836B /* tonemapping.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = tonemapping.metal; sourceTree = "<group>"; };
+		9F194D982FAD8C98005E836B /* viewSettings.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = viewSettings.metal; sourceTree = "<group>"; };
+		9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vs_unlit_textured.metal; sourceTree = "<group>"; };
+		9F194D9B2FAD8C98005E836B /* AEGltfLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEGltfLoader.h; sourceTree = "<group>"; };
+		9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEGltfLoader.m; sourceTree = "<group>"; };
+		9F194D9E2FAD8C98005E836B /* AEDebugTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEDebugTools.h; sourceTree = "<group>"; };
+		9F194D9F2FAD8C98005E836B /* AEDebugTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEDebugTools.m; sourceTree = "<group>"; };
+		9F194DA02FAD8C98005E836B /* AEPerformanceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPerformanceMonitor.h; sourceTree = "<group>"; };
+		9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPerformanceMonitor.m; sourceTree = "<group>"; };
+		9F194DA22FAD8C98005E836B /* AEResourceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEResourceManager.h; sourceTree = "<group>"; };
+		9F194DA32FAD8C98005E836B /* AEResourceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEResourceManager.m; sourceTree = "<group>"; };
+		9F194DA52FAD8C98005E836B /* AEView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEView.h; sourceTree = "<group>"; };
+		9F194DA62FAD8C98005E836B /* AEView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEView.m; sourceTree = "<group>"; };
+		9F194DA82FAD8C98005E836B /* AEWorldContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEWorldContext.h; sourceTree = "<group>"; };
+		9F194DA92FAD8C98005E836B /* AEWorldContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEWorldContext.m; sourceTree = "<group>"; };
+		9F194DAB2FAD8C98005E836B /* AEEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEEngine.h; sourceTree = "<group>"; };
+		9F194DAC2FAD8C98005E836B /* AEEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEEngine.m; sourceTree = "<group>"; };
 		9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aether-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,51 +155,6 @@
 		9FC84FDE2D61CA54000DBBA3 /* TestLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLog.h; sourceTree = "<group>"; };
 		9FC84FDF2D61CA54000DBBA3 /* TestLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLog.m; sourceTree = "<group>"; };
 		9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoScene.swift; sourceTree = "<group>"; };
-		9FC850962D6B2091000DBBA3 /* AEEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEEngine.m; sourceTree = "<group>"; };
-		9FC850982D6B2091000DBBA3 /* AESkybox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESkybox.m; sourceTree = "<group>"; };
-		9FC850992D6B2091000DBBA3 /* AEShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEShader.m; sourceTree = "<group>"; };
-		9FC8509A2D6B2091000DBBA3 /* AEElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEElement.h; sourceTree = "<group>"; };
-		9FC8509B2D6B2091000DBBA3 /* AETexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETexture.h; sourceTree = "<group>"; };
-		9FC8509C2D6B2091000DBBA3 /* AEShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEShader.h; sourceTree = "<group>"; };
-		9FC8509D2D6B2091000DBBA3 /* AESkybox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESkybox.h; sourceTree = "<group>"; };
-		9FC8509E2D6B2091000DBBA3 /* AEElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEElement.m; sourceTree = "<group>"; };
-		9FC8509F2D6B2091000DBBA3 /* AETexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETexture.m; sourceTree = "<group>"; };
-		9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEPipelineState.m; sourceTree = "<group>"; };
-		9FC850A22D6B2091000DBBA3 /* AEPipelineStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEPipelineStateManager.h; sourceTree = "<group>"; };
-		9FC850A32D6B2091000DBBA3 /* AEResourcePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEResourcePool.h; sourceTree = "<group>"; };
-		9FC850A42D6B2091000DBBA3 /* AERenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AERenderer.h; sourceTree = "<group>"; };
-		9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEPipelineStateManager.m; sourceTree = "<group>"; };
-		9FC850A62D6B2091000DBBA3 /* AEPipelineState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEPipelineState.h; sourceTree = "<group>"; };
-		9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEResourcePool.m; sourceTree = "<group>"; };
-		9FC850A82D6B2091000DBBA3 /* AERenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AERenderer.m; sourceTree = "<group>"; };
-		9FC850AA2D6B2091000DBBA3 /* AEWorldContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEWorldContext.h; sourceTree = "<group>"; };
-		9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEWorldContext.m; sourceTree = "<group>"; };
-		9FC850AD2D6B2091000DBBA3 /* AEMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMath.m; sourceTree = "<group>"; };
-		9FC850AE2D6B2091000DBBA3 /* AEMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMath.h; sourceTree = "<group>"; };
-		9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEPerformanceMonitor.m; sourceTree = "<group>"; };
-		9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDebugTools.m; sourceTree = "<group>"; };
-		9FC850B22D6B2091000DBBA3 /* AEPerformanceMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEPerformanceMonitor.h; sourceTree = "<group>"; };
-		9FC850B32D6B2091000DBBA3 /* AEDebugTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDebugTools.h; sourceTree = "<group>"; };
-		9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEBasicGeometry.m; sourceTree = "<group>"; };
-		9FC850B62D6B2091000DBBA3 /* AEScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEScene.m; sourceTree = "<group>"; };
-		9FC850B72D6B2091000DBBA3 /* AEMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMesh.h; sourceTree = "<group>"; };
-		9FC850B82D6B2091000DBBA3 /* AEModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEModel.m; sourceTree = "<group>"; };
-		9FC850B92D6B2091000DBBA3 /* AECamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AECamera.m; sourceTree = "<group>"; };
-		9FC850BA2D6B2091000DBBA3 /* AEComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEComponent.h; sourceTree = "<group>"; };
-		9FC850BB2D6B2091000DBBA3 /* AEBasicGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEBasicGeometry.h; sourceTree = "<group>"; };
-		9FC850BC2D6B2091000DBBA3 /* AEMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMesh.m; sourceTree = "<group>"; };
-		9FC850BD2D6B2091000DBBA3 /* AEScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEScene.h; sourceTree = "<group>"; };
-		9FC850BE2D6B2091000DBBA3 /* AEComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEComponent.m; sourceTree = "<group>"; };
-		9FC850BF2D6B2091000DBBA3 /* AECamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AECamera.h; sourceTree = "<group>"; };
-		9FC850C02D6B2091000DBBA3 /* AEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEModel.h; sourceTree = "<group>"; };
-		9FC850C22D6B2091000DBBA3 /* Basic.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Basic.metal; sourceTree = "<group>"; };
-		9FC850C32D6B2091000DBBA3 /* AEEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEEngine.h; sourceTree = "<group>"; };
-		9FC850C52D6B2091000DBBA3 /* AEView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEView.h; sourceTree = "<group>"; };
-		9FC850C62D6B2091000DBBA3 /* AEView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEView.m; sourceTree = "<group>"; };
-		9FC850C82D6B2091000DBBA3 /* AEMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMaterial.h; sourceTree = "<group>"; };
-		9FC850C92D6B2091000DBBA3 /* AEMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMaterial.m; sourceTree = "<group>"; };
-		9FC850E12D6EB4C0000DBBA3 /* AEBehaviour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEBehaviour.h; sourceTree = "<group>"; };
-		9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEBehaviour.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -189,14 +197,166 @@
 			path = Mac;
 			sourceTree = "<group>";
 		};
-		9F0625A62DAB89A2002FC5D2 /* DemoScene */ = {
+		9F194D762FAD8C98005E836B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9F0625AA2DAB8A0C002FC5D2 /* DemoScene.h */,
-				9F0625AB2DAB8A0C002FC5D2 /* DemoScene.m */,
+				9F194D682FAD8C98005E836B /* AEBasicGeometry.h */,
+				9F194D692FAD8C98005E836B /* AEBasicGeometry.m */,
+				9F194D6A2FAD8C98005E836B /* AECamera.h */,
+				9F194D6B2FAD8C98005E836B /* AECamera.m */,
+				9F194D6C2FAD8C98005E836B /* AEComponent.h */,
+				9F194D6D2FAD8C98005E836B /* AEComponent.m */,
+				9F194D6E2FAD8C98005E836B /* AELight.h */,
+				9F194D6F2FAD8C98005E836B /* AELight.m */,
+				9F194D702FAD8C98005E836B /* AEMesh.h */,
+				9F194D712FAD8C98005E836B /* AEMesh.m */,
+				9F194D722FAD8C98005E836B /* AEModel.h */,
+				9F194D732FAD8C98005E836B /* AEModel.m */,
+				9F194D742FAD8C98005E836B /* AEScene.h */,
+				9F194D752FAD8C98005E836B /* AEScene.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9F194D7F2FAD8C98005E836B /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D772FAD8C98005E836B /* AEElement.h */,
+				9F194D782FAD8C98005E836B /* AEElement.m */,
+				9F194D792FAD8C98005E836B /* AEShader.h */,
+				9F194D7A2FAD8C98005E836B /* AEShader.m */,
+				9F194D7B2FAD8C98005E836B /* AESkybox.h */,
+				9F194D7C2FAD8C98005E836B /* AESkybox.m */,
+				9F194D7D2FAD8C98005E836B /* AETexture.h */,
+				9F194D7E2FAD8C98005E836B /* AETexture.m */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		9F194D822FAD8C98005E836B /* DemoScene */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D802FAD8C98005E836B /* DemoScene.h */,
+				9F194D812FAD8C98005E836B /* DemoScene.m */,
 			);
 			path = DemoScene;
 			sourceTree = "<group>";
+		};
+		9F194D852FAD8C98005E836B /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D832FAD8C98005E836B /* AEMaterial.h */,
+				9F194D842FAD8C98005E836B /* AEMaterial.m */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		9F194D882FAD8C98005E836B /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D862FAD8C98005E836B /* AEMath.h */,
+				9F194D872FAD8C98005E836B /* AEMath.m */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		9F194D912FAD8C98005E836B /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D892FAD8C98005E836B /* AEPipelineState.h */,
+				9F194D8A2FAD8C98005E836B /* AEPipelineState.m */,
+				9F194D8B2FAD8C98005E836B /* AEPipelineStateManager.h */,
+				9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */,
+				9F194D8D2FAD8C98005E836B /* AERenderer.h */,
+				9F194D8E2FAD8C98005E836B /* AERenderer.m */,
+				9F194D8F2FAD8C98005E836B /* AEResourcePool.h */,
+				9F194D902FAD8C98005E836B /* AEResourcePool.m */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		9F194D942FAD8C98005E836B /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D922FAD8C98005E836B /* AEBehaviour.h */,
+				9F194D932FAD8C98005E836B /* AEBehaviour.m */,
+			);
+			path = Script;
+			sourceTree = "<group>";
+		};
+		9F194D9A2FAD8C98005E836B /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D952FAD8C98005E836B /* Basic.metal */,
+				9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */,
+				9F194D972FAD8C98005E836B /* tonemapping.metal */,
+				9F194D982FAD8C98005E836B /* viewSettings.metal */,
+				9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		9F194D9D2FAD8C98005E836B /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D9B2FAD8C98005E836B /* AEGltfLoader.h */,
+				9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */,
+			);
+			path = Loaders;
+			sourceTree = "<group>";
+		};
+		9F194DA42FAD8C98005E836B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D9D2FAD8C98005E836B /* Loaders */,
+				9F194D9E2FAD8C98005E836B /* AEDebugTools.h */,
+				9F194D9F2FAD8C98005E836B /* AEDebugTools.m */,
+				9F194DA02FAD8C98005E836B /* AEPerformanceMonitor.h */,
+				9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */,
+				9F194DA22FAD8C98005E836B /* AEResourceManager.h */,
+				9F194DA32FAD8C98005E836B /* AEResourceManager.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9F194DA72FAD8C98005E836B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F194DA52FAD8C98005E836B /* AEView.h */,
+				9F194DA62FAD8C98005E836B /* AEView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F194DAA2FAD8C98005E836B /* World */ = {
+			isa = PBXGroup;
+			children = (
+				9F194DA82FAD8C98005E836B /* AEWorldContext.h */,
+				9F194DA92FAD8C98005E836B /* AEWorldContext.m */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
+		9F194DAD2FAD8C98005E836B /* Aether */ = {
+			isa = PBXGroup;
+			children = (
+				9F194D762FAD8C98005E836B /* Components */,
+				9F194D7F2FAD8C98005E836B /* DataTypes */,
+				9F194D822FAD8C98005E836B /* DemoScene */,
+				9F194D852FAD8C98005E836B /* Material */,
+				9F194D882FAD8C98005E836B /* Math */,
+				9F194D912FAD8C98005E836B /* Render */,
+				9F194D942FAD8C98005E836B /* Script */,
+				9F194D9A2FAD8C98005E836B /* Shaders */,
+				9F194DA42FAD8C98005E836B /* Utilities */,
+				9F194DA72FAD8C98005E836B /* View */,
+				9F194DAA2FAD8C98005E836B /* World */,
+				9F194DAB2FAD8C98005E836B /* AEEngine.h */,
+				9F194DAC2FAD8C98005E836B /* AEEngine.m */,
+			);
+			name = Aether;
+			path = ../Aether;
+			sourceTree = SOURCE_ROOT;
 		};
 		9FC84FBD2D61C9EE000DBBA3 = {
 			isa = PBXGroup;
@@ -218,10 +378,10 @@
 		9FC84FC82D61C9EE000DBBA3 /* Aether-swift */ = {
 			isa = PBXGroup;
 			children = (
+				9F194DAD2FAD8C98005E836B /* Aether */,
 				9F0626132DAE558F002FC5D2 /* Resources */,
 				9F06259F2DAB7664002FC5D2 /* Mac */,
 				9F06259E2DAB7655002FC5D2 /* iOS */,
-				9FC850952D6B2091000DBBA3 /* Aether */,
 				9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */,
 				9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */,
 				9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */,
@@ -232,146 +392,6 @@
 				9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */,
 			);
 			path = "Aether-swift";
-			sourceTree = "<group>";
-		};
-		9FC850952D6B2091000DBBA3 /* Aether */ = {
-			isa = PBXGroup;
-			children = (
-				9F0625A62DAB89A2002FC5D2 /* DemoScene */,
-				9FC850C32D6B2091000DBBA3 /* AEEngine.h */,
-				9FC850962D6B2091000DBBA3 /* AEEngine.m */,
-				9FC850E02D6EB431000DBBA3 /* Script */,
-				9FC850972D6B2091000DBBA3 /* DataTypes */,
-				9FC850A02D6B2091000DBBA3 /* Render */,
-				9FC850A92D6B2091000DBBA3 /* World */,
-				9FC850AC2D6B2091000DBBA3 /* Math */,
-				9FC850AF2D6B2091000DBBA3 /* Utilities */,
-				9FC850B42D6B2091000DBBA3 /* Components */,
-				9FC850C12D6B2091000DBBA3 /* Shaders */,
-				9FC850C42D6B2091000DBBA3 /* View */,
-				9FC850C72D6B2091000DBBA3 /* Material */,
-			);
-			name = Aether;
-			path = ../../Aether;
-			sourceTree = "<group>";
-		};
-		9FC850972D6B2091000DBBA3 /* DataTypes */ = {
-			isa = PBXGroup;
-			children = (
-				9FC8509D2D6B2091000DBBA3 /* AESkybox.h */,
-				9FC850982D6B2091000DBBA3 /* AESkybox.m */,
-				9FC8509C2D6B2091000DBBA3 /* AEShader.h */,
-				9FC850992D6B2091000DBBA3 /* AEShader.m */,
-				9FC8509A2D6B2091000DBBA3 /* AEElement.h */,
-				9FC8509E2D6B2091000DBBA3 /* AEElement.m */,
-				9FC8509B2D6B2091000DBBA3 /* AETexture.h */,
-				9FC8509F2D6B2091000DBBA3 /* AETexture.m */,
-			);
-			path = DataTypes;
-			sourceTree = "<group>";
-		};
-		9FC850A02D6B2091000DBBA3 /* Render */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850A62D6B2091000DBBA3 /* AEPipelineState.h */,
-				9FC850A12D6B2091000DBBA3 /* AEPipelineState.m */,
-				9FC850A22D6B2091000DBBA3 /* AEPipelineStateManager.h */,
-				9FC850A52D6B2091000DBBA3 /* AEPipelineStateManager.m */,
-				9FC850A32D6B2091000DBBA3 /* AEResourcePool.h */,
-				9FC850A72D6B2091000DBBA3 /* AEResourcePool.m */,
-				9FC850A42D6B2091000DBBA3 /* AERenderer.h */,
-				9FC850A82D6B2091000DBBA3 /* AERenderer.m */,
-			);
-			path = Render;
-			sourceTree = "<group>";
-		};
-		9FC850A92D6B2091000DBBA3 /* World */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850AA2D6B2091000DBBA3 /* AEWorldContext.h */,
-				9FC850AB2D6B2091000DBBA3 /* AEWorldContext.m */,
-			);
-			path = World;
-			sourceTree = "<group>";
-		};
-		9FC850AC2D6B2091000DBBA3 /* Math */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850AE2D6B2091000DBBA3 /* AEMath.h */,
-				9FC850AD2D6B2091000DBBA3 /* AEMath.m */,
-			);
-			path = Math;
-			sourceTree = "<group>";
-		};
-		9FC850AF2D6B2091000DBBA3 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850B22D6B2091000DBBA3 /* AEPerformanceMonitor.h */,
-				9FC850B02D6B2091000DBBA3 /* AEPerformanceMonitor.m */,
-				9FC850B32D6B2091000DBBA3 /* AEDebugTools.h */,
-				9FC850B12D6B2091000DBBA3 /* AEDebugTools.m */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		9FC850B42D6B2091000DBBA3 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850BA2D6B2091000DBBA3 /* AEComponent.h */,
-				9FC850BE2D6B2091000DBBA3 /* AEComponent.m */,
-				9FC850BB2D6B2091000DBBA3 /* AEBasicGeometry.h */,
-				9FC850B52D6B2091000DBBA3 /* AEBasicGeometry.m */,
-				9FC850BD2D6B2091000DBBA3 /* AEScene.h */,
-				9FC850B62D6B2091000DBBA3 /* AEScene.m */,
-				9FC850B72D6B2091000DBBA3 /* AEMesh.h */,
-				9FC850BC2D6B2091000DBBA3 /* AEMesh.m */,
-				9FC850C02D6B2091000DBBA3 /* AEModel.h */,
-				9FC850B82D6B2091000DBBA3 /* AEModel.m */,
-				9FC850BF2D6B2091000DBBA3 /* AECamera.h */,
-				9FC850B92D6B2091000DBBA3 /* AECamera.m */,
-				9F0625D62DACB318002FC5D2 /* AELight.h */,
-				9F0625D72DACB318002FC5D2 /* AELight.m */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		9FC850C12D6B2091000DBBA3 /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-				9F8F47CC2D7443FF00A03C9E /* viewSettings.metal */,
-				9FC850C22D6B2091000DBBA3 /* Basic.metal */,
-				9F8F47C82D74409C00A03C9E /* vs_unlit_textured.metal */,
-				9F8F47CA2D74421000A03C9E /* fs_unlit_textured.metal */,
-				9F8F47CE2D74467400A03C9E /* tonemapping.metal */,
-			);
-			path = Shaders;
-			sourceTree = "<group>";
-		};
-		9FC850C42D6B2091000DBBA3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850C52D6B2091000DBBA3 /* AEView.h */,
-				9FC850C62D6B2091000DBBA3 /* AEView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9FC850C72D6B2091000DBBA3 /* Material */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850C82D6B2091000DBBA3 /* AEMaterial.h */,
-				9FC850C92D6B2091000DBBA3 /* AEMaterial.m */,
-			);
-			path = Material;
-			sourceTree = "<group>";
-		};
-		9FC850E02D6EB431000DBBA3 /* Script */ = {
-			isa = PBXGroup;
-			children = (
-				9FC850E12D6EB4C0000DBBA3 /* AEBehaviour.h */,
-				9FC850E22D6EB4C0000DBBA3 /* AEBehaviour.m */,
-			);
-			path = Script;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,38 +505,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0625C02DAB9276002FC5D2 /* vs_unlit_textured.metal in Sources */,
-				9F0625B82DAB923E002FC5D2 /* AEComponent.m in Sources */,
-				9F0625D82DACB318002FC5D2 /* AELight.m in Sources */,
-				9F0625CE2DAB92D3002FC5D2 /* AEShader.m in Sources */,
-				9F0625C12DAB927B002FC5D2 /* fs_unlit_textured.metal in Sources */,
-				9F0625BC2DAB925C002FC5D2 /* AEMesh.m in Sources */,
-				9F0625CA2DAB92B7002FC5D2 /* AEPipelineStateManager.m in Sources */,
-				9F0625C32DAB9286002FC5D2 /* AEView.m in Sources */,
-				9F0625BF2DAB9272002FC5D2 /* Basic.metal in Sources */,
+				9F194DAE2FAD8C98005E836B /* AEMesh.m in Sources */,
+				9F194DAF2FAD8C98005E836B /* Basic.metal in Sources */,
+				9F194DB02FAD8C98005E836B /* AEScene.m in Sources */,
+				9F194DB12FAD8C98005E836B /* AECamera.m in Sources */,
+				9F194DB22FAD8C98005E836B /* AEResourcePool.m in Sources */,
+				9F194DB32FAD8C98005E836B /* AEModel.m in Sources */,
+				9F194DB42FAD8C98005E836B /* AEMath.m in Sources */,
+				9F194DB52FAD8C98005E836B /* AEPipelineState.m in Sources */,
+				9F194DB62FAD8C98005E836B /* AESkybox.m in Sources */,
+				9F194DB72FAD8C98005E836B /* AEView.m in Sources */,
+				9F194DB82FAD8C98005E836B /* vs_unlit_textured.metal in Sources */,
+				9F194DB92FAD8C98005E836B /* fs_unlit_textured.metal in Sources */,
+				9F194DBA2FAD8C98005E836B /* AEShader.m in Sources */,
+				9F194DBB2FAD8C98005E836B /* AERenderer.m in Sources */,
+				9F194DBC2FAD8C98005E836B /* tonemapping.metal in Sources */,
+				9F194DBD2FAD8C98005E836B /* AEPipelineStateManager.m in Sources */,
+				9F194DBE2FAD8C98005E836B /* AELight.m in Sources */,
+				9F194DBF2FAD8C98005E836B /* AEBasicGeometry.m in Sources */,
+				9F194DC02FAD8C98005E836B /* AEWorldContext.m in Sources */,
+				9F194DC12FAD8C98005E836B /* viewSettings.metal in Sources */,
+				9F194DC22FAD8C98005E836B /* AEGltfLoader.m in Sources */,
+				9F194DC32FAD8C98005E836B /* AEElement.m in Sources */,
+				9F194DC42FAD8C98005E836B /* AEEngine.m in Sources */,
+				9F194DC52FAD8C98005E836B /* DemoScene.m in Sources */,
+				9F194DC62FAD8C98005E836B /* AEDebugTools.m in Sources */,
+				9F194DC72FAD8C98005E836B /* AEComponent.m in Sources */,
+				9F194DC82FAD8C98005E836B /* AETexture.m in Sources */,
+				9F194DC92FAD8C98005E836B /* AEPerformanceMonitor.m in Sources */,
+				9F194DCA2FAD8C98005E836B /* AEMaterial.m in Sources */,
+				9F194DCB2FAD8C98005E836B /* AEBehaviour.m in Sources */,
+				9F194DCC2FAD8C98005E836B /* AEResourceManager.m in Sources */,
 				9F0625B52DAB903A002FC5D2 /* ViewController.swift in Sources */,
-				9F0625BA2DAB9247002FC5D2 /* AEScene.m in Sources */,
-				9F0625BB2DAB9253002FC5D2 /* AEModel.m in Sources */,
-				9F0625B72DAB9233002FC5D2 /* AEEngine.m in Sources */,
 				9F0625B42DAB9035002FC5D2 /* AppDelegate.swift in Sources */,
-				9F0625C22DAB9280002FC5D2 /* tonemapping.metal in Sources */,
-				9F0625CD2DAB92C7002FC5D2 /* AESkybox.m in Sources */,
-				9F0625BE2DAB926E002FC5D2 /* viewSettings.metal in Sources */,
-				9F0625D02DAB92DD002FC5D2 /* AETexture.m in Sources */,
-				9F0625B92DAB9243002FC5D2 /* AEBasicGeometry.m in Sources */,
 				9F0625D22DAB9843002FC5D2 /* SwiftDemoScene.swift in Sources */,
-				9F0625BD2DAB9263002FC5D2 /* AECamera.m in Sources */,
-				9F0625AD2DAB8A0C002FC5D2 /* DemoScene.m in Sources */,
-				9F0625C82DAB92AC002FC5D2 /* AEWorldContext.m in Sources */,
-				9F0625C62DAB929F002FC5D2 /* AEDebugTools.m in Sources */,
-				9F0625CB2DAB92BC002FC5D2 /* AEResourcePool.m in Sources */,
-				9F0625CF2DAB92D9002FC5D2 /* AEElement.m in Sources */,
-				9F0625CC2DAB92C1002FC5D2 /* AERenderer.m in Sources */,
-				9F0625C42DAB928C002FC5D2 /* AEMaterial.m in Sources */,
-				9F0625C52DAB929B002FC5D2 /* AEPerformanceMonitor.m in Sources */,
-				9F0625D12DAB92E2002FC5D2 /* AEBehaviour.m in Sources */,
-				9F0625C72DAB92A6002FC5D2 /* AEMath.m in Sources */,
-				9F0625C92DAB92B2002FC5D2 /* AEPipelineState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,39 +546,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FC850CD2D6B2091000DBBA3 /* AEElement.m in Sources */,
-				9FC850D62D6B2091000DBBA3 /* AEDebugTools.m in Sources */,
-				9FC850DE2D6B2091000DBBA3 /* AEView.m in Sources */,
-				9FC850E32D6EB4C0000DBBA3 /* AEBehaviour.m in Sources */,
 				9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */,
-				9F8F47C92D74409C00A03C9E /* vs_unlit_textured.metal in Sources */,
-				9FC850CB2D6B2091000DBBA3 /* AESkybox.m in Sources */,
-				9FC850D42D6B2091000DBBA3 /* AEMath.m in Sources */,
-				9FC850CC2D6B2091000DBBA3 /* AEShader.m in Sources */,
 				9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */,
-				9FC850DB2D6B2091000DBBA3 /* AEMesh.m in Sources */,
-				9F8F47CB2D74421000A03C9E /* fs_unlit_textured.metal in Sources */,
-				9FC850DC2D6B2091000DBBA3 /* AEComponent.m in Sources */,
-				9FC850D22D6B2091000DBBA3 /* AERenderer.m in Sources */,
+				9F194DCD2FAD8C99005E836B /* AEMesh.m in Sources */,
+				9F194DCE2FAD8C99005E836B /* Basic.metal in Sources */,
+				9F194DCF2FAD8C99005E836B /* AEScene.m in Sources */,
+				9F194DD02FAD8C99005E836B /* AECamera.m in Sources */,
+				9F194DD12FAD8C99005E836B /* AEResourcePool.m in Sources */,
+				9F194DD22FAD8C99005E836B /* AEModel.m in Sources */,
+				9F194DD32FAD8C99005E836B /* AEMath.m in Sources */,
+				9F194DD42FAD8C99005E836B /* AEPipelineState.m in Sources */,
+				9F194DD52FAD8C99005E836B /* AESkybox.m in Sources */,
+				9F194DD62FAD8C99005E836B /* AEView.m in Sources */,
+				9F194DD72FAD8C99005E836B /* vs_unlit_textured.metal in Sources */,
+				9F194DD82FAD8C99005E836B /* fs_unlit_textured.metal in Sources */,
+				9F194DD92FAD8C99005E836B /* AEShader.m in Sources */,
+				9F194DDA2FAD8C99005E836B /* AERenderer.m in Sources */,
+				9F194DDB2FAD8C99005E836B /* tonemapping.metal in Sources */,
+				9F194DDC2FAD8C99005E836B /* AEPipelineStateManager.m in Sources */,
+				9F194DDD2FAD8C99005E836B /* AELight.m in Sources */,
+				9F194DDE2FAD8C99005E836B /* AEBasicGeometry.m in Sources */,
+				9F194DDF2FAD8C99005E836B /* AEWorldContext.m in Sources */,
+				9F194DE02FAD8C99005E836B /* viewSettings.metal in Sources */,
+				9F194DE12FAD8C99005E836B /* AEGltfLoader.m in Sources */,
+				9F194DE22FAD8C99005E836B /* AEElement.m in Sources */,
+				9F194DE32FAD8C99005E836B /* AEEngine.m in Sources */,
+				9F194DE42FAD8C99005E836B /* DemoScene.m in Sources */,
+				9F194DE52FAD8C99005E836B /* AEDebugTools.m in Sources */,
+				9F194DE62FAD8C99005E836B /* AEComponent.m in Sources */,
+				9F194DE72FAD8C99005E836B /* AETexture.m in Sources */,
+				9F194DE82FAD8C99005E836B /* AEPerformanceMonitor.m in Sources */,
+				9F194DE92FAD8C99005E836B /* AEMaterial.m in Sources */,
+				9F194DEA2FAD8C99005E836B /* AEBehaviour.m in Sources */,
+				9F194DEB2FAD8C99005E836B /* AEResourceManager.m in Sources */,
 				9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */,
-				9FC850D72D6B2091000DBBA3 /* AEBasicGeometry.m in Sources */,
-				9F0625D92DACB318002FC5D2 /* AELight.m in Sources */,
 				9FC8502A2D646FB9000DBBA3 /* SwiftDemoScene.swift in Sources */,
-				9FC850D12D6B2091000DBBA3 /* AEResourcePool.m in Sources */,
-				9FC850CA2D6B2091000DBBA3 /* AEEngine.m in Sources */,
-				9F8F47CF2D74467400A03C9E /* tonemapping.metal in Sources */,
-				9FC850CE2D6B2091000DBBA3 /* AETexture.m in Sources */,
-				9F8F47CD2D7443FF00A03C9E /* viewSettings.metal in Sources */,
-				9FC850DD2D6B2091000DBBA3 /* Basic.metal in Sources */,
-				9FC850DF2D6B2091000DBBA3 /* AEMaterial.m in Sources */,
-				9FC850CF2D6B2091000DBBA3 /* AEPipelineState.m in Sources */,
-				9F0625AC2DAB8A0C002FC5D2 /* DemoScene.m in Sources */,
-				9FC850D82D6B2091000DBBA3 /* AEScene.m in Sources */,
-				9FC850D32D6B2091000DBBA3 /* AEWorldContext.m in Sources */,
-				9FC850D52D6B2091000DBBA3 /* AEPerformanceMonitor.m in Sources */,
-				9FC850D92D6B2091000DBBA3 /* AEModel.m in Sources */,
-				9FC850DA2D6B2091000DBBA3 /* AECamera.m in Sources */,
-				9FC850D02D6B2091000DBBA3 /* AEPipelineStateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
