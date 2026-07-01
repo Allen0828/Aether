@@ -3,463 +3,231 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F0625152D9A758F002FC5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F06250F2D9A758F002FC5D2 /* Main.storyboard */; };
-		9F0625B42DAB9035002FC5D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */; };
-		9F0625B52DAB903A002FC5D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */; };
-		9F0625B62DAB9074002FC5D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */; };
-		9F0625D22DAB9843002FC5D2 /* SwiftDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */; };
-		9F194DAE2FAD8C98005E836B /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D712FAD8C98005E836B /* AEMesh.m */; };
-		9F194DAF2FAD8C98005E836B /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D952FAD8C98005E836B /* Basic.metal */; };
-		9F194DB02FAD8C98005E836B /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D752FAD8C98005E836B /* AEScene.m */; };
-		9F194DB12FAD8C98005E836B /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6B2FAD8C98005E836B /* AECamera.m */; };
-		9F194DB22FAD8C98005E836B /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D902FAD8C98005E836B /* AEResourcePool.m */; };
-		9F194DB32FAD8C98005E836B /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D732FAD8C98005E836B /* AEModel.m */; };
-		9F194DB42FAD8C98005E836B /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D872FAD8C98005E836B /* AEMath.m */; };
-		9F194DB52FAD8C98005E836B /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8A2FAD8C98005E836B /* AEPipelineState.m */; };
-		9F194DB62FAD8C98005E836B /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7C2FAD8C98005E836B /* AESkybox.m */; };
-		9F194DB72FAD8C98005E836B /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA62FAD8C98005E836B /* AEView.m */; };
-		9F194DB82FAD8C98005E836B /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */; };
-		9F194DB92FAD8C98005E836B /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */; };
-		9F194DBA2FAD8C98005E836B /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7A2FAD8C98005E836B /* AEShader.m */; };
-		9F194DBB2FAD8C98005E836B /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8E2FAD8C98005E836B /* AERenderer.m */; };
-		9F194DBC2FAD8C98005E836B /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D972FAD8C98005E836B /* tonemapping.metal */; };
-		9F194DBD2FAD8C98005E836B /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */; };
-		9F194DBE2FAD8C98005E836B /* AELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6F2FAD8C98005E836B /* AELight.m */; };
-		9F194DBF2FAD8C98005E836B /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D692FAD8C98005E836B /* AEBasicGeometry.m */; };
-		9F194DC02FAD8C98005E836B /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA92FAD8C98005E836B /* AEWorldContext.m */; };
-		9F194DC12FAD8C98005E836B /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D982FAD8C98005E836B /* viewSettings.metal */; };
-		9F194DC22FAD8C98005E836B /* AEGltfLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */; };
-		9F194DC32FAD8C98005E836B /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D782FAD8C98005E836B /* AEElement.m */; };
-		9F194DC42FAD8C98005E836B /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DAC2FAD8C98005E836B /* AEEngine.m */; };
-		9F194DC52FAD8C98005E836B /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D812FAD8C98005E836B /* DemoScene.m */; };
-		9F194DC62FAD8C98005E836B /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9F2FAD8C98005E836B /* AEDebugTools.m */; };
-		9F194DC72FAD8C98005E836B /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6D2FAD8C98005E836B /* AEComponent.m */; };
-		9F194DC82FAD8C98005E836B /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7E2FAD8C98005E836B /* AETexture.m */; };
-		9F194DC92FAD8C98005E836B /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */; };
-		9F194DCA2FAD8C98005E836B /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D842FAD8C98005E836B /* AEMaterial.m */; };
-		9F194DCB2FAD8C98005E836B /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D932FAD8C98005E836B /* AEBehaviour.m */; };
-		9F194DCC2FAD8C98005E836B /* AEResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA32FAD8C98005E836B /* AEResourceManager.m */; };
-		9F194DCD2FAD8C99005E836B /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D712FAD8C98005E836B /* AEMesh.m */; };
-		9F194DCE2FAD8C99005E836B /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D952FAD8C98005E836B /* Basic.metal */; };
-		9F194DCF2FAD8C99005E836B /* AEScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D752FAD8C98005E836B /* AEScene.m */; };
-		9F194DD02FAD8C99005E836B /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6B2FAD8C98005E836B /* AECamera.m */; };
-		9F194DD12FAD8C99005E836B /* AEResourcePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D902FAD8C98005E836B /* AEResourcePool.m */; };
-		9F194DD22FAD8C99005E836B /* AEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D732FAD8C98005E836B /* AEModel.m */; };
-		9F194DD32FAD8C99005E836B /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D872FAD8C98005E836B /* AEMath.m */; };
-		9F194DD42FAD8C99005E836B /* AEPipelineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8A2FAD8C98005E836B /* AEPipelineState.m */; };
-		9F194DD52FAD8C99005E836B /* AESkybox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7C2FAD8C98005E836B /* AESkybox.m */; };
-		9F194DD62FAD8C99005E836B /* AEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA62FAD8C98005E836B /* AEView.m */; };
-		9F194DD72FAD8C99005E836B /* vs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */; };
-		9F194DD82FAD8C99005E836B /* fs_unlit_textured.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */; };
-		9F194DD92FAD8C99005E836B /* AEShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7A2FAD8C98005E836B /* AEShader.m */; };
-		9F194DDA2FAD8C99005E836B /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8E2FAD8C98005E836B /* AERenderer.m */; };
-		9F194DDB2FAD8C99005E836B /* tonemapping.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D972FAD8C98005E836B /* tonemapping.metal */; };
-		9F194DDC2FAD8C99005E836B /* AEPipelineStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */; };
-		9F194DDD2FAD8C99005E836B /* AELight.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6F2FAD8C98005E836B /* AELight.m */; };
-		9F194DDE2FAD8C99005E836B /* AEBasicGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D692FAD8C98005E836B /* AEBasicGeometry.m */; };
-		9F194DDF2FAD8C99005E836B /* AEWorldContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA92FAD8C98005E836B /* AEWorldContext.m */; };
-		9F194DE02FAD8C99005E836B /* viewSettings.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D982FAD8C98005E836B /* viewSettings.metal */; };
-		9F194DE12FAD8C99005E836B /* AEGltfLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */; };
-		9F194DE22FAD8C99005E836B /* AEElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D782FAD8C98005E836B /* AEElement.m */; };
-		9F194DE32FAD8C99005E836B /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DAC2FAD8C98005E836B /* AEEngine.m */; };
-		9F194DE42FAD8C99005E836B /* DemoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D812FAD8C98005E836B /* DemoScene.m */; };
-		9F194DE52FAD8C99005E836B /* AEDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D9F2FAD8C98005E836B /* AEDebugTools.m */; };
-		9F194DE62FAD8C99005E836B /* AEComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D6D2FAD8C98005E836B /* AEComponent.m */; };
-		9F194DE72FAD8C99005E836B /* AETexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D7E2FAD8C98005E836B /* AETexture.m */; };
-		9F194DE82FAD8C99005E836B /* AEPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */; };
-		9F194DE92FAD8C99005E836B /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D842FAD8C98005E836B /* AEMaterial.m */; };
-		9F194DEA2FAD8C99005E836B /* AEBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194D932FAD8C98005E836B /* AEBehaviour.m */; };
-		9F194DEB2FAD8C99005E836B /* AEResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F194DA32FAD8C98005E836B /* AEResourceManager.m */; };
-		9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */; };
-		9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */; };
-		9FC84FD12D61C9EE000DBBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */; };
-		9FC84FD32D61C9EF000DBBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */; };
-		9FC84FD62D61C9EF000DBBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */; };
-		9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC84FDF2D61CA54000DBBA3 /* TestLog.m */; };
-		9FC8502A2D646FB9000DBBA3 /* SwiftDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */; };
+		BF00000000000000000004 /* AEEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000003 /* AEEngine.m */; };
+		BF00000000000000000008 /* AECamera.m in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000007 /* AECamera.m */; };
+		BF00000000000000000012 /* AERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000011 /* AERenderer.m */; };
+		BF00000000000000000014 /* AEModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000F /* AEModelView.m */; };
+		BF00000000000000000016 /* AEMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000015 /* AEMesh.m */; };
+		BF00000000000000000020 /* AEGltfLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000019 /* AEGltfLoader.m */; };
+		BF00000000000000000024 /* AEMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000023 /* AEMaterial.m */; };
+		BF00000000000000000028 /* AEMath.m in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000027 /* AEMath.m */; };
+		BF00000000000000000030 /* Basic.metal in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000029 /* Basic.metal */; };
+		BF00000000000000000032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000031 /* AppDelegate.swift */; };
+		BF00000000000000000034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000033 /* ViewController.swift */; };
+		BF00000000000000000040 /* Box.gltf in Resources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000039 /* Box.gltf */; };
+		BF00000000000000000042 /* Box0.bin in Resources */ = {isa = PBXBuildFile; fileRef = FR00000000000000000041 /* Box0.bin */; };
+		FB00000000000000000044 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FW00000000000000000043 /* Metal.framework */; };
+		FB00000000000000000046 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FW00000000000000000045 /* MetalKit.framework */; };
+		FB00000000000000000048 /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FW00000000000000000047 /* ModelIO.framework */; };
+		FB00000000000000000050 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FW00000000000000000049 /* UIKit.framework */; };
+		FB00000000000000000052 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FW00000000000000000051 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F0624FD2D9A4500002FC5D2 /* Aether-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aether-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F06250C2D9A758F002FC5D2 /* Aether_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aether_Mac.entitlements; sourceTree = "<group>"; };
-		9F0625112D9A758F002FC5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9F194D682FAD8C98005E836B /* AEBasicGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEBasicGeometry.h; sourceTree = "<group>"; };
-		9F194D692FAD8C98005E836B /* AEBasicGeometry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEBasicGeometry.m; sourceTree = "<group>"; };
-		9F194D6A2FAD8C98005E836B /* AECamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AECamera.h; sourceTree = "<group>"; };
-		9F194D6B2FAD8C98005E836B /* AECamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AECamera.m; sourceTree = "<group>"; };
-		9F194D6C2FAD8C98005E836B /* AEComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEComponent.h; sourceTree = "<group>"; };
-		9F194D6D2FAD8C98005E836B /* AEComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEComponent.m; sourceTree = "<group>"; };
-		9F194D6E2FAD8C98005E836B /* AELight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AELight.h; sourceTree = "<group>"; };
-		9F194D6F2FAD8C98005E836B /* AELight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AELight.m; sourceTree = "<group>"; };
-		9F194D702FAD8C98005E836B /* AEMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEMesh.h; sourceTree = "<group>"; };
-		9F194D712FAD8C98005E836B /* AEMesh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMesh.m; sourceTree = "<group>"; };
-		9F194D722FAD8C98005E836B /* AEModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEModel.h; sourceTree = "<group>"; };
-		9F194D732FAD8C98005E836B /* AEModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEModel.m; sourceTree = "<group>"; };
-		9F194D742FAD8C98005E836B /* AEScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEScene.h; sourceTree = "<group>"; };
-		9F194D752FAD8C98005E836B /* AEScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEScene.m; sourceTree = "<group>"; };
-		9F194D772FAD8C98005E836B /* AEElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEElement.h; sourceTree = "<group>"; };
-		9F194D782FAD8C98005E836B /* AEElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEElement.m; sourceTree = "<group>"; };
-		9F194D792FAD8C98005E836B /* AEShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEShader.h; sourceTree = "<group>"; };
-		9F194D7A2FAD8C98005E836B /* AEShader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEShader.m; sourceTree = "<group>"; };
-		9F194D7B2FAD8C98005E836B /* AESkybox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESkybox.h; sourceTree = "<group>"; };
-		9F194D7C2FAD8C98005E836B /* AESkybox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESkybox.m; sourceTree = "<group>"; };
-		9F194D7D2FAD8C98005E836B /* AETexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AETexture.h; sourceTree = "<group>"; };
-		9F194D7E2FAD8C98005E836B /* AETexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AETexture.m; sourceTree = "<group>"; };
-		9F194D802FAD8C98005E836B /* DemoScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoScene.h; sourceTree = "<group>"; };
-		9F194D812FAD8C98005E836B /* DemoScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoScene.m; sourceTree = "<group>"; };
-		9F194D832FAD8C98005E836B /* AEMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEMaterial.h; sourceTree = "<group>"; };
-		9F194D842FAD8C98005E836B /* AEMaterial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMaterial.m; sourceTree = "<group>"; };
-		9F194D862FAD8C98005E836B /* AEMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEMath.h; sourceTree = "<group>"; };
-		9F194D872FAD8C98005E836B /* AEMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMath.m; sourceTree = "<group>"; };
-		9F194D892FAD8C98005E836B /* AEPipelineState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPipelineState.h; sourceTree = "<group>"; };
-		9F194D8A2FAD8C98005E836B /* AEPipelineState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPipelineState.m; sourceTree = "<group>"; };
-		9F194D8B2FAD8C98005E836B /* AEPipelineStateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPipelineStateManager.h; sourceTree = "<group>"; };
-		9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPipelineStateManager.m; sourceTree = "<group>"; };
-		9F194D8D2FAD8C98005E836B /* AERenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AERenderer.h; sourceTree = "<group>"; };
-		9F194D8E2FAD8C98005E836B /* AERenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AERenderer.m; sourceTree = "<group>"; };
-		9F194D8F2FAD8C98005E836B /* AEResourcePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEResourcePool.h; sourceTree = "<group>"; };
-		9F194D902FAD8C98005E836B /* AEResourcePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEResourcePool.m; sourceTree = "<group>"; };
-		9F194D922FAD8C98005E836B /* AEBehaviour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEBehaviour.h; sourceTree = "<group>"; };
-		9F194D932FAD8C98005E836B /* AEBehaviour.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEBehaviour.m; sourceTree = "<group>"; };
-		9F194D952FAD8C98005E836B /* Basic.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Basic.metal; sourceTree = "<group>"; };
-		9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = fs_unlit_textured.metal; sourceTree = "<group>"; };
-		9F194D972FAD8C98005E836B /* tonemapping.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = tonemapping.metal; sourceTree = "<group>"; };
-		9F194D982FAD8C98005E836B /* viewSettings.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = viewSettings.metal; sourceTree = "<group>"; };
-		9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = vs_unlit_textured.metal; sourceTree = "<group>"; };
-		9F194D9B2FAD8C98005E836B /* AEGltfLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEGltfLoader.h; sourceTree = "<group>"; };
-		9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEGltfLoader.m; sourceTree = "<group>"; };
-		9F194D9E2FAD8C98005E836B /* AEDebugTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEDebugTools.h; sourceTree = "<group>"; };
-		9F194D9F2FAD8C98005E836B /* AEDebugTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEDebugTools.m; sourceTree = "<group>"; };
-		9F194DA02FAD8C98005E836B /* AEPerformanceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPerformanceMonitor.h; sourceTree = "<group>"; };
-		9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPerformanceMonitor.m; sourceTree = "<group>"; };
-		9F194DA22FAD8C98005E836B /* AEResourceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEResourceManager.h; sourceTree = "<group>"; };
-		9F194DA32FAD8C98005E836B /* AEResourceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEResourceManager.m; sourceTree = "<group>"; };
-		9F194DA52FAD8C98005E836B /* AEView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEView.h; sourceTree = "<group>"; };
-		9F194DA62FAD8C98005E836B /* AEView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEView.m; sourceTree = "<group>"; };
-		9F194DA82FAD8C98005E836B /* AEWorldContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEWorldContext.h; sourceTree = "<group>"; };
-		9F194DA92FAD8C98005E836B /* AEWorldContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEWorldContext.m; sourceTree = "<group>"; };
-		9F194DAB2FAD8C98005E836B /* AEEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEEngine.h; sourceTree = "<group>"; };
-		9F194DAC2FAD8C98005E836B /* AEEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEEngine.m; sourceTree = "<group>"; };
-		9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aether-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9FC84FD02D61C9EE000DBBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9FC84FD52D61C9EF000DBBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9FC84FD72D61C9EF000DBBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FC84FDD2D61CA54000DBBA3 /* Aether-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aether-swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		9FC84FDE2D61CA54000DBBA3 /* TestLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLog.h; sourceTree = "<group>"; };
-		9FC84FDF2D61CA54000DBBA3 /* TestLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLog.m; sourceTree = "<group>"; };
-		9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoScene.swift; sourceTree = "<group>"; };
+		FR00000000000000000000 /* Aether.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Aether.h; path = ../Aether/Aether.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000001 /* AEEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AEEngine.h; path = ../Aether/Core/AEEngine.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000003 /* AEEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AEEngine.m; path = ../Aether/Core/AEEngine.m; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000005 /* AECamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AECamera.h; path = ../Aether/Core/AECamera.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000007 /* AECamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AECamera.m; path = ../Aether/Core/AECamera.m; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000009 /* AERenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AERenderer.h; path = ../Aether/Core/AERenderer.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000011 /* AERenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AERenderer.m; path = ../Aether/Core/AERenderer.m; sourceTree = SOURCE_ROOT; };
+		FR0000000000000000000E /* AEModelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AEModelView.h; path = ../Aether/Core/AEModelView.h; sourceTree = SOURCE_ROOT; };
+		FR0000000000000000000F /* AEModelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AEModelView.m; path = ../Aether/Core/AEModelView.m; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000013 /* AEMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AEMesh.h; path = ../Aether/Model/AEMesh.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000015 /* AEMesh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AEMesh.m; path = ../Aether/Model/AEMesh.m; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000017 /* AEGltfLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AEGltfLoader.h; path = ../Aether/Model/AEGltfLoader.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000019 /* AEGltfLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AEGltfLoader.m; path = ../Aether/Model/AEGltfLoader.m; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000021 /* AEMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AEMaterial.h; path = ../Aether/Material/AEMaterial.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000023 /* AEMaterial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AEMaterial.m; path = ../Aether/Material/AEMaterial.m; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000025 /* AEMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AEMath.h; path = ../Aether/Math/AEMath.h; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000027 /* AEMath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AEMath.m; path = ../Aether/Math/AEMath.m; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000029 /* Basic.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = Basic.metal; path = ../Aether/Shaders/Basic.metal; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AetherDemo/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = AetherDemo/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000035 /* AetherDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AetherDemo-Bridging-Header.h"; path = "AetherDemo/AetherDemo-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = AetherDemo/Info.plist; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000039 /* Box.gltf */ = {isa = PBXFileReference; lastKnownFileType = text; name = Box.gltf; path = AetherDemo/Resources/Box/Box.gltf; sourceTree = SOURCE_ROOT; };
+		FR00000000000000000041 /* Box0.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Box0.bin; path = AetherDemo/Resources/Box/Box0.bin; sourceTree = SOURCE_ROOT; };
+		FW00000000000000000043 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
+		FW00000000000000000045 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
+		FW00000000000000000047 /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ModelIO.framework; sourceTree = DEVELOPER_DIR; };
+		FW00000000000000000049 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FW00000000000000000051 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		PR00000000000000000053 /* AetherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AetherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		9F0626132DAE558F002FC5D2 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		9F0624FA2D9A4500002FC5D2 /* Frameworks */ = {
+		PH00000000000000000063 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9FC84FC32D61C9EE000DBBA3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				FB00000000000000000044 /* Metal.framework in Frameworks */,
+				FB00000000000000000046 /* MetalKit.framework in Frameworks */,
+				FB00000000000000000048 /* ModelIO.framework in Frameworks */,
+				FB00000000000000000050 /* UIKit.framework in Frameworks */,
+				FB00000000000000000052 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9F06259E2DAB7655002FC5D2 /* iOS */ = {
+		9F194E352FE124C2005E836B /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */,
-				9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */,
+				FR00000000000000000039 /* Box.gltf */,
+				FR00000000000000000041 /* Box0.bin */,
 			);
-			path = iOS;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		9F06259F2DAB7664002FC5D2 /* Mac */ = {
+		GR00000000000000000065 = {
 			isa = PBXGroup;
 			children = (
-				9F06250C2D9A758F002FC5D2 /* Aether_Mac.entitlements */,
-				9F06250F2D9A758F002FC5D2 /* Main.storyboard */,
+				GR00000000000000000066 /* Aether */,
+				GR00000000000000000072 /* AetherDemo */,
+				GR00000000000000000074 /* Frameworks */,
+				GR00000000000000000075 /* Products */,
+				9F194E352FE124C2005E836B /* Recovered References */,
 			);
-			path = Mac;
 			sourceTree = "<group>";
 		};
-		9F194D762FAD8C98005E836B /* Components */ = {
+		GR00000000000000000066 /* Aether */ = {
 			isa = PBXGroup;
 			children = (
-				9F194D682FAD8C98005E836B /* AEBasicGeometry.h */,
-				9F194D692FAD8C98005E836B /* AEBasicGeometry.m */,
-				9F194D6A2FAD8C98005E836B /* AECamera.h */,
-				9F194D6B2FAD8C98005E836B /* AECamera.m */,
-				9F194D6C2FAD8C98005E836B /* AEComponent.h */,
-				9F194D6D2FAD8C98005E836B /* AEComponent.m */,
-				9F194D6E2FAD8C98005E836B /* AELight.h */,
-				9F194D6F2FAD8C98005E836B /* AELight.m */,
-				9F194D702FAD8C98005E836B /* AEMesh.h */,
-				9F194D712FAD8C98005E836B /* AEMesh.m */,
-				9F194D722FAD8C98005E836B /* AEModel.h */,
-				9F194D732FAD8C98005E836B /* AEModel.m */,
-				9F194D742FAD8C98005E836B /* AEScene.h */,
-				9F194D752FAD8C98005E836B /* AEScene.m */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		9F194D7F2FAD8C98005E836B /* DataTypes */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D772FAD8C98005E836B /* AEElement.h */,
-				9F194D782FAD8C98005E836B /* AEElement.m */,
-				9F194D792FAD8C98005E836B /* AEShader.h */,
-				9F194D7A2FAD8C98005E836B /* AEShader.m */,
-				9F194D7B2FAD8C98005E836B /* AESkybox.h */,
-				9F194D7C2FAD8C98005E836B /* AESkybox.m */,
-				9F194D7D2FAD8C98005E836B /* AETexture.h */,
-				9F194D7E2FAD8C98005E836B /* AETexture.m */,
-			);
-			path = DataTypes;
-			sourceTree = "<group>";
-		};
-		9F194D822FAD8C98005E836B /* DemoScene */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D802FAD8C98005E836B /* DemoScene.h */,
-				9F194D812FAD8C98005E836B /* DemoScene.m */,
-			);
-			path = DemoScene;
-			sourceTree = "<group>";
-		};
-		9F194D852FAD8C98005E836B /* Material */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D832FAD8C98005E836B /* AEMaterial.h */,
-				9F194D842FAD8C98005E836B /* AEMaterial.m */,
-			);
-			path = Material;
-			sourceTree = "<group>";
-		};
-		9F194D882FAD8C98005E836B /* Math */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D862FAD8C98005E836B /* AEMath.h */,
-				9F194D872FAD8C98005E836B /* AEMath.m */,
-			);
-			path = Math;
-			sourceTree = "<group>";
-		};
-		9F194D912FAD8C98005E836B /* Render */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D892FAD8C98005E836B /* AEPipelineState.h */,
-				9F194D8A2FAD8C98005E836B /* AEPipelineState.m */,
-				9F194D8B2FAD8C98005E836B /* AEPipelineStateManager.h */,
-				9F194D8C2FAD8C98005E836B /* AEPipelineStateManager.m */,
-				9F194D8D2FAD8C98005E836B /* AERenderer.h */,
-				9F194D8E2FAD8C98005E836B /* AERenderer.m */,
-				9F194D8F2FAD8C98005E836B /* AEResourcePool.h */,
-				9F194D902FAD8C98005E836B /* AEResourcePool.m */,
-			);
-			path = Render;
-			sourceTree = "<group>";
-		};
-		9F194D942FAD8C98005E836B /* Script */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D922FAD8C98005E836B /* AEBehaviour.h */,
-				9F194D932FAD8C98005E836B /* AEBehaviour.m */,
-			);
-			path = Script;
-			sourceTree = "<group>";
-		};
-		9F194D9A2FAD8C98005E836B /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D952FAD8C98005E836B /* Basic.metal */,
-				9F194D962FAD8C98005E836B /* fs_unlit_textured.metal */,
-				9F194D972FAD8C98005E836B /* tonemapping.metal */,
-				9F194D982FAD8C98005E836B /* viewSettings.metal */,
-				9F194D992FAD8C98005E836B /* vs_unlit_textured.metal */,
-			);
-			path = Shaders;
-			sourceTree = "<group>";
-		};
-		9F194D9D2FAD8C98005E836B /* Loaders */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D9B2FAD8C98005E836B /* AEGltfLoader.h */,
-				9F194D9C2FAD8C98005E836B /* AEGltfLoader.m */,
-			);
-			path = Loaders;
-			sourceTree = "<group>";
-		};
-		9F194DA42FAD8C98005E836B /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D9D2FAD8C98005E836B /* Loaders */,
-				9F194D9E2FAD8C98005E836B /* AEDebugTools.h */,
-				9F194D9F2FAD8C98005E836B /* AEDebugTools.m */,
-				9F194DA02FAD8C98005E836B /* AEPerformanceMonitor.h */,
-				9F194DA12FAD8C98005E836B /* AEPerformanceMonitor.m */,
-				9F194DA22FAD8C98005E836B /* AEResourceManager.h */,
-				9F194DA32FAD8C98005E836B /* AEResourceManager.m */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		9F194DA72FAD8C98005E836B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9F194DA52FAD8C98005E836B /* AEView.h */,
-				9F194DA62FAD8C98005E836B /* AEView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9F194DAA2FAD8C98005E836B /* World */ = {
-			isa = PBXGroup;
-			children = (
-				9F194DA82FAD8C98005E836B /* AEWorldContext.h */,
-				9F194DA92FAD8C98005E836B /* AEWorldContext.m */,
-			);
-			path = World;
-			sourceTree = "<group>";
-		};
-		9F194DAD2FAD8C98005E836B /* Aether */ = {
-			isa = PBXGroup;
-			children = (
-				9F194D762FAD8C98005E836B /* Components */,
-				9F194D7F2FAD8C98005E836B /* DataTypes */,
-				9F194D822FAD8C98005E836B /* DemoScene */,
-				9F194D852FAD8C98005E836B /* Material */,
-				9F194D882FAD8C98005E836B /* Math */,
-				9F194D912FAD8C98005E836B /* Render */,
-				9F194D942FAD8C98005E836B /* Script */,
-				9F194D9A2FAD8C98005E836B /* Shaders */,
-				9F194DA42FAD8C98005E836B /* Utilities */,
-				9F194DA72FAD8C98005E836B /* View */,
-				9F194DAA2FAD8C98005E836B /* World */,
-				9F194DAB2FAD8C98005E836B /* AEEngine.h */,
-				9F194DAC2FAD8C98005E836B /* AEEngine.m */,
+				FR00000000000000000000 /* Aether.h */,
+				GR00000000000000000067 /* Core */,
+				GR00000000000000000068 /* Model */,
+				GR00000000000000000069 /* Material */,
+				GR00000000000000000070 /* Math */,
+				GR00000000000000000071 /* Shaders */,
 			);
 			name = Aether;
-			path = ../Aether;
-			sourceTree = SOURCE_ROOT;
-		};
-		9FC84FBD2D61C9EE000DBBA3 = {
-			isa = PBXGroup;
-			children = (
-				9FC84FC82D61C9EE000DBBA3 /* Aether-swift */,
-				9FC84FC72D61C9EE000DBBA3 /* Products */,
-			);
 			sourceTree = "<group>";
 		};
-		9FC84FC72D61C9EE000DBBA3 /* Products */ = {
+		GR00000000000000000067 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */,
-				9F0624FD2D9A4500002FC5D2 /* Aether-Mac.app */,
+				FR00000000000000000001 /* AEEngine.h */,
+				FR00000000000000000003 /* AEEngine.m */,
+				FR00000000000000000005 /* AECamera.h */,
+				FR00000000000000000007 /* AECamera.m */,
+				FR00000000000000000009 /* AERenderer.h */,
+				FR00000000000000000011 /* AERenderer.m */,
+				FR0000000000000000000E /* AEModelView.h */,
+				FR0000000000000000000F /* AEModelView.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		GR00000000000000000068 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FR00000000000000000013 /* AEMesh.h */,
+				FR00000000000000000015 /* AEMesh.m */,
+				FR00000000000000000017 /* AEGltfLoader.h */,
+				FR00000000000000000019 /* AEGltfLoader.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		GR00000000000000000069 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				FR00000000000000000021 /* AEMaterial.h */,
+				FR00000000000000000023 /* AEMaterial.m */,
+			);
+			name = Material;
+			sourceTree = "<group>";
+		};
+		GR00000000000000000070 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				FR00000000000000000025 /* AEMath.h */,
+				FR00000000000000000027 /* AEMath.m */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+		GR00000000000000000071 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				FR00000000000000000029 /* Basic.metal */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		GR00000000000000000072 /* AetherDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FR00000000000000000031 /* AppDelegate.swift */,
+				FR00000000000000000033 /* ViewController.swift */,
+				FR00000000000000000035 /* AetherDemo-Bridging-Header.h */,
+				FR00000000000000000037 /* Info.plist */,
+			);
+			name = AetherDemo;
+			sourceTree = "<group>";
+		};
+		GR00000000000000000074 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FW00000000000000000043 /* Metal.framework */,
+				FW00000000000000000045 /* MetalKit.framework */,
+				FW00000000000000000047 /* ModelIO.framework */,
+				FW00000000000000000049 /* UIKit.framework */,
+				FW00000000000000000051 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		GR00000000000000000075 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PR00000000000000000053 /* AetherDemo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9FC84FC82D61C9EE000DBBA3 /* Aether-swift */ = {
-			isa = PBXGroup;
-			children = (
-				9F194DAD2FAD8C98005E836B /* Aether */,
-				9F0626132DAE558F002FC5D2 /* Resources */,
-				9F06259F2DAB7664002FC5D2 /* Mac */,
-				9F06259E2DAB7655002FC5D2 /* iOS */,
-				9FC84FC92D61C9EE000DBBA3 /* AppDelegate.swift */,
-				9FC84FCD2D61C9EE000DBBA3 /* ViewController.swift */,
-				9FC84FD22D61C9EF000DBBA3 /* Assets.xcassets */,
-				9FC84FD72D61C9EF000DBBA3 /* Info.plist */,
-				9FC84FDE2D61CA54000DBBA3 /* TestLog.h */,
-				9FC84FDF2D61CA54000DBBA3 /* TestLog.m */,
-				9FC84FDD2D61CA54000DBBA3 /* Aether-swift-Bridging-Header.h */,
-				9FC850292D646FB9000DBBA3 /* SwiftDemoScene.swift */,
-			);
-			path = "Aether-swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F0624FC2D9A4500002FC5D2 /* Aether-Mac */ = {
+		TG00000000000000000054 /* AetherDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F06250B2D9A4502002FC5D2 /* Build configuration list for PBXNativeTarget "Aether-Mac" */;
+			buildConfigurationList = CL00000000000000000060 /* Build configuration list for PBXNativeTarget "AetherDemo" */;
 			buildPhases = (
-				9F0624F92D9A4500002FC5D2 /* Sources */,
-				9F0624FA2D9A4500002FC5D2 /* Frameworks */,
-				9F0624FB2D9A4500002FC5D2 /* Resources */,
+				PH00000000000000000062 /* Sources */,
+				PH00000000000000000063 /* Frameworks */,
+				PH00000000000000000064 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				9F0626132DAE558F002FC5D2 /* Resources */,
-			);
-			name = "Aether-Mac";
-			packageProductDependencies = (
-			);
-			productName = "Aether-Mac";
-			productReference = 9F0624FD2D9A4500002FC5D2 /* Aether-Mac.app */;
-			productType = "com.apple.product-type.application";
-		};
-		9FC84FC52D61C9EE000DBBA3 /* Aether-swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9FC84FDA2D61C9EF000DBBA3 /* Build configuration list for PBXNativeTarget "Aether-swift" */;
-			buildPhases = (
-				9FC84FC22D61C9EE000DBBA3 /* Sources */,
-				9FC84FC32D61C9EE000DBBA3 /* Frameworks */,
-				9FC84FC42D61C9EE000DBBA3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				9F0626132DAE558F002FC5D2 /* Resources */,
-			);
-			name = "Aether-swift";
-			productName = "Aether-swift";
-			productReference = 9FC84FC62D61C9EE000DBBA3 /* Aether-swift.app */;
+			name = AetherDemo;
+			productName = AetherDemo;
+			productReference = PR00000000000000000053 /* AetherDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9FC84FBE2D61C9EE000DBBA3 /* Project object */ = {
+		PR00000000000000000055 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1510;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					9F0624FC2D9A4500002FC5D2 = {
-						CreatedOnToolsVersion = 16.2;
-						LastSwiftMigration = 1620;
-					};
-					9FC84FC52D61C9EE000DBBA3 = {
-						CreatedOnToolsVersion = 15.1;
-						LastSwiftMigration = 1510;
+					TG00000000000000000054 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 9FC84FC12D61C9EE000DBBA3 /* Build configuration list for PBXProject "Aether-swift" */;
+			buildConfigurationList = CL00000000000000000061 /* Build configuration list for PBXProject "Aether-swift" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -467,433 +235,189 @@
 				en,
 				Base,
 			);
-			mainGroup = 9FC84FBD2D61C9EE000DBBA3;
-			productRefGroup = 9FC84FC72D61C9EE000DBBA3 /* Products */;
+			mainGroup = GR00000000000000000065;
+			productRefGroup = GR00000000000000000075 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9FC84FC52D61C9EE000DBBA3 /* Aether-swift */,
-				9F0624FC2D9A4500002FC5D2 /* Aether-Mac */,
+				TG00000000000000000054 /* AetherDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9F0624FB2D9A4500002FC5D2 /* Resources */ = {
+		PH00000000000000000064 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0625B62DAB9074002FC5D2 /* Assets.xcassets in Resources */,
-				9F0625152D9A758F002FC5D2 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9FC84FC42D61C9EE000DBBA3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FC84FD62D61C9EF000DBBA3 /* LaunchScreen.storyboard in Resources */,
-				9FC84FD32D61C9EF000DBBA3 /* Assets.xcassets in Resources */,
-				9FC84FD12D61C9EE000DBBA3 /* Main.storyboard in Resources */,
+				BF00000000000000000040 /* Box.gltf in Resources */,
+				BF00000000000000000042 /* Box0.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9F0624F92D9A4500002FC5D2 /* Sources */ = {
+		PH00000000000000000062 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F194DAE2FAD8C98005E836B /* AEMesh.m in Sources */,
-				9F194DAF2FAD8C98005E836B /* Basic.metal in Sources */,
-				9F194DB02FAD8C98005E836B /* AEScene.m in Sources */,
-				9F194DB12FAD8C98005E836B /* AECamera.m in Sources */,
-				9F194DB22FAD8C98005E836B /* AEResourcePool.m in Sources */,
-				9F194DB32FAD8C98005E836B /* AEModel.m in Sources */,
-				9F194DB42FAD8C98005E836B /* AEMath.m in Sources */,
-				9F194DB52FAD8C98005E836B /* AEPipelineState.m in Sources */,
-				9F194DB62FAD8C98005E836B /* AESkybox.m in Sources */,
-				9F194DB72FAD8C98005E836B /* AEView.m in Sources */,
-				9F194DB82FAD8C98005E836B /* vs_unlit_textured.metal in Sources */,
-				9F194DB92FAD8C98005E836B /* fs_unlit_textured.metal in Sources */,
-				9F194DBA2FAD8C98005E836B /* AEShader.m in Sources */,
-				9F194DBB2FAD8C98005E836B /* AERenderer.m in Sources */,
-				9F194DBC2FAD8C98005E836B /* tonemapping.metal in Sources */,
-				9F194DBD2FAD8C98005E836B /* AEPipelineStateManager.m in Sources */,
-				9F194DBE2FAD8C98005E836B /* AELight.m in Sources */,
-				9F194DBF2FAD8C98005E836B /* AEBasicGeometry.m in Sources */,
-				9F194DC02FAD8C98005E836B /* AEWorldContext.m in Sources */,
-				9F194DC12FAD8C98005E836B /* viewSettings.metal in Sources */,
-				9F194DC22FAD8C98005E836B /* AEGltfLoader.m in Sources */,
-				9F194DC32FAD8C98005E836B /* AEElement.m in Sources */,
-				9F194DC42FAD8C98005E836B /* AEEngine.m in Sources */,
-				9F194DC52FAD8C98005E836B /* DemoScene.m in Sources */,
-				9F194DC62FAD8C98005E836B /* AEDebugTools.m in Sources */,
-				9F194DC72FAD8C98005E836B /* AEComponent.m in Sources */,
-				9F194DC82FAD8C98005E836B /* AETexture.m in Sources */,
-				9F194DC92FAD8C98005E836B /* AEPerformanceMonitor.m in Sources */,
-				9F194DCA2FAD8C98005E836B /* AEMaterial.m in Sources */,
-				9F194DCB2FAD8C98005E836B /* AEBehaviour.m in Sources */,
-				9F194DCC2FAD8C98005E836B /* AEResourceManager.m in Sources */,
-				9F0625B52DAB903A002FC5D2 /* ViewController.swift in Sources */,
-				9F0625B42DAB9035002FC5D2 /* AppDelegate.swift in Sources */,
-				9F0625D22DAB9843002FC5D2 /* SwiftDemoScene.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9FC84FC22D61C9EE000DBBA3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FC84FCE2D61C9EE000DBBA3 /* ViewController.swift in Sources */,
-				9FC84FCA2D61C9EE000DBBA3 /* AppDelegate.swift in Sources */,
-				9F194DCD2FAD8C99005E836B /* AEMesh.m in Sources */,
-				9F194DCE2FAD8C99005E836B /* Basic.metal in Sources */,
-				9F194DCF2FAD8C99005E836B /* AEScene.m in Sources */,
-				9F194DD02FAD8C99005E836B /* AECamera.m in Sources */,
-				9F194DD12FAD8C99005E836B /* AEResourcePool.m in Sources */,
-				9F194DD22FAD8C99005E836B /* AEModel.m in Sources */,
-				9F194DD32FAD8C99005E836B /* AEMath.m in Sources */,
-				9F194DD42FAD8C99005E836B /* AEPipelineState.m in Sources */,
-				9F194DD52FAD8C99005E836B /* AESkybox.m in Sources */,
-				9F194DD62FAD8C99005E836B /* AEView.m in Sources */,
-				9F194DD72FAD8C99005E836B /* vs_unlit_textured.metal in Sources */,
-				9F194DD82FAD8C99005E836B /* fs_unlit_textured.metal in Sources */,
-				9F194DD92FAD8C99005E836B /* AEShader.m in Sources */,
-				9F194DDA2FAD8C99005E836B /* AERenderer.m in Sources */,
-				9F194DDB2FAD8C99005E836B /* tonemapping.metal in Sources */,
-				9F194DDC2FAD8C99005E836B /* AEPipelineStateManager.m in Sources */,
-				9F194DDD2FAD8C99005E836B /* AELight.m in Sources */,
-				9F194DDE2FAD8C99005E836B /* AEBasicGeometry.m in Sources */,
-				9F194DDF2FAD8C99005E836B /* AEWorldContext.m in Sources */,
-				9F194DE02FAD8C99005E836B /* viewSettings.metal in Sources */,
-				9F194DE12FAD8C99005E836B /* AEGltfLoader.m in Sources */,
-				9F194DE22FAD8C99005E836B /* AEElement.m in Sources */,
-				9F194DE32FAD8C99005E836B /* AEEngine.m in Sources */,
-				9F194DE42FAD8C99005E836B /* DemoScene.m in Sources */,
-				9F194DE52FAD8C99005E836B /* AEDebugTools.m in Sources */,
-				9F194DE62FAD8C99005E836B /* AEComponent.m in Sources */,
-				9F194DE72FAD8C99005E836B /* AETexture.m in Sources */,
-				9F194DE82FAD8C99005E836B /* AEPerformanceMonitor.m in Sources */,
-				9F194DE92FAD8C99005E836B /* AEMaterial.m in Sources */,
-				9F194DEA2FAD8C99005E836B /* AEBehaviour.m in Sources */,
-				9F194DEB2FAD8C99005E836B /* AEResourceManager.m in Sources */,
-				9FC84FE02D61CA54000DBBA3 /* TestLog.m in Sources */,
-				9FC8502A2D646FB9000DBBA3 /* SwiftDemoScene.swift in Sources */,
+				BF00000000000000000004 /* AEEngine.m in Sources */,
+				BF00000000000000000008 /* AECamera.m in Sources */,
+				BF00000000000000000012 /* AERenderer.m in Sources */,
+				BF00000000000000000014 /* AEModelView.m in Sources */,
+				BF00000000000000000016 /* AEMesh.m in Sources */,
+				BF00000000000000000020 /* AEGltfLoader.m in Sources */,
+				BF00000000000000000024 /* AEMaterial.m in Sources */,
+				BF00000000000000000028 /* AEMath.m in Sources */,
+				BF00000000000000000030 /* Basic.metal in Sources */,
+				BF00000000000000000032 /* AppDelegate.swift in Sources */,
+				BF00000000000000000034 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		9F06250F2D9A758F002FC5D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F0625112D9A758F002FC5D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9FC84FCF2D61C9EE000DBBA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FC84FD02D61C9EE000DBBA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9FC84FD42D61C9EF000DBBA3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FC84FD52D61C9EF000DBBA3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		9F0625092D9A4502002FC5D2 /* Debug */ = {
+		CF00000000000000000056 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Aether-swift/Mac/Aether_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"TARGET_MACOS=1",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_FILE = AetherDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-Mac";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Metal,
+					"-framework",
+					MetalKit,
+					"-framework",
+					ModelIO,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aether.AetherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OBJC_BRIDGING_HEADER = "AetherDemo/AetherDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		9F06250A2D9A4502002FC5D2 /* Release */ = {
+		CF00000000000000000057 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Aether-swift/Mac/Aether_Mac.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_MACOS=1";
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_FILE = AetherDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-Mac";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Metal,
+					"-framework",
+					MetalKit,
+					"-framework",
+					ModelIO,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aether.AetherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AetherDemo/AetherDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		9FC84FD82D61C9EF000DBBA3 /* Debug */ = {
+		CF00000000000000000058 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		9FC84FD92D61C9EF000DBBA3 /* Release */ = {
+		CF00000000000000000059 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9FC84FDB2D61C9EF000DBBA3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D5M8CJ9NDR;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"TARGET_IOS=1",
-					"$(inherited)",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Aether-swift/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9FC84FDC2D61C9EF000DBBA3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D5M8CJ9NDR;
-				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_IOS=1";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Aether-swift/Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.engine.Aether-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Aether-swift/Aether-swift-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F06250B2D9A4502002FC5D2 /* Build configuration list for PBXNativeTarget "Aether-Mac" */ = {
+		CL00000000000000000060 /* Build configuration list for PBXNativeTarget "AetherDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F0625092D9A4502002FC5D2 /* Debug */,
-				9F06250A2D9A4502002FC5D2 /* Release */,
+				CF00000000000000000056 /* Debug */,
+				CF00000000000000000057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FC84FC12D61C9EE000DBBA3 /* Build configuration list for PBXProject "Aether-swift" */ = {
+		CL00000000000000000061 /* Build configuration list for PBXProject "Aether-swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9FC84FD82D61C9EF000DBBA3 /* Debug */,
-				9FC84FD92D61C9EF000DBBA3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9FC84FDA2D61C9EF000DBBA3 /* Build configuration list for PBXNativeTarget "Aether-swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9FC84FDB2D61C9EF000DBBA3 /* Debug */,
-				9FC84FDC2D61C9EF000DBBA3 /* Release */,
+				CF00000000000000000058 /* Debug */,
+				CF00000000000000000059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9FC84FBE2D61C9EE000DBBA3 /* Project object */;
+	rootObject = PR00000000000000000055 /* Project object */;
 }

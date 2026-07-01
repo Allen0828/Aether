@@ -206,7 +206,7 @@ matrix_float4x4 matrix_look_at_right_hand(simd_float3 eye, simd_float3 target, s
 }
 
 matrix_float4x4 matrix_perspective_right_hand(float fov, float aspectRatio, float near, float far) {
-    float tanHalfFov = tanf(fov * M_PI / 360.0);
+    float tanHalfFov = tanf(fov / 2.0);
     matrix_float4x4 result = matrix_identity_float4x4;
     result.columns[0] = (simd_make_float4(1.0 / (aspectRatio * tanHalfFov), 0, 0, 0));
     result.columns[1] = (simd_make_float4(0, 1.0 / tanHalfFov, 0, 0));
@@ -223,5 +223,16 @@ matrix_float4x4 matrix_orthographic_right_hand(float left, float right, float bo
     result.columns[2] = (simd_make_float4(0, 0, -2 / (far - near), 0));
     result.columns[3] = (simd_make_float4(-(right + left) / (right - left), -(top + bottom) / (top - bottom), -(far + near) / (far - near), 1));
 
+    return result;
+}
+
+matrix_float4x4 matrix_perspective_right_hand_metal(float fov, float aspectRatio, float near, float far) {
+    // Metal-compatible: maps z_ndc to [0, 1] (OpenGL maps to [-1, 1])
+    float tanHalfFov = tanf(fov / 2.0);
+    matrix_float4x4 result = matrix_identity_float4x4;
+    result.columns[0] = (simd_make_float4(1.0 / (aspectRatio * tanHalfFov), 0, 0, 0));
+    result.columns[1] = (simd_make_float4(0, 1.0 / tanHalfFov, 0, 0));
+    result.columns[2] = (simd_make_float4(0, 0, far / (near - far), -1));
+    result.columns[3] = (simd_make_float4(0, 0, -(far * near) / (far - near), 0));
     return result;
 }

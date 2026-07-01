@@ -49,3 +49,6 @@ simd_float4x4 leftHandedLook(simd_float3 eye, simd_float3 center, simd_float3 up
 simd_float4x4 orthographic(CGRect rect, float near, float far);
 
 
+
+// Metal-compatible perspective projection (z_ndc in [0,1] instead of [-1,1])
+simd_float4x4 matrix_perspective_right_hand_metal(float fov, float aspectRatio, float near, float far);

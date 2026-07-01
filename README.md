@@ -1,112 +1,92 @@
-# Aether 库说明文档
+# Aether — Lightweight iOS glTF Viewer
 
-Aether 库基于 Metal 框架开发，专为高效图形渲染和计算任务打造，充分发挥 GPU 并行计算能力，旨在为开发者提供一套简洁、易用且高性能的工具集，以应对诸如游戏开发、虚拟现实、科学计算可视化等对图形处理和计算性能要求严苛的应用场景。
+Aether is a minimal Metal-based iOS library for loading a `.gltf` model and showing it quickly inside an app. The fastest path is `AEModelView`, a drop-in `UIView` that owns the Metal layer, render loop, glTF loader, camera, orbit gesture, and pinch zoom.
 
-[English Document](https://github.com/Allen0828/AAEngine/blob/master/README_EN.md)
+## Quick Start
 
+1. Add the `Aether/` source folder to your iOS app target.
+2. Add `Aether/Shaders/Basic.metal` to the app target sources.
+3. Add your `.gltf` file and its external `.bin` buffer to the app bundle.
+4. If your app is Swift, import Aether headers in your bridging header:
 
-## 使用方式
-#### Swift Package Manager  推荐
-
-- File > Swift Packages > Add Package Dependency
-- Add `https://github.com/Allen0828/AAEngine.git`
-- Select "Up to Next Major" with "0.0.5"
-
-#### CocoaPods
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '12.0'
-use_frameworks!
-
-target 'MyApp' do
-  pod 'AAEngine', '~> 0.0.3'
-end
-```
-#### 手动安装
-下载仓库，将Aether文件夹放到工程中，即可运行。
-
-
-#### 使用示例
-##### 1 简单图形渲染
-初始化 Aether 环境
-```swift
-
-let mLayer = CAMetalLayer()
-mLayer.frame = self.view.layer.frame
-self.view.layer.addSublayer(mLayer)
-
-let engine = AEEngine(layer: mLayer)
-engine.createEngineLoopContext()
-
-let context = engine.getRuntimeContext()
-context.load(DemoScene())    // demo scene 在仓库中内置
-
+```objc
+#import "Aether.h"
 ```
 
-##### 2 为组件添加 Behaviour
+Then add a model view anywhere in UIKit:
+
 ```swift
-class testCompBeh: AEBehaviour {
-    
-    private var posZ: Float = 0.0
-    
-    override init() {
-        super.init()
-    }
-    
-    override func update() {
-        posZ += 0.001
-        let comp = getComponent()
-        comp?.position = simd_float3(0, 0, 0+posZ)
-        
+import UIKit
+
+final class ViewController: UIViewController {
+    private let modelView = AEModelView()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        modelView.frame = view.bounds
+        modelView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(modelView)
+
+        do {
+            try modelView.loadModel(named: "Box", in: .main)
+        } catch {
+            print("glTF error: \(error)")
+        }
     }
 }
-
-class SwiftDemoScene: AEScene {
-    override init() {
-        super.init()
-        // ...
-        let box1 = AEBoxGeometry(extent: [1.0, 1.0, 1.0], segments: [1, 1, 1], normals: false)
-        box1.position = simd_float3(0.0, -0.04, 0.0);
-        self.addChildComponent(box1)
-        box.attach(testCompBeh())
-        // ...
-    }
-}
-
 ```
 
-##### 3 材质
+`AEModelView` starts rendering automatically when it is attached to a window and stops when it is removed. Users can drag to orbit and pinch to zoom.
+
+## Lower-Level API
+
+If you need to control the Metal layer yourself, use `AEEngine`, `AECamera`, and `AEGltfLoader` directly:
+
 ```swift
-let unlit = AEUnlitMaterial()
-let path = Bundle.main.path(forResource: "texture.png", ofType: "")
-mat.setTexture(path ?? "")
+let engine = AEEngine(layer: metalLayer)
+engine.renderer.camera = AECamera(position: simd_float3(3, 2, 5),
+                                  target: simd_float3(0, 0, 0))
 
-box1.setMaterial(unlit)
-
-let standard = AEStandardMaterial()
-standard.setTexture(path ?? "")
-
-box2.setMaterial(standard)
-
+let path = Bundle.main.path(forResource: "model", ofType: "gltf")!
+engine.model = try AEGltfLoader().loadMeshFromGLTF(atPath: path)
+engine.start(withFPS: 60)
 ```
 
-##### 4 灯光
-```swift
-let light = AELight()
-light?.componentName = "light"
-light?.lightType = DirectionalLight
-light?.position = simd_make_float3(3, 3, -2)
-light?.diffuse = LightColor(r: 1, g: 1, b: 1)
-light?.specular = LightColor(r: 0.6, g: 0.6, b: 0.6)
-        
-self.addChildComponent(light!)
+## Supported glTF Scope
+
+- glTF 2.0 `.gltf` files with an external `.bin` buffer
+- First mesh, first primitive
+- `POSITION`, `NORMAL`, and `TEXCOORD_0` vertex attributes
+- `FLOAT` vertex attributes and `UNSIGNED_SHORT` indices
+- Single draw-call rendering with a built-in Metal shader
+
+## Architecture
+
+```
+Aether/
+├── Core/
+│   ├── AEEngine.h/m       — Engine setup & render loop
+│   ├── AECamera.h/m       — Camera (orbit, zoom, pan via touch)
+│   └── AERenderer.h/m     — Metal renderer
+├── Model/
+│   ├── AEMesh.h/m         — Vertex/index buffer container
+│   └── AEGltfLoader.h/m   — glTF 2.0 (.gltf + .bin) loader
+├── Material/
+│   └── AEMaterial.h/m     — Texture & base color
+├── Math/
+│   └── AEMath.h/m         — Matrix & vector utilities
+└── Shaders/
+    └── Basic.metal         — Vertex & fragment shaders
 ```
 
+## Features
 
+- Drop-in `AEModelView` for UIKit apps
+- Metal rendering with single draw call
+- Orbit camera and pinch zoom
+- Small Objective-C API that is callable from Swift
 
-## 展示全景地图
-<view><img src="https://github.com/Allen0828/AAEngine/blob/main/images/img_01.jpg" width="400"></img><img src="https://github.com/Allen0828/AAEngine/blob/main/images/img_02.jpg" width="400"></img>
-</view>
+## License
 
-请参考demo中代码进行设置，如果只是加载全景地图，请对相机的位移增加限制。
+MIT

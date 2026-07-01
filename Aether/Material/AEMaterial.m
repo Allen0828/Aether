@@ -2,79 +2,32 @@
 //  AEMaterial.m
 //  Aether
 //
-//  Created by Allen on 2025/1/1.
-//
 
 #import "AEMaterial.h"
-#import <MetalKit/MTKTextureLoader.h>
-#import "AEEngine.h"
-
-@interface AEMaterial ()
-
-@property (nonatomic,strong,readonly) id<MTLTexture> texture;
-
-@end
+#import <MetalKit/MetalKit.h>
+#import "../Core/AEEngine.h"
 
 @implementation AEMaterial
 
-- (CGFloat)GetOpacity {
-    return 0.0;
-}
-
-- (NSArray *)GetTextureList {
-    return [NSArray new];
-}
-
-- (BOOL)GetUseLinearColor {
-    return false;
-}
-
-- (BOOL)HasDynamicProperties {
-    return false;
-}
-
-- (BOOL)IsForceTransparent {
-    return false;
-}
-
-- (void)SetAdditiveBlending:(BOOL)bAdditive {
-    
-}
-
-- (void)SetTexture:(NSString*)filePath {
-    NSError *error;
-    MTKTextureLoader *texLoader = [[MTKTextureLoader alloc] initWithDevice:AEEngine.device];
-    NSURL *url = [NSURL fileURLWithPath:filePath];
-    if (url == nil) {
-        NSLog(@"Material Error: file path not find");
+- (instancetype)init {
+    if (self = [super init]) {
+        _baseColor = simd_make_float3(1.0, 1.0, 1.0);
     }
-    NSDictionary *options = @{
+    return self;
+}
+
+- (void)loadTextureFromFile:(NSString *)path {
+    NSError *error = nil;
+    MTKTextureLoader *loader = [[MTKTextureLoader alloc] initWithDevice:AEEngine.device];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    if (!url) { NSLog(@"AEMaterial: invalid path"); return; }
+    NSDictionary *opts = @{
         MTKTextureLoaderOptionTextureUsage: @(MTLTextureUsageShaderRead),
-        MTKTextureLoaderOptionTextureStorageMode: @(MTLStorageModePrivate),
-        MTKTextureLoaderOptionSRGB: @(NO),
-        MTKTextureLoaderOptionGenerateMipmaps: @(NO)
+        MTKTextureLoaderOptionSRGB: @(NO)
     };
-    id<MTLTexture> uv = [texLoader newTextureWithContentsOfURL:url options:options error:&error];
-    if (error != nil) {
-        NSLog(@"Material Error: load tex filed %@", error);
-    }
-    _texture = uv;
-}
-
-- (id<MTLTexture>)getTexture {
-    return _texture;
+    id<MTLTexture> tex = [loader newTextureWithContentsOfURL:url options:opts error:&error];
+    if (error) { NSLog(@"AEMaterial: texture load error %@", error); }
+    else { _diffuseTexture = tex; }
 }
 
 @end
-
-
-@implementation AEStandardMaterial
-
-@end
-
-@implementation AEUnlitMaterial
-
-
-
-@end
-

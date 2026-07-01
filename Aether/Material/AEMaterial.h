@@ -2,84 +2,22 @@
 //  AEMaterial.h
 //  Aether
 //
-//  Created by Allen on 2025/1/1.
-//
 
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
+#import <simd/simd.h>
 
-typedef enum : NSUInteger {
-    BlendDisabled,
-    BlendAlphaBlending,
-    BlendAdditiveBlending,
-    BlendOIT,
-    BlendPremultiplyAlphaBlending,
-    BlendMasked,
-} EBlendFunc;
-
-typedef enum : NSUInteger {
-    ModeNone,
-    ModeBack,
-    ModeFront,
-} EFaceCullingMode;
-
-typedef enum : NSUInteger {
-    Default,
-    TwoPass,
-    DepthPreTransparency,
-} ETransparencyMode;
-
-typedef enum : NSUInteger {
-    Never,
-    Less,
-    LessEqual,
-    Greater,
-    GreaterEqual,
-    Equal,
-    NotEqual,
-    Alawys,
-} EStencilFunc;
-
-typedef enum : NSUInteger {
-    Keep,
-    Zero,
-    Replace,
-    Increment,
-    IncrementWrap,
-    Decrement,
-    DecrementWrap,
-    Invert,
-} EStencilOp;
-
+NS_ASSUME_NONNULL_BEGIN
 
 @interface AEMaterial : NSObject
 
-@property (nonatomic,assign) BOOL DoubleSided;
-@property (nonatomic,assign) EBlendFunc BlendFuncion;
-@property (nonatomic,assign) EFaceCullingMode FaceCullingMode;
-@property (nonatomic,assign) ETransparencyMode TransparencyMode;
-@property (nonatomic,assign) EStencilFunc StencilFunction;
-@property (nonatomic,assign) EStencilOp StencilOperation;
-@property (nonatomic,assign) NSInteger ActiveDynamicPropertiesLine;
-@property (nonatomic,assign) BOOL CacheGraphBasedShader;
+@property (nonatomic, strong, nullable) id<MTLTexture> diffuseTexture;
 
-- (BOOL)IsForceTransparent;
-- (void)SetAdditiveBlending:(BOOL)bAdditive;
-- (CGFloat)GetOpacity;
-- (BOOL)GetUseLinearColor;
-- (BOOL)HasDynamicProperties;
+/// Default base color used when no texture is set (RGB).
+@property (nonatomic) simd_float3 baseColor;
 
-- (void)SetTexture:(NSString*)filePath;
-- (id<MTLTexture>)getTexture;
-
-- (NSArray*)GetTextureList;
+- (void)loadTextureFromFile:(NSString *)path;
 
 @end
 
-@interface AEStandardMaterial : AEMaterial
-
-@end
-
-@interface AEUnlitMaterial : AEMaterial
-
-@end
+NS_ASSUME_NONNULL_END
